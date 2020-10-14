@@ -1,0 +1,41 @@
+.modal-nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+ .modal {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  
+} 
+
+.login-form-box {
+    background-color: white;
+}
+
+.close-button {
+    display: flex;
+    justify-content: center;
+}
+.modal-main {
+  position:fixed;
+  background: white;
+  width: 80%;
+  height: auto;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+.modal-display-block {
+  display: block;
+}
+
+.modal-display-none {
+  display: none;
+}
