@@ -3,7 +3,7 @@ import SignupFormContainer from '../session_form/signup_form_container'
 
 const SignInModal = (props) => {
     const showHideClassname = props.show ? "modal-display-block" : "modal-display-none"
-
+    // debugger;
     return (
         <div className={showHideClassname}>
             <section className="login-modal">

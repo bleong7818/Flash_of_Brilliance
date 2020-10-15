@@ -46,3 +46,12 @@ export const logout = () => dispatch => {
     return APIUtil.logout()
         .then(() => dispatch(logoutCurrentUser()));
 };
+
+export const requestUser = (user) => {
+    return dispatch => {
+        return APIUtil.receiveCurrentUser(user)
+            .then(currentUser => {
+                return dispatch(receiveCurrentUser(currentUser))
+            });
+    };
+};

@@ -6,22 +6,49 @@
  .modal {
   position: fixed;
   display: flex;
+  justify-content: center;
+  align-items: center;
   top: 0;
   left: 0;
+  right: 0;
   width: 50%;
   height: 50%;
   background: rgba(0, 0, 0, 0.6);
-  
+  color: black;
+//   border-radius: 10 10 10 10;
+  // background-color: white;
 } 
 
-.login-form-box {
-    background-color: white;
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-.close-button {
+.login-form {
+    height: 80%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
 }
+
+.login-form-box {
+    display: flex;
+    flex-direction: column;
+    background-color: teal;
+    height: 90%;
+    border-radius: 10px 10px 10px 10px;
+}
+
+
+.close-button {
+    // position: relative;
+    background-color: none;
+    background: transparent;
+    border: none;
+}
+
 .modal-main {
   position:fixed;
   background: white;
