@@ -13,7 +13,9 @@ class SignupForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.processForm(user);
+        this.props.processForm(user).then(() => {
+            this.props.history.push("/dashboard")
+        }).then(this.props.hideModal());
     }
 
     update(field) {
@@ -37,9 +39,8 @@ class SignupForm extends React.Component {
     render() {
         return (
             <div className="modal">
-                <main className="modal-body">
                 <button className="close-button" onClick={this.props.hideModal}>×</button>
-                <form action="/dashboard" onSubmit={this.handleSubmit} className="login-form-box">
+                <form onSubmit={this.handleSubmit} className="login-form-box">
                     <h1 className="login-link">Please Sign In {this.renderErrors()}</h1>
                     <div className="login-form">
                         <label>Email:
@@ -51,7 +52,6 @@ class SignupForm extends React.Component {
                         <button type="submit">Sign in</button>
                      </div>
                 </form>
-                </main>
             </div>
         )
     }

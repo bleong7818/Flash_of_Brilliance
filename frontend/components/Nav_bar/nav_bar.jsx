@@ -7,7 +7,7 @@ class NavBar extends React.Component {
     constructor(props) {
         super(props)
         this.state = { loginShow: false, sessionShow: false }
-        // debugger;
+        
         this.showModal = this.showModal.bind(this)
         this.hideModal = this.hideModal.bind(this)
     }

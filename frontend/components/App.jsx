@@ -10,7 +10,7 @@ const App = () => (
         <header>
             <h1>Flash of Brilliance</h1>
         </header>
-        <Route path="/dashboard" component={DashboardContainer}></Route>
+        <Route path={`/dashboard`} component={DashboardContainer}></Route>
         <Route path="/" component={NavBar}></Route>
     </div>
 );
