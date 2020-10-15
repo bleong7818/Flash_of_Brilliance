@@ -12,7 +12,8 @@ class Dashboard extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault()
-        this.props.processForm().then(() => {
+        // debugger;
+        this.props.logout().then(() => {
             this.props.history.push("/")})
     }
 
@@ -20,12 +21,10 @@ class Dashboard extends React.Component {
     render() {
         if (!this.props.user) return null;
         return (
-            <div>
-                <p>{this.props.user.email}</p>
-                <form onSubmit={this.handleSubmit}>
-                    <button onClick={this.props.logout}>Log out</button>
-                </form>
-            </div>
+            <nav className="Dashboard-nav">
+                <p>Hello, {this.props.user.email}</p>
+                <button onClick={this.handleSubmit}>Log out</button>
+            </nav>
             
         )
     }

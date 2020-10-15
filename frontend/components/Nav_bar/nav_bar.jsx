@@ -5,41 +5,46 @@ import SignInModal from '../login_module/signup_modal';
 
 class NavBar extends React.Component {
     constructor(props) {
-        super(props)
-        this.state = { loginShow: false, sessionShow: false }
-        
-        this.showModal = this.showModal.bind(this)
-        this.hideModal = this.hideModal.bind(this)
+        super(props);
+        this.state = { loginShow: false, sessionShow: false };
+        this.showModal = this.showModal.bind(this);
+        this.hideModal = this.hideModal.bind(this);
     }
 
     showModal(type) {
-        this.setState({ [type]: true })
+        this.setState({ [type]: true });
     }
 
     hideModal() {
         if (this.state.loginShow) {
-            this.setState({loginShow: false})
+            this.setState({loginShow: false});
         } else {
-            this.setState({sessionShow: false})
+            this.setState({sessionShow: false});
         }
     }
 
     render () {
-        
-        return (
-            <nav className="modal-nav">
+        const display = this.props.currentUser ? (
+            null
+        ) : (
+            <div className="modal-nav">
                 <LoginModal show={this.state.loginShow}
-                    hideModal={this.hideModal} 
-                    className="modal"/>
+                    hideModal={this.hideModal}
+                    className="modal" />
                 <button onClick={() => this.showModal("loginShow")}>
                     Log In
                 </button>
                 <SignInModal show={this.state.sessionShow}
                     hideModal={this.hideModal}
                     className="modal" />
-                <button onClick={ () => this.showModal("sessionShow")}>
+                <button onClick={() => this.showModal("sessionShow")}>
                     Sign In
                 </button>
+            </div>
+        )
+        return (
+            <nav>
+                {display}
             </nav>
         )
     }
