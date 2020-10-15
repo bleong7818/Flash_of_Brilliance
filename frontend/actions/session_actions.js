@@ -47,11 +47,11 @@ export const logout = () => dispatch => {
         .then(() => dispatch(logoutCurrentUser()));
 };
 
-export const requestUser = (user) => {
-    return dispatch => {
-        return APIUtil.receiveCurrentUser(user)
-            .then(currentUser => {
-                return dispatch(receiveCurrentUser(currentUser))
-            });
-    };
-};
+// export const requestUser = (user) => {
+//     return dispatch => {
+//         return APIUtil.receiveCurrentUser(user)
+//             .then(currentUser => {
+//                 return dispatch(receiveCurrentUser(currentUser))
+//             });
+//     };
+// };

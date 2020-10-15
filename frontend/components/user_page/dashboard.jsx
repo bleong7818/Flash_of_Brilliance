@@ -3,11 +3,12 @@ import React from 'react';
 class Dashboard extends React.Component {
     constructor(props) {
         super(props);
+        // debugger;
     }
 
-    componentDidMount() {
-        this.requestUser(this.props.user.id)
-    }
+    // componentDidMount() {
+    //     this.requestUser(this.props.user.id)
+    // }
 
     render() {
         return (

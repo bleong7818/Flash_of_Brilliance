@@ -13,8 +13,9 @@ class LoginForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.processForm(user);
-        <Route></Route>
+        this.props.processForm(user).then( () => {
+            this.props.history.push("/dashboard")
+        }).then(this.props.hideModal());
     }
 
     update(field) {
@@ -39,7 +40,7 @@ class LoginForm extends React.Component {
         return (
             <div className="modal">
                 <button className="close-button" onClick={this.props.hideModal}>×</button>
-                <form action="dashboard" onSubmit={this.handleSubmit} className="login-form-box">
+                <form onSubmit={this.handleSubmit} className="login-form-box">
                     <h1 className="login-link">Please Login {this.renderErrors()}</h1>
                     <div className="login-form">
                         <label>Email:

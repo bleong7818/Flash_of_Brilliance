@@ -25,6 +25,7 @@ class NavBar extends React.Component {
     }
 
     render () {
+        
         return (
             <nav className="modal-nav">
                 <LoginModal show={this.state.loginShow}

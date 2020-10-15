@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import React from 'react';
 import { login } from '../../actions/session_actions';
 import LoginForm from './login_form';
+import { withRouter } from 'react-router-dom'
 
 const MSTP = ( {errors} ) => {
     return {
@@ -16,4 +17,4 @@ const MDTP = (dispatch) => {
     };
 };
 
-export default connect(MSTP, MDTP)(LoginForm);
+export default withRouter(connect(MSTP, MDTP)(LoginForm));
