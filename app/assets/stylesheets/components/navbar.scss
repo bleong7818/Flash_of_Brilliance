@@ -15,9 +15,12 @@
   height: 50%;
   background: rgba(0, 0, 0, 0.6);
   color: black;
-//   border-radius: 10 10 10 10;
-  // background-color: white;
 } 
+
+.modal > .close-button {
+  display: flex;
+  flex-direction: column;
+}
 
 .modal-body {
   display: flex;

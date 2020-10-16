@@ -4,6 +4,8 @@ class SignupForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            first_name: "",
+            last_name: "",
             email: "",
             password: ""
         };
@@ -41,15 +43,23 @@ class SignupForm extends React.Component {
             <div className="modal">
                 <button className="close-button" onClick={this.props.hideModal}>×</button>
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                    <h1 className="login-link">Please Sign In {this.renderErrors()}</h1>
+                    <h1 className="login-link">Please Sign Up {this.renderErrors()}</h1>
                     <div className="login-form">
+                        <div className="names">
+                            <label>First Name
+                                <input type="text" onChange={this.update('first_name')} value={this.state.first_name}/>
+                            </label>
+                            <label>Last Name
+                                <input type="text" onChange={this.update('last_name')} value={this.state.last_name} />
+                            </label>
+                        </div>
                         <label>Email:
                             <input type="text" onChange={this.update('email')} value={this.state.email} className="login-email"/>
                         </label>
                         <label>Password:
                              <input type="password" onChange={this.update('password')} value={this.state.password} className="login-password"/>
                         </label>
-                        <button type="submit">Sign in</button>
+                        <button type="submit">Sign Up</button>
                      </div>
                 </form>
             </div>

@@ -12,7 +12,7 @@ class Dashboard extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault()
-        // debugger;
+        debugger;
         this.props.logout().then(() => {
             this.props.history.push("/")})
     }
@@ -22,10 +22,9 @@ class Dashboard extends React.Component {
         if (!this.props.user) return null;
         return (
             <nav className="Dashboard-nav">
-                <p>Hello, {this.props.user.email}</p>
+                <p>Hello, {this.props.user.first_name} {this.props.user.last_name}</p>
                 <button onClick={this.handleSubmit}>Log out</button>
-            </nav>
-            
+            </nav>   
         )
     }
 }

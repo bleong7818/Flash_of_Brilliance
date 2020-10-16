@@ -39,7 +39,6 @@ class LoginForm extends React.Component {
     render() {
         return (
             <div className="modal">
-                <button className="close-button" onClick={this.props.hideModal}>×</button>
                 <form onSubmit={this.handleSubmit} className="login-form-box">
                     <h1 className="login-link">Please Login {this.renderErrors()}</h1>
                     <div className="login-form">
@@ -52,6 +51,7 @@ class LoginForm extends React.Component {
                         <button type="submit" >Login</button>
                     </div>
                 </form>
+                <button className="close-button" onClick={this.props.hideModal}>×</button>
             </div>
         )
     }

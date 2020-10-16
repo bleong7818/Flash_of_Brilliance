@@ -14,7 +14,7 @@ const App = () => (
         </header>
         <Switch>
             <AuthRoute exact path={`/dashboard`} component={DashboardContainer}/>
-            <AuthRoute exact path="/" component={NavBarContainer} />
+            <Route path="/" component={NavBarContainer} />
         </Switch>
     </div>
 );

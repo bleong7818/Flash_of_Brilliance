@@ -24,6 +24,7 @@ class NavBar extends React.Component {
     }
 
     render () {
+        
         const display = this.props.currentUser ? (
             null
         ) : (
@@ -38,7 +39,7 @@ class NavBar extends React.Component {
                     hideModal={this.hideModal}
                     className="modal" />
                 <button onClick={() => this.showModal("sessionShow")}>
-                    Sign In
+                    Sign Up
                 </button>
             </div>
         )
