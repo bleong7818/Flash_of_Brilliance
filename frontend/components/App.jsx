@@ -5,7 +5,10 @@ import NavBarContainer from './Nav_bar/nav_bar_container';
 // import LoginFormContainer from './session_form/login_form_container';
 // import SignupFormContainer from './session_form/signup_form_container';
 import DashboardContainer from './user_page/dashboard_container';
+import MainPageContainer from './main_page/main_page_container'
 import { AuthRoute } from '../util/route_util';
+import MainPage from './main_page/main_page';
+
 
 const App = () => (
     <div className="front-page">
@@ -14,7 +17,7 @@ const App = () => (
         </header>
         <Switch>
             <AuthRoute exact path={`/dashboard`} component={DashboardContainer}/>
-            <Route path="/" component={NavBarContainer} />
+            <Route path="/" component={MainPageContainer} />
         </Switch>
     </div>
 );

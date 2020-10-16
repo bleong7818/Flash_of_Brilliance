@@ -12,7 +12,6 @@ class Dashboard extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault()
-        debugger;
         this.props.logout().then(() => {
             this.props.history.push("/")})
     }

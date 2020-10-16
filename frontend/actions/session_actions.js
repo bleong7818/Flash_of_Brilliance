@@ -29,17 +29,18 @@ export const signup = (user) => {
         return APIUtil.signup(user)
             .then(newUser => {
                 return dispatch(receiveCurrentUser(newUser));
-            });
+            }, 
+            errors => dispatch(receiveSessionErrors(errors.responseJSON))
+        );
     };
 };
 
 export const login = (user) => dispatch => {
     return APIUtil.login(user)
         .then(
-            oldUser => dispatch(receiveCurrentUser(oldUser),
+            oldUser => dispatch(receiveCurrentUser(oldUser)),
             errors => dispatch(receiveSessionErrors(errors.responseJSON))
-        )
-    );
+        );
 };
 
 export const logout = () => dispatch => {
