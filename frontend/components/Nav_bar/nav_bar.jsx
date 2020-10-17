@@ -11,6 +11,10 @@ class NavBar extends React.Component {
         this.hideModal = this.hideModal.bind(this);
     }
 
+    // componentDidMount() {
+    //     debugger;
+    // }
+
     showModal(type) {
         this.setState({ [type]: true });
     }
@@ -31,13 +35,13 @@ class NavBar extends React.Component {
                 <LoginModal show={this.state.loginShow}
                     hideModal={this.hideModal}
                     className="modal" />
-                <button onClick={() => this.showModal("loginShow")}>
+                <button className="login-button" onClick={() => this.showModal("loginShow")}>
                     Log In
                 </button>
                 <SignInModal show={this.state.sessionShow}
                     hideModal={this.hideModal}
                     className="modal" />
-                <button onClick={() => this.showModal("sessionShow")}>
+                <button className="sign-up-button" onClick={() => this.showModal("sessionShow")}>
                     Sign Up
                 </button>
             </div>

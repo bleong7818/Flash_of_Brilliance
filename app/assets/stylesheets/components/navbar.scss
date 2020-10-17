@@ -1,71 +1,11 @@
-.modal-nav {
-    display: flex;
-    justify-content: space-evenly;
-}
-
- .modal {
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 50%;
-  height: 50%;
-  background: rgba(0, 0, 0, 0.6);
-  color: black;
-} 
-
-.modal > .close-button {
-  display: flex;
-  flex-direction: column;
-}
-
-.modal-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.login-form {
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 10px;
-}
-
-.login-form-box {
-    display: flex;
-    flex-direction: column;
-    background-color: teal;
-    height: 90%;
-    border-radius: 10px 10px 10px 10px;
-}
-
-
-.close-button {
-    // position: relative;
-    background-color: none;
+.login-button {
+    padding-right: 20px;
     background: transparent;
+    border: none
+}
+
+.sign-up-button {
+    padding-right: 20px;
     border: none;
-}
-
-.modal-main {
-  position:fixed;
-  background: white;
-  width: 80%;
-  height: auto;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
-}
-
-.modal-display-block {
-  display: block;
-}
-
-.modal-display-none {
-  display: none;
+    background-color: #FF8A48;
 }

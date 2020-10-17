@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import MainPage from './main_page';
+import {removeSessionErrors} from '../../actions/session_actions';
 
 const MSTP = (state, ownProps) => {
     return {
@@ -9,7 +10,7 @@ const MSTP = (state, ownProps) => {
 
 const MDTP = dispatch => {
     return {
-        requestUser: userId => dispatch(requestUser(userId))
+        removeSessionErrors: () => dispatch(removeSessionErrors())
     };
 };
 

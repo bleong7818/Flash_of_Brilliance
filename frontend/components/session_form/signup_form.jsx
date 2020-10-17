@@ -10,14 +10,25 @@ class SignupForm extends React.Component {
             password: ""
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleClose = this.handleClose.bind(this);
     }
+
+    // componentDidMount() {
+    //     debugger;
+    //     this.props.removeSessionErrors();
+    // }
 
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user).then(() => {
             this.props.history.push("/dashboard")
-        }).then(this.props.hideModal());
+        }).then(() => this.props.hideModal());
+    }
+
+    handleClose(event) {
+        this.props.removeSessionErrors();
+        this.props.hideModal();
     }
 
     update(field) {
@@ -41,26 +52,26 @@ class SignupForm extends React.Component {
     render() {
         return (
             <div className="modal">
-                <button className="close-button" onClick={this.props.hideModal}>×</button>
                 <form onSubmit={this.handleSubmit} className="login-form-box">
                     <h1 className="login-link">Please Sign Up {this.renderErrors()}</h1>
                     <div className="login-form">
                         <div className="names">
                             <label>First Name
-                                <input type="text" onChange={this.update('first_name')} value={this.state.first_name}/>
+                                <input type="text" onChange={this.update('first_name')} placeholder="First Name"/>
                             </label>
                             <label>Last Name
-                                <input type="text" onChange={this.update('last_name')} value={this.state.last_name} />
+                                <input type="text" onChange={this.update('last_name')} placeholder="Last Name" />
                             </label>
                         </div>
                         <label>Email:
-                            <input type="text" onChange={this.update('email')} value={this.state.email} className="login-email"/>
+                            <input type="text" onChange={this.update('email')} placeholder="Email"/>
                         </label>
                         <label>Password:
-                             <input type="password" onChange={this.update('password')} value={this.state.password} className="login-password"/>
+                             <input type="password" onChange={this.update('password')} placeholder="Password" />
                         </label>
-                        <button type="submit">Sign Up</button>
+                        <button className="close-button" type="submit">Sign Up</button>
                      </div>
+                <div className="close-button" onClick={this.handleClose}>×</div>
                 </form>
             </div>
         )

@@ -7,7 +7,7 @@ const LoginModal = (props) => {
     return (
         <div className={showHideClassname}>
             <section className="login-modal">
-                <LoginFormContainer hideModal={props.hideModal} formType="Log in"/>
+                <LoginFormContainer hideModal={props.hideModal} className="log-modal" formType="Log in"/>
             </section>
         </div>
     )
