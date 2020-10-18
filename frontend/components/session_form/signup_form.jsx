@@ -1,4 +1,5 @@
 import React from 'react';
+import LoginFormContainer from '../session_form/login_form_container'
 
 class SignupForm extends React.Component {
     constructor(props) {
@@ -53,23 +54,26 @@ class SignupForm extends React.Component {
         return (
             <div className="modal">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                    <h1 className="login-link">Please Sign Up {this.renderErrors()}</h1>
-                    <div className="login-form">
+                    <h1 className="login-link">Get Started</h1>
+                    <div className="signup-form">
                         <div className="names">
-                            <label>First Name
+                            <label>
                                 <input type="text" onChange={this.update('first_name')} placeholder="First Name"/>
                             </label>
-                            <label>Last Name
+                            <label>
                                 <input type="text" onChange={this.update('last_name')} placeholder="Last Name" />
                             </label>
                         </div>
-                        <label>Email:
+                        <label>
                             <input type="text" onChange={this.update('email')} placeholder="Email"/>
                         </label>
-                        <label>Password:
+                        <label>
                              <input type="password" onChange={this.update('password')} placeholder="Password" />
                         </label>
-                        <button className="close-button" type="submit">Sign Up</button>
+                        <h1>{this.renderErrors()}</h1>
+                     </div>
+                    <div className="log-in-container">
+                        <button className="log-in-button" type="submit">Register</button>
                      </div>
                 <div className="close-button" onClick={this.handleClose}>×</div>
                 </form>

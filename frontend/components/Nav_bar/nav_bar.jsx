@@ -32,18 +32,21 @@ class NavBar extends React.Component {
             null
         ) : (
             <div className="modal-nav">
-                <LoginModal show={this.state.loginShow}
-                    hideModal={this.hideModal}
-                    className="modal" />
-                <button className="login-button" onClick={() => this.showModal("loginShow")}>
-                    Log In
-                </button>
-                <SignInModal show={this.state.sessionShow}
-                    hideModal={this.hideModal}
-                    className="modal" />
-                <button className="sign-up-button" onClick={() => this.showModal("sessionShow")}>
-                    Sign Up
-                </button>
+                <div className="nav-bar-logo"></div>
+                <div className="nav-bar-buttons">
+                    <LoginModal show={this.state.loginShow}
+                        hideModal={this.hideModal}
+                        className="modal" />
+                    <button className="login-button" onClick={() => this.showModal("loginShow")}>
+                        Log In
+                    </button>
+                    <SignInModal show={this.state.sessionShow}
+                        hideModal={this.hideModal}
+                        className="modal" />
+                    <button className="sign-up-button" onClick={() => this.showModal("sessionShow")}>
+                        Get Started
+                    </button>
+                </div>
             </div>
         )
         return (

@@ -13,7 +13,6 @@ import MainPage from './main_page/main_page';
 const App = () => (
     <div className="front-page">
         <header>
-            <h1>Flash of Brilliance</h1>
         </header>
         <Switch>
             <AuthRoute exact path={`/dashboard`} component={DashboardContainer}/>
