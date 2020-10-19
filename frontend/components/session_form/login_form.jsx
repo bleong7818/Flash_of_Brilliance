@@ -11,10 +11,6 @@ class LoginForm extends React.Component {
         this.handleClose = this.handleClose.bind(this);
     }
 
-    // componentWillUnmount() {
-    //     debugger;
-    // }
-
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
@@ -47,8 +43,7 @@ class LoginForm extends React.Component {
     }
 
     render() {
-        // debugger;
-    //    this.props.removeSessionErrors()
+
         return (
             <div className="modal">
                 <form onSubmit={this.handleSubmit} className="login-form-box">

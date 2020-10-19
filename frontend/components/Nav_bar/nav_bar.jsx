@@ -12,10 +12,6 @@ class NavBar extends React.Component {
         this.hideModal = this.hideModal.bind(this);
     }
 
-    // componentDidMount() {
-    //     debugger;
-    // }
-
     showModal(type) {
         this.setState({ [type]: true });
     }

@@ -22,7 +22,9 @@ class Dashboard extends React.Component {
         return (
             <nav className="Dashboard-nav">
                 <p>Hello, {this.props.user.first_name} {this.props.user.last_name}</p>
-                <button onClick={this.handleSubmit}>Log out</button>
+                <i class="fas fa-cog">
+                </i>
+                    <button onClick={this.handleSubmit}>Log out</button>
             </nav>   
         )
     }
