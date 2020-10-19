@@ -35,7 +35,7 @@ class NavBar extends React.Component {
             <div className="modal-nav">
                 <div className="nav-bar-logo"></div>
                 <div className="nav-bar-buttons">
-                    <button>Demo log in</button>
+                    <button type="submit" onClick={() => this.props.login(this.props.demoUser)}>Demo log in</button>
                     <LoginModal show={this.state.loginShow}
                         hideModal={this.hideModal}
                         className="modal" />
