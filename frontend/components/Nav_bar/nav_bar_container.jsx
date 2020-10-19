@@ -8,6 +8,7 @@ const MSTP = (state, ownProps) => {
     return {
         currentUser: state.entities.users[state.session.id],
         errors: state.errors.session
+        demoUser: state.entities.users
     };
 };
 
