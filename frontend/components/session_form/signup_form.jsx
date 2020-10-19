@@ -54,7 +54,7 @@ class SignupForm extends React.Component {
         return (
             <div className="modal">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                    <h1 className="login-link">Get Started</h1>
+                    <h2 className="login-link">Get Started</h2>
                     <div className="signup-form">
                         <div className="names">
                             <label>
@@ -70,10 +70,10 @@ class SignupForm extends React.Component {
                         <label>
                              <input type="password" onChange={this.update('password')} placeholder="Password" />
                         </label>
-                        <h1>{this.renderErrors()}</h1>
                      </div>
-                    <div className="log-in-container">
+                    <div className="sign-up-container">
                         <button className="log-in-button" type="submit">Register</button>
+                        <h1 className="errors">{this.renderErrors()}</h1>
                      </div>
                 <div className="close-button" onClick={this.handleClose}>×</div>
                 </form>

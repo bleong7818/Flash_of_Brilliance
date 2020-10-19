@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import LoginModal from '../login_module/login_modal';
 import SignInModal from '../login_module/signup_modal';
+import DashboardContainer from '../user_page/dashboard_container';
 
 class NavBar extends React.Component {
     constructor(props) {
@@ -29,7 +30,7 @@ class NavBar extends React.Component {
 
     render () {
         const display = this.props.currentUser ? (
-            null
+           <DashboardContainer />
         ) : (
             <div className="modal-nav">
                 <div className="nav-bar-logo"></div>
@@ -49,6 +50,7 @@ class NavBar extends React.Component {
                 </div>
             </div>
         )
+        
         return (
             <nav>
                 {display}

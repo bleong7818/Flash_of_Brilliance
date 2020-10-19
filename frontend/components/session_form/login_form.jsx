@@ -51,7 +51,6 @@ class LoginForm extends React.Component {
     //    this.props.removeSessionErrors()
         return (
             <div className="modal">
-
                 <form onSubmit={this.handleSubmit} className="login-form-box">
                     <h1 className="login-link">Log In</h1>
                     <div className="login-form">
@@ -61,10 +60,10 @@ class LoginForm extends React.Component {
                         <label>
                              <input type="password" onChange={this.update('password')} placeholder="Password" className="login-password" />
                         </label>
-                        <h1>{this.renderErrors()}</h1>
                     </div>
                         <div className="log-in-container">
                             <button className="log-in-button" type="submit" >Login</button>
+                            <h3>{this.renderErrors()}</h3>
                         </div>
                  <div className="close-button" onClick={this.handleClose}>×</div>
                 </form>

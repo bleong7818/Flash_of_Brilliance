@@ -110,7 +110,18 @@
 
 .log-in-container {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   bottom: 15%;
+}
+
+.sign-up-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 5%;
 }
 
 .log-in-button {
@@ -123,6 +134,3 @@
   background-color: orange;
 }
 
-.register-button {
-
-}

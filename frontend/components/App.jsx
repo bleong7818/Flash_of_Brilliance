@@ -6,9 +6,8 @@ import NavBarContainer from './Nav_bar/nav_bar_container';
 // import SignupFormContainer from './session_form/signup_form_container';
 import DashboardContainer from './user_page/dashboard_container';
 import MainPageContainer from './main_page/main_page_container'
-import { AuthRoute } from '../util/route_util';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import MainPage from './main_page/main_page';
-
 
 const App = () => (
     <div className="front-page">
