@@ -37,15 +37,23 @@ export const removeSessionErrors = () => {
 //     };
 // };
 
-export const signup = (user) => {
-    return dispatch => {
-        return APIUtil.signup(user)
-            .then(newUser => {
-                return dispatch(receiveCurrentUser(newUser));
-            }, 
+// export const signup = (user) => {
+//     return dispatch => {
+//         return APIUtil.signup(user)
+//             .then(newUser => {
+//                 return dispatch(receiveCurrentUser(newUser)),
+//                 return errors => dispatch(receiveSessionErrors(errors.responseJSON))
+//             }
+//         );
+//     };
+// };
+
+export const signup = (user) => dispatch => {
+    return APIUtil.signup(user)
+        .then(
+            oldUser => dispatch(receiveCurrentUser(oldUser)),
             errors => dispatch(receiveSessionErrors(errors.responseJSON))
         );
-    };
 };
 
 export const login = (user) => dispatch => {

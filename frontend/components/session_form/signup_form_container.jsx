@@ -6,6 +6,7 @@ import { withRouter } from 'react-router-dom';
 
 
 const MSTP = ({errors}) => {
+    
     return {
         errors: errors.session,
         formType: "Sign up",
