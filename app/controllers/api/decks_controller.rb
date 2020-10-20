@@ -1,6 +1,10 @@
 class Api::DecksController < ApplicationController
 
-    before_action :require_logged_in, only: [:create, :destroy, :update]
+    before_action :require_logged_in, only: [:index, :create, :destroy, :update]
+
+    def index
+        @decks = @current_user.decks
+    end
 
     def create 
         @deck = Deck.new(deck_params)
