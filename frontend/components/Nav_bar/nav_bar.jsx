@@ -29,9 +29,9 @@ class NavBar extends React.Component {
            <DashboardContainer />
         ) : (
             <div className="modal-nav">
-                <div className="nav-bar-logo"></div>
+                <img className="nav-logo" src="https://www.brainscape.com/blog/wp-content/uploads/2018/07/Transparent-Background.png" />
                 <div className="nav-bar-buttons">
-                    <button type="submit" onClick={() => this.props.login(this.props.demoUser)}>Demo log in</button>
+                    <button className="demo-button" type="submit" onClick={() => this.props.login(this.props.demoUser)}>Demo log in</button>
                     <LoginModal show={this.state.loginShow}
                         hideModal={this.hideModal}
                         className="modal" />

@@ -49,7 +49,7 @@ class SignupForm extends React.Component {
     render() {
         return (
             <div className="modal">
-                <form onSubmit={this.handleSubmit} className="login-form-box">
+                <form onSubmit={this.handleSubmit} className="sign-up-form-box">
                     <h2 className="login-link">Get Started</h2>
                     <div className="signup-form">
                         <div className="names">

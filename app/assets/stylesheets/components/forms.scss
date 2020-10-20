@@ -1,6 +1,6 @@
 .modal-nav {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding: 20px;
 }
 
@@ -55,6 +55,17 @@
     background-color: white;
     height: 50%;
     width: 30%;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.sign-up-form-box {
+  position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    height: 60%;
+    width: 50%;
     border-radius: 10px 10px 10px 10px;
 }
 

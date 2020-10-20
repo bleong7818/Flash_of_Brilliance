@@ -1,11 +1,36 @@
+.nav-bar-buttons {
+    padding: 10px;
+}
+
 .login-button {
-    padding-right: 20px;
-    background: transparent;
+    // padding-right: 20px;
+    background-color: #FDF8F7;
     border: none
 }
 
 .sign-up-button {
-    padding-right: 20px;
+    // padding: 20px;
     border: none;
     background-color: #FF8A48;
+}
+
+.sign-up-button:hover {
+    padding-left: 16px;
+    // padding-bottom: 19px;
+    font-size: 14px;
+}
+
+.login-button:hover {
+    font-size: 14px;
+}
+
+.nav-logo {
+    height: 100px;
+    width: 100px;
+}
+
+.demo-button {
+    padding: 20px;
+    background: lightblue;
+    border: none
 }
