@@ -69,7 +69,7 @@ class SignupForm extends React.Component {
                      </div>
                     <div className="sign-up-container">
                         <button className="log-in-button" type="submit">Register</button>
-                        <h1 className="errors">{this.renderErrors()}</h1>
+                        <h1 className="form-errors">{this.renderErrors()}</h1>
                      </div>
                 <div className="close-button" onClick={this.handleClose}>×</div>
                 </form>

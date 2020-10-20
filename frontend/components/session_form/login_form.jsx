@@ -58,7 +58,7 @@ class LoginForm extends React.Component {
                     </div>
                         <div className="log-in-container">
                             <button className="log-in-button" type="submit" >Login</button>
-                            <h3>{this.renderErrors()}</h3>
+                            <h3 className="form-errors">{this.renderErrors()}</h3>
                         </div>
                  <div className="close-button" onClick={this.handleClose}>×</div>
                 </form>

@@ -1,5 +1,4 @@
 .nav-bar-buttons {
-    padding: 10px;
     position: relative;
     display: flex;
 }
@@ -15,26 +14,44 @@
 .login-button {
     // padding-right: 20px;
     // position: absolute;
+    width: 120px;
+    height: 80px;
+    font-weight: 500;
     background-color: #FDF8F7;
     border: none
 }
 
 .sign-up-button {
     // padding: 20px;
+    color: white;
+    font-weight: 600;
+    width: 120px;
+    height: 80px;
     border: none;
     background-color: #FF8A48;
 }
 
+// .sign-up-button:hover {
+//     padding-left: 16px;
+//     padding-bottom: 19px;
+//     font-size: 14px;
+// }
+
 .sign-up-button:hover {
-    padding-left: 17px;
-    padding-bottom: 19px;
+    // width: 108px;
+    // height: 55px;
     font-size: 14px;
+    background-color: #ff8243;
+
 }
+
+// .sign-up-button:hover .login-button {
+//     padding-right: 100px;
+// }
 
 .login-button:hover {
     font-size: 14px;
-    padding-left: 18px;
-    padding-bottom: 19px;
+    background-color: #faf6f6;
 }
 
 .nav-logo {
@@ -44,7 +61,8 @@
 
 .demo-button {
     // padding: 20px;
-    height: 55px;
+    width: 120px;
+    height: 80px;
     background: lightblue;
     border: none
 }

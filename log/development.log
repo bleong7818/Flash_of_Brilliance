@@ -15961,3 +15961,584 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 57ms (Views: 53.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2020-10-20 09:21:57 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 332ms (Views: 309.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:22:01 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 61ms (Views: 58.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:22:07 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 150ms (Views: 147.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:22:10 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 60ms (Views: 56.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:22:22 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 159ms (Views: 156.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:22:28 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 61ms (Views: 56.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:23:20 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 234ms (Views: 231.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:23:29 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 62ms (Views: 58.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:23:33 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 157ms (Views: 153.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:23:44 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 161ms (Views: 157.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:23:59 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 192ms (Views: 180.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:24:07 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 87ms (Views: 71.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:24:11 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 145ms (Views: 140.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:24:22 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 64ms (Views: 61.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:24:27 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 148ms (Views: 145.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:24:34 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 63ms (Views: 58.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:24:37 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 200ms (Views: 197.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:24:42 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 185ms (Views: 181.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:30:10 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 327ms (Views: 319.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:30:38 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 281ms (Views: 275.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:30:57 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 171ms (Views: 167.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:31:01 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 84ms (Views: 81.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:32:15 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 223ms (Views: 214.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:41:00 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 371ms (Views: 367.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:42:57 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 553ms (Views: 549.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:46:24 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 491ms (Views: 482.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:46:29 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 368ms (Views: 363.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:46:44 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 345ms (Views: 339.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:47:04 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 562ms (Views: 559.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:47:14 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 350ms (Views: 343.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:47:24 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 368ms (Views: 362.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:47:54 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 387ms (Views: 377.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:47:58 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 103ms (Views: 100.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:50:27 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 174ms (Views: 171.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:50:34 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 332ms (Views: 327.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:50:53 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 82ms (Views: 77.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:51:39 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 299ms (Views: 296.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:51:43 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 60ms (Views: 54.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:52:33 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 280ms (Views: 275.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:52:40 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 99ms (Views: 96.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:52:44 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 115ms (Views: 112.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:53:01 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 158ms (ActiveRecord: 0.0ms)
+
+
+
+Sass::SyntaxError - Invalid CSS after "    font-weight: ": expected expression (e.g. 1px, bold), was ";":
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__2666123191545965794_70250682165640'
+
+Started POST "/__better_errors/11ce605b47e64771/variables" for ::1 at 2020-10-20 09:53:02 -0700
+Started GET "/" for ::1 at 2020-10-20 09:53:04 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 294ms (Views: 284.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:54:21 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 304ms (Views: 300.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:54:27 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 61ms (Views: 58.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:54:52 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 148ms (Views: 145.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:55:06 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 161ms (Views: 152.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2020-10-20 09:57:38 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"Sieg@Liberl.orb", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "Sieg@Liberl.orb"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "Sieg@Liberl.orb"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "yLa9Iu1OpeCbz6ph0Ue5EA"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (2.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "yLa9Iu1OpeCbz6ph0Ue5EA"], ["updated_at", "2020-10-20 16:57:39.111432"], ["id", 1]]
+  ↳ app/models/user.rb:28
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered api/users/show.json.jbuilder (2.9ms)
+Completed 200 OK in 320ms (Views: 11.4ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/api/users/1" for ::1 at 2020-10-20 09:57:39 -0700
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:14
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.6ms)
+Completed 200 OK in 24ms (Views: 20.0ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-10-20 09:57:41 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "yLa9Iu1OpeCbz6ph0Ue5EA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "Sieg@Liberl.orb"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "UXwKozwt10nLSGqLU15Ahg"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "UXwKozwt10nLSGqLU15Ahg"], ["updated_at", "2020-10-20 16:57:41.721263"], ["id", 1]]
+  ↳ app/models/user.rb:28
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 09:59:41 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 224ms (Views: 219.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 10:00:01 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 150ms (Views: 146.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 10:00:07 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 48ms (Views: 45.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2020-10-20 10:00:15 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/api/users" for ::1 at 2020-10-20 10:00:23 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"first_name"=>"", "last_name"=>"", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "7K_AaCPDpDDzB7i7TXdqug"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 422 Unprocessable Entity in 332ms (Views: 0.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 10:03:20 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 822ms (Views: 813.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2020-10-20 10:03:24 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 422 Unprocessable Entity in 5ms (Views: 0.2ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/api/users" for ::1 at 2020-10-20 10:03:29 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"first_name"=>"", "last_name"=>"", "email"=>"JYBright@liberl.orb", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (7.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "JYBright@liberl.orb"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "rwkBzEZlnpsGeMedJ7XoRg"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 422 Unprocessable Entity in 320ms (Views: 0.2ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 10:04:01 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 247ms (Views: 243.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2020-10-20 10:04:07 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/api/users" for ::1 at 2020-10-20 10:07:48 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"first_name"=>"", "last_name"=>"", "email"=>"JYBright@liberl.orb", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "JYBright@liberl.orb"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "llWVNOwO3beR-hexiVVK1A"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 422 Unprocessable Entity in 301ms (Views: 0.5ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/api/users" for ::1 at 2020-10-20 10:11:14 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"first_name"=>"", "last_name"=>"", "email"=>"JYBright@liberl.orb", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "JYBright@liberl.orb"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "xmOjYYYZNC5HQ9NO_-aAvg"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:5
+Completed 422 Unprocessable Entity in 305ms (Views: 0.2ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/api/session" for ::1 at 2020-10-20 10:11:17 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-10-20 10:11:35 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 466ms (Views: 462.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2020-10-20 10:11:38 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"JYBright@liberl.orb", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "JYBright@liberl.orb"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "JYBright@liberl.orb"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "2z93lJbyLkE5yxhCI9eJiQ"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (2.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "2z93lJbyLkE5yxhCI9eJiQ"], ["updated_at", "2020-10-20 17:11:38.817941"], ["id", 3]]
+  ↳ app/models/user.rb:28
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (1.6ms)
+  Rendered api/users/show.json.jbuilder (6.0ms)
+Completed 200 OK in 360ms (Views: 20.7ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/api/users/3" for ::1 at 2020-10-20 10:11:38 -0700
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:14
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (2.1ms)
+  Rendered api/users/show.json.jbuilder (5.7ms)
+Completed 200 OK in 83ms (Views: 55.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/users/3" for ::1 at 2020-10-20 10:11:39 -0700
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:14
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered api/users/show.json.jbuilder (3.0ms)
+Completed 200 OK in 29ms (Views: 25.9ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-10-20 10:11:41 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "2z93lJbyLkE5yxhCI9eJiQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "JYBright@liberl.orb"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "Ob-6ETgFw4NhbKIpLBGt7w"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "Ob-6ETgFw4NhbKIpLBGt7w"], ["updated_at", "2020-10-20 17:11:41.028433"], ["id", 3]]
+  ↳ app/models/user.rb:28
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/api/session" for ::1 at 2020-10-20 10:11:43 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"JYBri", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "JYBri"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+Completed 422 Unprocessable Entity in 2ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+

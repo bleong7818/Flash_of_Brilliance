@@ -1,7 +1,7 @@
 .modal-nav {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    font-family: sans-serif;
 }
 
  .modal {
@@ -148,4 +148,13 @@
 
 .email-and-password {
   width: 80%;
+}
+
+.form-errors {
+  color: #bb0000;
+  font-family: sans-serif;
+  line-height: 16.8px;
+  font-size: 12px;
+  font-style: italic;
+  text-align: left;
 }
