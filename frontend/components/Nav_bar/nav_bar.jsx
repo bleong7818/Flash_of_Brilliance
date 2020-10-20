@@ -10,6 +10,8 @@ class NavBar extends React.Component {
         this.state = { loginShow: false, sessionShow: false };
         this.showModal = this.showModal.bind(this);
         this.hideModal = this.hideModal.bind(this);
+        this.homepage = this.homepage.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     showModal(type) {
@@ -24,30 +26,45 @@ class NavBar extends React.Component {
         }
     }
 
+    homepage() {
+        e.preventDefault()
+        this.props.history("/") 
+    }
+
+    handleSubmit(e) {
+        e.preventDefault()
+        this.props.login(this.props.demoUser).then(() => {
+            this.props.history.push("/dashboard")
+        })
+    }
+
     render () {
         const display = this.props.currentUser ? (
            <DashboardContainer />
         ) : (
             <div className="modal-nav">
-                <img className="nav-logo" src="https://www.brainscape.com/blog/wp-content/uploads/2018/07/Transparent-Background.png" />
+                <img className="nav-logo" onClick={this.homepage} src="https://www.brainscape.com/blog/wp-content/uploads/2018/07/Transparent-Background.png" />
                 <div className="nav-bar-buttons">
-                    <button className="demo-button" type="submit" onClick={() => this.props.login(this.props.demoUser)}>Demo log in</button>
-                    <LoginModal show={this.state.loginShow}
-                        hideModal={this.hideModal}
-                        className="modal" />
-                    <button className="login-button" onClick={() => this.showModal("loginShow")}>
-                        Log In
-                    </button>
-                    <SignInModal show={this.state.sessionShow}
-                        hideModal={this.hideModal}
-                        className="modal" />
-                    <button className="sign-up-button" onClick={() => this.showModal("sessionShow")}>
-                        Get Started
-                    </button>
+                    <button className="demo-button" type="submit" onClick={this.handleSubmit}>Demo log in</button>
+                    <div className="login-modal-div">
+                        <LoginModal show={this.state.loginShow}
+                            hideModal={this.hideModal}
+                            className="modal" />
+                        <button className="login-button" onClick={() => this.showModal("loginShow")}>
+                            Log In
+                        </button>
+                    </div>
+                    <div className="sign-up-modal">
+                        <SignInModal show={this.state.sessionShow}
+                            hideModal={this.hideModal}
+                            className="modal" />
+                        <button className="sign-up-button" onClick={() => this.showModal("sessionShow")}>
+                            Get Started
+                        </button>
+                    </div>
                 </div>
             </div>
         )
-        
         return (
             <nav>
                 {display}

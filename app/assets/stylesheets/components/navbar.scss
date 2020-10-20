@@ -1,9 +1,20 @@
 .nav-bar-buttons {
     padding: 10px;
+    position: relative;
+    display: flex;
 }
+
+// .login-modal-div {
+//     position: absolute;
+// }
+
+// .sign-up-button {
+//     position: absolute;
+// }
 
 .login-button {
     // padding-right: 20px;
+    // position: absolute;
     background-color: #FDF8F7;
     border: none
 }
@@ -15,13 +26,15 @@
 }
 
 .sign-up-button:hover {
-    padding-left: 16px;
-    // padding-bottom: 19px;
+    padding-left: 17px;
+    padding-bottom: 19px;
     font-size: 14px;
 }
 
 .login-button:hover {
     font-size: 14px;
+    padding-left: 18px;
+    padding-bottom: 19px;
 }
 
 .nav-logo {
@@ -30,7 +43,8 @@
 }
 
 .demo-button {
-    padding: 20px;
+    // padding: 20px;
+    height: 55px;
     background: lightblue;
     border: none
 }

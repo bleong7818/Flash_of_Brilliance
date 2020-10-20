@@ -16,7 +16,6 @@ class Dashboard extends React.Component {
             this.props.history.push("/")})
     }
 
-
     render() {
         if (!this.props.user) return null;
         return (
