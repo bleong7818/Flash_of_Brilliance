@@ -18308,3 +18308,767 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 1413ms (Views: 1404.1ms | ActiveRecord: 0.0ms)
 
 
+Started POST "/api/session" for ::1 at 2020-10-21 11:03:34 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"Sieg@Liberl.orb", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "Sieg@Liberl.orb"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:33
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "Sieg@Liberl.orb"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:33
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "3XYx8KNcegFcmpeVKchwig"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:33
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "3XYx8KNcegFcmpeVKchwig"], ["updated_at", "2020-10-21 18:03:35.347967"], ["id", 1]]
+  ↳ app/models/user.rb:33
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:33
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (1.9ms)
+  Rendered api/users/show.json.jbuilder (94.5ms)
+Completed 200 OK in 459ms (Views: 105.2ms | ActiveRecord: 23.4ms)
+
+
+Started GET "/api/users/1" for ::1 at 2020-10-21 11:03:35 -0700
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:14
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered api/users/show.json.jbuilder (7.2ms)
+Completed 200 OK in 63ms (Views: 53.0ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-10-21 11:31:04 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "3XYx8KNcegFcmpeVKchwig"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:33
+  [1m[36mUser Exists (8.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "Sieg@Liberl.orb"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:33
+  [1m[36mUser Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "YrG7Ch8VplUJGsew_bHDHQ"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:33
+  [1m[36mUser Update (21.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "YrG7Ch8VplUJGsew_bHDHQ"], ["updated_at", "2020-10-21 18:31:04.801367"], ["id", 1]]
+  ↳ app/models/user.rb:33
+  [1m[35m (14.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:33
+Completed 200 OK in 182ms (Views: 0.4ms | ActiveRecord: 101.3ms)
+
+
+Started GET "/" for ::1 at 2020-10-21 11:31:06 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 1018ms (Views: 1011.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-21 11:31:39 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 672ms (Views: 666.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2020-10-21 11:31:42 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"Sieg@Liberl.orb", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "Sieg@Liberl.orb"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:33
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "Sieg@Liberl.orb"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:33
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "KKjsCSjUjK5HrLemgbDHcA"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:33
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "KKjsCSjUjK5HrLemgbDHcA"], ["updated_at", "2020-10-21 18:31:42.704440"], ["id", 1]]
+  ↳ app/models/user.rb:33
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:33
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (2.9ms)
+  Rendered api/users/show.json.jbuilder (82.5ms)
+Completed 200 OK in 480ms (Views: 92.3ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/api/users/1" for ::1 at 2020-10-21 11:31:42 -0700
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:14
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (2.0ms)
+  Rendered api/users/show.json.jbuilder (7.3ms)
+Completed 200 OK in 47ms (Views: 36.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/decks" for ::1 at 2020-10-21 11:32:26 -0700
+
+SyntaxError - syntax error, unexpected tIVAR, expecting keyword_end
+            render :json @deck.errors.full_messages, status...
+                         ^~~~~
+/Users/brandonleong/Desktop/FlashOfBrilliance/app/controllers/api/decks_controller.rb:17: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+...rrors.full_messages, status 422
+...                            ^~~
+/Users/brandonleong/Desktop/FlashOfBrilliance/app/controllers/api/decks_controller.rb:38: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+... ["Deck not found"], status 404
+...                            ^~~
+/Users/brandonleong/Desktop/FlashOfBrilliance/app/controllers/api/decks_controller.rb:48: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+... ["Deck not found"], status 404
+...                            ^~~:
+  app/controllers/api/decks_controller.rb:17:in `'
+
+Started GET "/" for ::1 at 2020-10-21 11:33:44 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "KKjsCSjUjK5HrLemgbDHcA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 147ms (Views: 136.6ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/api/users/1" for ::1 at 2020-10-21 11:33:45 -0700
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (120.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:14
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (3.3ms)
+  Rendered api/users/show.json.jbuilder (9.0ms)
+Completed 200 OK in 143ms (Views: 21.8ms | ActiveRecord: 120.1ms)
+
+
+Started POST "/api/decks" for ::1 at 2020-10-21 11:35:34 -0700
+
+SyntaxError - syntax error, unexpected tIVAR, expecting keyword_end
+            render :json @deck.errors.full_messages, status...
+                         ^~~~~
+/Users/brandonleong/Desktop/FlashOfBrilliance/app/controllers/api/decks_controller.rb:17: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+...rrors.full_messages, status 422
+...                            ^~~
+/Users/brandonleong/Desktop/FlashOfBrilliance/app/controllers/api/decks_controller.rb:38: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+... ["Deck not found"], status 404
+...                            ^~~
+/Users/brandonleong/Desktop/FlashOfBrilliance/app/controllers/api/decks_controller.rb:48: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+... ["Deck not found"], status 404
+...                            ^~~:
+  app/controllers/api/decks_controller.rb:17:in `'
+
+Started GET "/" for ::1 at 2020-10-21 11:36:20 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "KKjsCSjUjK5HrLemgbDHcA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (42.7ms)
+Completed 200 OK in 728ms (Views: 706.9ms | ActiveRecord: 19.0ms)
+
+
+Started GET "/api/users/1" for ::1 at 2020-10-21 11:36:21 -0700
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:14
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered api/users/show.json.jbuilder (24.2ms)
+Completed 200 OK in 62ms (Views: 41.8ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/api/decks/" for ::1 at 2020-10-21 11:36:28 -0700
+
+SyntaxError - syntax error, unexpected tIVAR, expecting keyword_end
+            render :json @deck.errors.full_messages, status...
+                         ^~~~~
+/Users/brandonleong/Desktop/FlashOfBrilliance/app/controllers/api/decks_controller.rb:18: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+...rrors.full_messages, status 422
+...                            ^~~
+/Users/brandonleong/Desktop/FlashOfBrilliance/app/controllers/api/decks_controller.rb:39: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+... ["Deck not found"], status 404
+...                            ^~~
+/Users/brandonleong/Desktop/FlashOfBrilliance/app/controllers/api/decks_controller.rb:49: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+... ["Deck not found"], status 404
+...                            ^~~:
+  app/controllers/api/decks_controller.rb:18:in `'
+
+Started POST "/api/decks/" for ::1 at 2020-10-21 11:37:34 -0700
+
+SyntaxError - syntax error, unexpected tIVAR, expecting keyword_end
+            render :json @deck.errors.full_messages, status...
+                         ^~~~~
+/Users/brandonleong/Desktop/FlashOfBrilliance/app/controllers/api/decks_controller.rb:18: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+...rrors.full_messages, status 422
+...                            ^~~
+/Users/brandonleong/Desktop/FlashOfBrilliance/app/controllers/api/decks_controller.rb:39: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+... ["Deck not found"], status 404
+...                            ^~~
+/Users/brandonleong/Desktop/FlashOfBrilliance/app/controllers/api/decks_controller.rb:49: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+... ["Deck not found"], status 404
+...                            ^~~:
+  app/controllers/api/decks_controller.rb:18:in `'
+
+Started GET "/" for ::1 at 2020-10-21 11:38:02 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "KKjsCSjUjK5HrLemgbDHcA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendered api/users/_user.json.jbuilder (1.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (44.8ms)
+Completed 200 OK in 170ms (Views: 157.3ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/api/users/1" for ::1 at 2020-10-21 11:38:03 -0700
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:14
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.9ms)
+  Rendered api/users/show.json.jbuilder (15.2ms)
+Completed 200 OK in 34ms (Views: 30.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/decks/" for ::1 at 2020-10-21 11:38:11 -0700
+
+SyntaxError - syntax error, unexpected tIVAR, expecting keyword_end
+            render :json @deck.errors.full_messages, status...
+                         ^~~~~
+/Users/brandonleong/Desktop/FlashOfBrilliance/app/controllers/api/decks_controller.rb:19: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+...rrors.full_messages, status 422
+...                            ^~~
+/Users/brandonleong/Desktop/FlashOfBrilliance/app/controllers/api/decks_controller.rb:40: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+... ["Deck not found"], status 404
+...                            ^~~
+/Users/brandonleong/Desktop/FlashOfBrilliance/app/controllers/api/decks_controller.rb:50: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+... ["Deck not found"], status 404
+...                            ^~~:
+  app/controllers/api/decks_controller.rb:19:in `'
+
+Started GET "/" for ::1 at 2020-10-21 11:45:23 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "KKjsCSjUjK5HrLemgbDHcA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendered api/users/_user.json.jbuilder (1.0ms)
+  Rendered static_pages/root.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 921ms (Views: 910.8ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/api/users/1" for ::1 at 2020-10-21 11:45:25 -0700
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:14
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered api/users/show.json.jbuilder (4.3ms)
+Completed 200 OK in 30ms (Views: 18.7ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/api/decks/" for ::1 at 2020-10-21 11:46:04 -0700
+
+SyntaxError - syntax error, unexpected tIVAR, expecting keyword_end
+            render :json @deck.errors.full_messages, status...
+                         ^~~~~
+/Users/brandonleong/Desktop/FlashOfBrilliance/app/controllers/api/decks_controller.rb:19: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+...rrors.full_messages, status 422
+...                            ^~~
+/Users/brandonleong/Desktop/FlashOfBrilliance/app/controllers/api/decks_controller.rb:40: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+... ["Deck not found"], status 404
+...                            ^~~
+/Users/brandonleong/Desktop/FlashOfBrilliance/app/controllers/api/decks_controller.rb:50: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+... ["Deck not found"], status 404
+...                            ^~~:
+  app/controllers/api/decks_controller.rb:19:in `'
+
+Started GET "/" for ::1 at 2020-10-21 11:46:18 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "KKjsCSjUjK5HrLemgbDHcA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 711ms (Views: 703.8ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/api/users/1" for ::1 at 2020-10-21 11:46:19 -0700
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:14
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered api/users/show.json.jbuilder (3.8ms)
+Completed 200 OK in 37ms (Views: 34.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/decks/" for ::1 at 2020-10-21 11:47:30 -0700
+
+SyntaxError - syntax error, unexpected tIVAR, expecting keyword_end
+            render :json @deck.errors.full_messages, status...
+                         ^~~~~
+/Users/brandonleong/Desktop/FlashOfBrilliance/app/controllers/api/decks_controller.rb:19: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+...rrors.full_messages, status 422
+...                            ^~~
+/Users/brandonleong/Desktop/FlashOfBrilliance/app/controllers/api/decks_controller.rb:40: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+... ["Deck not found"], status 404
+...                            ^~~
+/Users/brandonleong/Desktop/FlashOfBrilliance/app/controllers/api/decks_controller.rb:50: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+... ["Deck not found"], status 404
+...                            ^~~:
+  app/controllers/api/decks_controller.rb:19:in `'
+
+Started GET "/" for ::1 at 2020-10-21 11:47:46 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "KKjsCSjUjK5HrLemgbDHcA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendered api/users/_user.json.jbuilder (1.0ms)
+  Rendered static_pages/root.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 649ms (Views: 641.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/users/1" for ::1 at 2020-10-21 11:47:48 -0700
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (7.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:14
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (3.6ms)
+Completed 200 OK in 24ms (Views: 14.7ms | ActiveRecord: 7.6ms)
+
+
+Started POST "/api/decks/" for ::1 at 2020-10-21 11:48:57 -0700
+
+SyntaxError - syntax error, unexpected tIVAR, expecting keyword_end
+            render :json @deck.errors.full_messages, status...
+                         ^~~~~
+/Users/brandonleong/Desktop/FlashOfBrilliance/app/controllers/api/decks_controller.rb:19: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+...rrors.full_messages, status 422
+...                            ^~~
+/Users/brandonleong/Desktop/FlashOfBrilliance/app/controllers/api/decks_controller.rb:40: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+... ["Deck not found"], status 404
+...                            ^~~
+/Users/brandonleong/Desktop/FlashOfBrilliance/app/controllers/api/decks_controller.rb:50: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+... ["Deck not found"], status 404
+...                            ^~~:
+  app/controllers/api/decks_controller.rb:19:in `'
+
+Started GET "/" for ::1 at 2020-10-21 11:50:55 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "KKjsCSjUjK5HrLemgbDHcA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendered api/users/_user.json.jbuilder (1.0ms)
+  Rendered static_pages/root.html.erb within layouts/application (77.1ms)
+Completed 200 OK in 658ms (Views: 616.2ms | ActiveRecord: 37.9ms)
+
+
+Started GET "/api/users/1" for ::1 at 2020-10-21 11:50:57 -0700
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:14
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (1.4ms)
+  Rendered api/users/show.json.jbuilder (12.3ms)
+Completed 200 OK in 33ms (Views: 30.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/decks/" for ::1 at 2020-10-21 11:52:05 -0700
+
+SyntaxError - syntax error, unexpected tIVAR, expecting keyword_end
+            render :json @deck.errors.full_messages, status...
+                         ^~~~~
+/Users/brandonleong/Desktop/FlashOfBrilliance/app/controllers/api/decks_controller.rb:19: syntax error, unexpected tLABEL, expecting '='
+...k.errors.full_messages, status: 422
+...                        ^~~~~~~:
+  app/controllers/api/decks_controller.rb:19:in `'
+
+Started GET "/" for ::1 at 2020-10-21 11:52:52 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "KKjsCSjUjK5HrLemgbDHcA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (34.4ms)
+Completed 200 OK in 130ms (Views: 120.0ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/api/users/1" for ::1 at 2020-10-21 11:52:53 -0700
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (19.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:14
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (1.0ms)
+  Rendered api/users/show.json.jbuilder (18.1ms)
+Completed 200 OK in 62ms (Views: 40.0ms | ActiveRecord: 19.9ms)
+
+
+Started POST "/api/decks/" for ::1 at 2020-10-21 11:53:01 -0700
+Processing by Api::DecksController#create as JSON
+  Parameters: {"deck"=>{"title"=>"The Ruby Knight and the Azure Knight"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "KKjsCSjUjK5HrLemgbDHcA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Started GET "/" for ::1 at 2020-10-21 12:11:19 -0700
+Started GET "/" for ::1 at 2020-10-21 12:11:19 -0700
+Completed 500 Internal Server Error in 1098659ms (ActiveRecord: 65.5ms)
+
+
+
+NoMethodError - undefined method `creator_id=' for nil:NilClass:
+  app/controllers/api/decks_controller.rb:12:in `create'
+
+Started GET "/" for ::1 at 2020-10-21 12:11:19 -0700
+Started GET "/" for ::1 at 2020-10-21 12:11:19 -0700
+Processing by StaticPagesController#root as HTML
+Processing by StaticPagesController#root as HTML
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+Processing by StaticPagesController#root as HTML
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "KKjsCSjUjK5HrLemgbDHcA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered api/users/_user.json.jbuilder (6.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (75.5ms)
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (34.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "KKjsCSjUjK5HrLemgbDHcA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendered api/users/_user.json.jbuilder (1.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (116.6ms)
+  [1m[36mUser Load (8.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "KKjsCSjUjK5HrLemgbDHcA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mUser Load (98.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "KKjsCSjUjK5HrLemgbDHcA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered static_pages/root.html.erb within layouts/application (124.9ms)
+  Rendered api/users/_user.json.jbuilder (3.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (130.0ms)
+Completed 200 OK in 4127ms (Views: 4089.4ms | ActiveRecord: 11.5ms)
+
+
+Completed 200 OK in 4182ms (Views: 4097.2ms | ActiveRecord: 73.3ms)
+
+
+Completed 200 OK in 4416ms (Views: 4280.1ms | ActiveRecord: 98.2ms)
+
+
+Completed 200 OK in 4319ms (Views: 4292.3ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/api/users/1" for ::1 at 2020-10-21 12:11:25 -0700
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:14
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered api/users/show.json.jbuilder (6.4ms)
+Completed 200 OK in 33ms (Views: 24.0ms | ActiveRecord: 4.8ms)
+
+
+Started POST "/api/decks/" for ::1 at 2020-10-21 12:11:53 -0700
+Processing by Api::DecksController#create as JSON
+  Parameters: {"deck"=>{"title"=>"The Ruby Knight and the Azure Knight"}}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "KKjsCSjUjK5HrLemgbDHcA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 500 Internal Server Error in 6273ms (ActiveRecord: 1.9ms)
+
+
+
+NoMethodError - undefined method `creator_id=' for nil:NilClass:
+  app/controllers/api/decks_controller.rb:12:in `create'
+
+Started POST "/api/decks/" for ::1 at 2020-10-21 12:12:06 -0700
+Processing by Api::DecksController#create as JSON
+  Parameters: {"deck"=>{"title"=>"The Ruby Knight and the Azure Knight"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "KKjsCSjUjK5HrLemgbDHcA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 500 Internal Server Error in 41649ms (ActiveRecord: 0.8ms)
+
+
+
+NoMethodError - undefined method `creator_id=' for nil:NilClass:
+  app/controllers/api/decks_controller.rb:12:in `create'
+
+Started GET "/" for ::1 at 2020-10-21 12:13:32 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "KKjsCSjUjK5HrLemgbDHcA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (35.9ms)
+Completed 200 OK in 108ms (Views: 91.6ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/api/users/1" for ::1 at 2020-10-21 12:13:33 -0700
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:14
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered api/users/show.json.jbuilder (14.5ms)
+Completed 200 OK in 39ms (Views: 25.2ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/api/decks/" for ::1 at 2020-10-21 13:41:31 -0700
+Processing by Api::DecksController#create as JSON
+  Parameters: {"deck"=>{"title"=>"The Ruby Knight and the Azure Knight"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "KKjsCSjUjK5HrLemgbDHcA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 500 Internal Server Error in 53072ms (ActiveRecord: 25.5ms)
+
+
+
+NoMethodError - undefined method `creator_id=' for nil:NilClass:
+  app/controllers/api/decks_controller.rb:12:in `create'
+
+Started POST "/api/decks/" for ::1 at 2020-10-21 13:46:40 -0700
+Processing by Api::DecksController#create as JSON
+  Parameters: {"deck"=>{"title"=>"The Ruby Knight and the Azure Knight"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "KKjsCSjUjK5HrLemgbDHcA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 500 Internal Server Error in 9947ms (ActiveRecord: 0.6ms)
+
+
+
+NoMethodError - undefined method `creator_id=' for nil:NilClass:
+  app/controllers/api/decks_controller.rb:12:in `create'
+
+Started GET "/" for ::1 at 2020-10-21 13:46:54 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "KKjsCSjUjK5HrLemgbDHcA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendered api/users/_user.json.jbuilder (1.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (59.9ms)
+Completed 200 OK in 186ms (Views: 160.0ms | ActiveRecord: 16.7ms)
+
+
+Started GET "/api/users/1" for ::1 at 2020-10-21 13:46:55 -0700
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:14
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered api/users/show.json.jbuilder (24.2ms)
+Completed 200 OK in 51ms (Views: 38.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/decks/" for ::1 at 2020-10-21 13:47:00 -0700
+Processing by Api::DecksController#create as JSON
+  Parameters: {"deck"=>{"title"=>"The Ruby Knight and the Azure Knight"}}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "KKjsCSjUjK5HrLemgbDHcA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 16.4ms)
+
+
+
+NoMethodError - undefined method `creator_id=' for nil:NilClass:
+  app/controllers/api/decks_controller.rb:13:in `create'
+
+Started POST "/api/decks/" for ::1 at 2020-10-21 13:47:29 -0700
+Processing by Api::DecksController#create as JSON
+  Parameters: {"deck"=>{"title"=>"The Ruby Knight and the Azure Knight"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "KKjsCSjUjK5HrLemgbDHcA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Completed 500 Internal Server Error in 16424ms (ActiveRecord: 16.3ms)
+
+
+
+NoMethodError - undefined method `creator_id=' for nil:NilClass:
+  app/controllers/api/decks_controller.rb:13:in `create'
+
+Started GET "/" for ::1 at 2020-10-21 13:47:48 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "KKjsCSjUjK5HrLemgbDHcA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (49.2ms)
+Completed 200 OK in 176ms (Views: 161.5ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/api/users/1" for ::1 at 2020-10-21 13:47:49 -0700
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (11.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:14
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered api/users/show.json.jbuilder (43.3ms)
+Completed 200 OK in 89ms (Views: 74.4ms | ActiveRecord: 11.5ms)
+
+
+Started POST "/api/decks/" for ::1 at 2020-10-21 13:47:55 -0700
+Processing by Api::DecksController#create as JSON
+  Parameters: {"deck"=>{"title"=>"The Ruby Knight and the Azure Knight"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "KKjsCSjUjK5HrLemgbDHcA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/decks_controller.rb:17
+  [1m[35m (7.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/decks_controller.rb:17
+Completed 422 Unprocessable Entity in 9763ms (Views: 0.3ms | ActiveRecord: 43.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-21 13:48:19 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "KKjsCSjUjK5HrLemgbDHcA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (33.6ms)
+Completed 200 OK in 120ms (Views: 107.3ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/api/users/1" for ::1 at 2020-10-21 13:48:20 -0700
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (8.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:14
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered api/users/show.json.jbuilder (14.8ms)
+Completed 200 OK in 202ms (Views: 37.2ms | ActiveRecord: 98.4ms)
+
+
+Started POST "/api/decks/" for ::1 at 2020-10-21 13:48:25 -0700
+Processing by Api::DecksController#create as JSON
+  Parameters: {"deck"=>{"title"=>"The Ruby Knight and the Azure Knight"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "KKjsCSjUjK5HrLemgbDHcA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/decks_controller.rb:17
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/decks_controller.rb:17
+Completed 422 Unprocessable Entity in 60961ms (Views: 0.2ms | ActiveRecord: 21.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-21 13:49:38 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "KKjsCSjUjK5HrLemgbDHcA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (59.4ms)
+Completed 200 OK in 141ms (Views: 123.5ms | ActiveRecord: 15.3ms)
+
+
+Started GET "/api/users/1" for ::1 at 2020-10-21 13:49:39 -0700
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (12.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:14
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (2.8ms)
+  Rendered api/users/show.json.jbuilder (25.9ms)
+Completed 200 OK in 169ms (Views: 95.9ms | ActiveRecord: 42.8ms)
+
+
+Started POST "/api/decks/" for ::1 at 2020-10-21 13:49:43 -0700
+Processing by Api::DecksController#create as JSON
+  Parameters: {"deck"=>{"title"=>"The Ruby Knight and the Azure Knight"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "KKjsCSjUjK5HrLemgbDHcA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/decks_controller.rb:17
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/decks_controller.rb:17
+  [1m[36mDeck Create (33.1ms)[0m  [1m[32mINSERT INTO "decks" ("creator_id", "title", "creator_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["creator_id", 1], ["title", "The Ruby Knight and the Azure Knight"], ["creator_name", "Kloe Rinz"], ["created_at", "2020-10-21 20:49:55.767757"], ["updated_at", "2020-10-21 20:49:55.767757"]]
+  ↳ app/controllers/api/decks_controller.rb:17
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/decks_controller.rb:17
+  Rendering api/decks/show.json.jbuilder
+  Rendered api/decks/_deck.json.jbuilder (0.7ms)
+  Rendered api/decks/show.json.jbuilder (3.4ms)
+Completed 200 OK in 11888ms (Views: 20.1ms | ActiveRecord: 63.4ms)
+
+
+Started GET "/" for ::1 at 2020-10-21 13:50:40 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "KKjsCSjUjK5HrLemgbDHcA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 125ms (Views: 105.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/users/1" for ::1 at 2020-10-21 13:50:40 -0700
+Processing by Api::UsersController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:14
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered api/users/show.json.jbuilder (7.6ms)
+Completed 200 OK in 24ms (Views: 19.8ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/api/decks/" for ::1 at 2020-10-21 14:00:52 -0700
+Processing by Api::DecksController#create as JSON
+  Parameters: {"deck"=>{"title"=>"The Ruby Knight and the Asure Knight"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "KKjsCSjUjK5HrLemgbDHcA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[35m (5.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/decks_controller.rb:17
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/decks_controller.rb:17
+  [1m[36mDeck Create (42.3ms)[0m  [1m[32mINSERT INTO "decks" ("creator_id", "title", "creator_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["creator_id", 1], ["title", "The Ruby Knight and the Asure Knight"], ["creator_name", "Kloe Rinz"], ["created_at", "2020-10-21 21:01:09.206730"], ["updated_at", "2020-10-21 21:01:09.206730"]]
+  ↳ app/controllers/api/decks_controller.rb:17
+  [1m[35m (23.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/decks_controller.rb:17
+  Rendering api/decks/show.json.jbuilder
+  Rendered api/decks/_deck.json.jbuilder (2.8ms)
+  Rendered api/decks/show.json.jbuilder (7.4ms)
+Completed 200 OK in 16418ms (Views: 33.5ms | ActiveRecord: 73.9ms)
+
+
+  [1m[36mDeck Load (29.6ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+Started DELETE "/api/deck/2" for ::1 at 2020-10-21 14:02:56 -0700
+  
+ActionController::RoutingError (No route matches [DELETE] "/api/deck/2"):
+  
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/decks" for ::1 at 2020-10-21 14:03:34 -0700
+Processing by Api::DecksController#index as JSON
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "KKjsCSjUjK5HrLemgbDHcA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+No template found for Api::DecksController#index, rendering head :no_content
+Completed 204 No Content in 162ms (ActiveRecord: 5.8ms)
+
+

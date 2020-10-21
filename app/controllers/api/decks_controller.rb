@@ -7,14 +7,18 @@ class Api::DecksController < ApplicationController
     end
 
     def create 
+        # debugger;
         @deck = Deck.new(deck_params)
-        @goal.creator_id = params[:creator_id]
+        # debugger;
+        @deck.creator_id = @current_user.id
         @deck.creator_name = @current_user.first_name + " " + @current_user.last_name
+        debugger;
 
         if @deck.save
             render :show
         else
-            render :json @deck.errors.full_messages, status 422
+            render json: @deck.errors.full_messages, status: 422
+
         end
     end
 
@@ -35,7 +39,7 @@ class Api::DecksController < ApplicationController
         if @goal && @goal.destroy
             render "api/users/show"
         else
-            render json: ["Deck not found"], status 404
+            render json: ["Deck not found"], status: 404
         end
     end
 
@@ -45,12 +49,12 @@ class Api::DecksController < ApplicationController
         if @deck && @deck.update
             render :show
         else
-            render json: ["Deck not found"], status 404
+            render json: ["Deck not found"], status: 404
         end
     end
 
     private
     def deck_params
-        params.require(:deck).permit(:title, :creator_name)
+        params.require(:deck).permit(:title)
     end
 end
