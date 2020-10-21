@@ -9,6 +9,7 @@ class Api::DecksController < ApplicationController
     def create 
         @deck = Deck.new(deck_params)
         @goal.creator_id = params[:creator_id]
+        @deck.creator_name = @current_user.first_name + " " + @current_user.last_name
 
         if @deck.save
             render :show
