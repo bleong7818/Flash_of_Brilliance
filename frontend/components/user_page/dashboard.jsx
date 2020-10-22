@@ -1,5 +1,5 @@
 import React from 'react';
-import DeckShowContainer from '../decks/deck_show_container';
+import DeckShowContainer from '../decks/deck_show_container'
 
 class Dashboard extends React.Component {
     constructor(props) {
@@ -30,7 +30,7 @@ class Dashboard extends React.Component {
                     </div>
                 </section>
                 <div className="current-deck">
-                    <DeckShowContainer />
+                    current deck
                 </div>
             </main>   
         )

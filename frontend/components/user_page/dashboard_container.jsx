@@ -1,6 +1,4 @@
 import { connect } from 'react-redux';
-import React from 'react';
-// import { requestUser } from '../../actions/session_actions';
 import Dashboard from './dashboard';
 import { requestUser, logout } from '../../actions/session_actions';
 import { withRouter } from 'react-router-dom'

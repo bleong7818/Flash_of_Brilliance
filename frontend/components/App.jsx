@@ -6,15 +6,17 @@ import NavBarContainer from './Nav_bar/nav_bar_container';
 // import SignupFormContainer from './session_form/signup_form_container';
 import DashboardContainer from './user_page/dashboard_container';
 import MainPageContainer from './main_page/main_page_container'
+import DeckShowContainer from './decks/deck_show_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import MainPage from './main_page/main_page';
 
 const App = () => (
     <div className="front-page">
-        <header>
-        </header>
+        <header></header>
         <Switch>
+            {/* {debugger} */}
             <AuthRoute exact path={`/dashboard`} component={DashboardContainer}/>
+            <Route exact path="/decks/:deckId" component={DeckShowContainer} />
             <Route path="/" component={MainPageContainer} />
         </Switch>
     </div>

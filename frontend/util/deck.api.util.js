@@ -3,12 +3,11 @@ export const fetchDecks = () => {
         url: "/api/decks",
         method: "GET"
     })
-    
 }
 
 export const fetchDeck = (deckId) => {
     return $.ajax ({
-        url: `/api/deck/${deckId}`,
+        url: `/api/decks/${deckId}`,
         method: "GET"
     })
 };
@@ -23,7 +22,7 @@ export const createDeck = (deck) => {
 
 export const updateDeck = (deck) => {
     return $.ajax ({
-        url: `/api/deck/${deck.id}`,
+        url: `/api/decks/${deck.id}`,
         method: "PATCH",
         data: { deck }
     })
@@ -31,7 +30,7 @@ export const updateDeck = (deck) => {
 
 export const deleteDeck = (deckId) => {
     return $.ajax ({
-        url: `/api/deck/${deckId}`,
+        url: `/api/decks/${deckId}`,
         method: "DELETE"
     })
 };

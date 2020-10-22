@@ -7,11 +7,7 @@ class Api::DecksController < ApplicationController
     end
 
     def create 
-    
         @deck = Deck.new(deck_params)
-        @deck.creator_id = @current_user.id
-        @deck.creator_name = @current_user.first_name + " " + @current_user.last_name
-
         if @deck.save
             render :show
         else
@@ -24,6 +20,7 @@ class Api::DecksController < ApplicationController
         @deck = Deck.find_by(id: params[:id])
 
         if @deck 
+
             render :show
         else
             render json: @deck.errors.full_messages, status: 404
@@ -53,6 +50,6 @@ class Api::DecksController < ApplicationController
 
     private
     def deck_params
-        params.require(:deck).permit(:title)
+        params.require(:deck).permit(:title, :creator_id)
     end
 end

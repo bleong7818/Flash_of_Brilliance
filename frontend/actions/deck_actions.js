@@ -12,11 +12,10 @@ const receiveDecks = (decks) => {
     }
 }
 
-const receiveDeck = (deck, creator) => {
+const receiveDeck = (deck) => {
     return {
         type: RECEIVE_DECK,
-        deck,
-        creator
+        deck
     };
 };
 

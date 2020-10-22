@@ -6,5 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create({first_name: 'Kloe', last_name: 'Rinz', email: "Sieg@Liberl.orb", password: "Grancel"})
-Deck.create({title: "The White Madrigal", creator_name: "Kloe Rinz", creator_id: 1})
+User.destroy_all
+Deck.destroy_all
+
+user1 = User.create({first_name: 'Kloe', last_name: 'Rinz', email: "Sieg@Liberl.orb", password: "Grancel"})
+deck1 = Deck.create({id: 1, title: "The White Madrigal", creator_id: user1.id})

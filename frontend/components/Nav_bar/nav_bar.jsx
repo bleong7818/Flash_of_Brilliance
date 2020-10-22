@@ -34,7 +34,9 @@ class NavBar extends React.Component {
 
     demoSubmit(e) {
         e.preventDefault()
-        this.props.login(this.props.demoUser).then(() => {
+        this.props.login(this.props.demoUser).then(
+            () => {
+            // debugger;
             this.props.history.push("/dashboard")
         })
     }
@@ -42,7 +44,6 @@ class NavBar extends React.Component {
     render () {
         const display = this.props.currentUser ? (
            <DashboardContainer />
-          
         ) : (
             <div className="modal-nav">
                 <img className="nav-logo" onClick={this.homepage} src="https://www.brainscape.com/blog/wp-content/uploads/2018/07/Transparent-Background.png" />
