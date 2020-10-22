@@ -53,13 +53,22 @@ export const requestDeck = (deckId) => {
 };
 
 export const createDeck = (deck) => dispatch => {
-    debugger;
+
     return APIUtil.createDeck(deck)
         .then(
             newDeck => dispatch(receiveDeck(newDeck)),
             errors => dispatch(receiveDeckErrors(errors.responseJSON))
         );
 };
+
+// export const createDeck = deck => {
+//     return dispatch => {
+//         return APIUtil.createDeck(deck)
+//             .then(newDeck => {
+//                 return dispatch(createDeck(newDeck))
+//             }
+//     };
+// };
 
 export const updateDeck = (deck) => {
     return dispatch => {

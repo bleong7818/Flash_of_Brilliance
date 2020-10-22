@@ -7,12 +7,10 @@ class Api::DecksController < ApplicationController
     end
 
     def create 
-        # debugger;
+    
         @deck = Deck.new(deck_params)
-        # debugger;
         @deck.creator_id = @current_user.id
         @deck.creator_name = @current_user.first_name + " " + @current_user.last_name
-        debugger;
 
         if @deck.save
             render :show

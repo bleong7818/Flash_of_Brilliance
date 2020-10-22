@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import configureStore from './store/store';
-// import {login, logout, signup} from './util/session_api_util';
+import {login, logout, signup} from './util/session_api_util';
 import Root from './components/root';
-import { createDeck, deleteDeck, fetchDecks } from './util/deck.api.util';
+import { createDeck, deleteDeck, requestDecks } from './actions/deck_actions';
 
 document.addEventListener("DOMContentLoaded", () => {
     let store;
@@ -26,10 +26,10 @@ document.addEventListener("DOMContentLoaded", () => {
     window.dispatch = store.dispatch
     window.createDeck = createDeck
     window.deleteDeck = deleteDeck
-    window.fetchDecks = fetchDecks
-    // window.login = login;
-    // window.logout = logout;
-    // window.signup = signup;
+    window.fetchDecks = requestDecks
+    window.login = login;
+    window.logout = logout;
+    window.signup = signup;
     //test
 
     const root = document.getElementById('root');

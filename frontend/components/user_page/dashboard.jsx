@@ -1,4 +1,5 @@
 import React from 'react';
+import DeckShowContainer from '../decks/deck_show_container';
 
 class Dashboard extends React.Component {
     constructor(props) {
@@ -28,8 +29,8 @@ class Dashboard extends React.Component {
                         <button className="dashboard-logout" onClick={this.handleSubmit}>Log out</button>
                     </div>
                 </section>
-                <div className="current-class">
-                    Sample Class
+                <div className="current-deck">
+                    <DeckShowContainer />
                 </div>
             </main>   
         )

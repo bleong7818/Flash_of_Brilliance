@@ -3,6 +3,7 @@ import { updateDeck, deleteDeck, requestDeck } from '../../actions/deck_actions'
 import DeckShow from './deck_show';
 
 const MSTP = (state, ownProps) => {
+    debugger;
     return {
         deck: state.entities.decks[ownProps.match.params.deckId]
     }
@@ -10,9 +11,9 @@ const MSTP = (state, ownProps) => {
 
 const MDTP = dispatch => {
     return {
-        updateDeck = (deck) => dispatch(updateDeck(deck)),
-        deleteDeck = (deckId) => dispatch(deleteDeck(deckId)),
-        requestDeck = (deckId) => dispatch(requestDeck(deckId))
+        updateDeck: (deck) => dispatch(updateDeck(deck)),
+        deleteDeck: (deckId) => dispatch(deleteDeck(deckId)),
+        requestDeck: (deckId) => dispatch(requestDeck(deckId))
     }
 }
 

@@ -3,13 +3,15 @@ import React from 'react';
 class DeckShow extends React.Component {
     constructor(props) {
         super(props)
+        // debugger;
     }
 
-    componentDidMount() {
-        this.props.requestDeck(this.props.deck.id)
-    }
+    // componentDidMount() {
+    //     this.props.requestDeck(this.props.deck.id)
+    // }
 
     render() {
+        // debugger;
         return (
             <div className="deck-show">
                 <div className="first-row">
@@ -23,4 +25,4 @@ class DeckShow extends React.Component {
     }
 }
 
-export default DeckShow
+export default DeckShow;

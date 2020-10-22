@@ -7,3 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create({first_name: 'Kloe', last_name: 'Rinz', email: "Sieg@Liberl.orb", password: "Grancel"})
+Deck.create({title: "The White Madrigal", creator_name: "Kloe Rinz", creator_id: 1})
