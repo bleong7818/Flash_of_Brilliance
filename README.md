@@ -6,13 +6,13 @@ Flash of Brilliance is a flashcard website for people dedicated to learning and 
 
 On the technical side, Flash of Brilliance is a an application that uses Rails and React. Rails makes up the backend for the project while the front end follows the react-redux cycle, including ajax calls, actions, reducers, and components. 
 
-**These the specs for the app
+***These the specs for the app
 
 Ruby version: 2.5.1
 
 Rails version: 5.2.4.4
 
-**Special Feature
+***Special Feature
 
 The feature I am most proud of on this app is the login and sign up modals. I did not have much experience with modals prior to this project, and in the end the two modals took me about seven hours of research and experimentation to get done. At first I tried to use bootstrapping, but that did not really work out. Next, I tried putting the forms inside the modal component, but I realized after some time that the modal component would have too much functionality. The examples I had been using as reference had done so, but I realized that I could put another component inside of the modal component, i.e. the login and sign up containers. The decision to put the nest those containers inside the modal component really streamlined the process of getting the modals to function properly. While it does mean that the navigation bar on the main screen has two nested components inside of it, I appreciate the separation between all three components that allows for more focused work on each of the components.
 
@@ -75,7 +75,7 @@ I ended up addressing these problems as follows.
 
 
 
-**Instructions for how to run the test suite
+***Instructions for how to run the test suite
 
 Start out with installing the bundle.
 
@@ -93,7 +93,7 @@ Run the rails server and you should be good to go! The server should display a l
 
         rails s
 
-**Future Additions for the Project
+***Future Additions for the Project
 
 * Full CRUD methods for flashcard decks and flashcards will be accessible by logged in users.
 * Logged in users will also be able to study flashcard decks.
