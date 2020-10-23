@@ -5,7 +5,6 @@ import  NavBar from './nav_bar';
 import {withRouter} from 'react-router-dom';
 
 const MSTP = (state, ownProps) => {
-    debugger;
     return {
         currentUser: state.entities.users[state.session.id],
         errors: state.errors.session,

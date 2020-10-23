@@ -3,7 +3,7 @@ import React from 'react';
 class DeckShow extends React.Component {
     constructor(props) {
         super(props)
-        // debugger;
+
     }
 
     componentDidMount() {

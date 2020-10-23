@@ -8,10 +8,6 @@ const MSTP = (state, ownProps) => {
     return {
         deck: state.entities.decks[ownProps.match.params.deckId],
         deckId: ownProps.match.params.deckId,
-        // creator_name: {
-        //     first_name: state.entities.decks[ownProps.match.params.deckId].creator.first_name,
-        //     last_name: state.entities.decks[ownProps.match.params.deckId].creator.last_name
-        // }
     }
 }
 

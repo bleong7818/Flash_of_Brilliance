@@ -62,7 +62,6 @@ class LoginForm extends React.Component {
                         </div>
                  <div className="close-button" onClick={this.handleClose}>×</div>
                 </form>
-
             </div>
         )
     }
