@@ -6,7 +6,8 @@ Flash of Brilliance is a flashcard website for people dedicated to learning and 
 
 On the technical side, Flash of Brilliance is a an application that uses Rails and React. Rails makes up the backend for the project while the front end follows the react-redux cycle, including ajax calls, actions, reducers, and components. 
 
-***These the specs for the app
+These the specs for the app
+=============
 
 Ruby version: 2.5.1
 
