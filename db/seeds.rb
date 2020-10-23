@@ -11,3 +11,7 @@ Deck.destroy_all
 
 user1 = User.create({first_name: 'Kloe', last_name: 'Rinz', email: "Sieg@Liberl.orb", password: "Grancel"})
 deck1 = Deck.create({id: 1, title: "The White Madrigal", creator_id: user1.id})
+user2 = User.create({first_name: 'Estelle', last_name: 'Bright', email: "BigStick@liberl.orb", password: "Shines"})
+deck2 = Deck.create({id: 2, title: "Bracer Rules", creator_id: user2.id})
+user3 = User.create({first_name: 'Joshua', last_name: 'Bright', email: "JYBright@liberl.orb", password: "KarinAndLoewe"})
+deck3 = Deck.create({id: 3, title: "How to be happy", creator_id: user3.id})
