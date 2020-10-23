@@ -5,6 +5,7 @@ import  NavBar from './nav_bar';
 import {withRouter} from 'react-router-dom';
 
 const MSTP = (state, ownProps) => {
+    debugger;
     return {
         currentUser: state.entities.users[state.session.id],
         errors: state.errors.session,
@@ -22,4 +23,4 @@ const MDTP = (dispatch) => {
     };
 };
 
-export default connect(MSTP, MDTP)(NavBar);
+export default withRouter(connect(MSTP, MDTP)(NavBar));

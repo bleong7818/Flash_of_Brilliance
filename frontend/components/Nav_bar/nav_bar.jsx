@@ -36,7 +36,6 @@ class NavBar extends React.Component {
         e.preventDefault()
         this.props.login(this.props.demoUser).then(
             () => {
-            debugger;
             this.props.history.push("/dashboard")
         })
     }
