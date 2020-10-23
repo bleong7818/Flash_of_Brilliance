@@ -14,9 +14,7 @@ Rails version: 5.2.4.4
 
 **Instructions for running the app once downloaded
 
-<blockquote>
-        <p>Bundle install</p>
-</blockquote>
+        Bundle Install
 
 **Future Additions for the Project
 
