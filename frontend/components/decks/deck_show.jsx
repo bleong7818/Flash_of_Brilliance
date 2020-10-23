@@ -12,14 +12,16 @@ class DeckShow extends React.Component {
     }
 
     render() {
-        debugger;
         if (!this.props.deck) return null;
         return (
             <div className="deck-show">
                 <div className="first-row">
-                    <div>stuff
-                        <h1>{this.props.deck.title}</h1>
-                        <div>Creator: {this.props.deck.creator.first_name + " " +this.props.deck.creator.last_name}</div>
+                    <div className="pack-header-main">
+                        <h1 className="deck-title">{this.props.deck.title}</h1>
+                        <div className="deck-show-creator">Creator: {this.props.deck.creator.first_name + " " +this.props.deck.creator.last_name}</div>
+                    </div>
+                    <div>
+                        flashcards
                     </div>
                 </div>
             </div>

@@ -14,7 +14,6 @@ const App = () => (
     <div className="front-page">
         <header></header>
         <Switch>
-            {/* {debugger} */}
             <AuthRoute exact path={`/dashboard`} component={DashboardContainer}/>
             <Route exact path="/decks/:deckId" component={DeckShowContainer} />
             <Route path="/" component={MainPageContainer} />

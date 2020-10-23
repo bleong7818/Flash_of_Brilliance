@@ -1,0 +1,21 @@
+.deck-show {
+    display: flex;
+    justify-content: center;
+}
+
+.first-row {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.pack-header-main {
+    padding-bottom: 20px;
+}
+
+.deck-title {
+    padding-bottom: 20px;
+    font-family: sans-serif;
+    font-size: 36px;
+    color: #28a5dc;
+}
