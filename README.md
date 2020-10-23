@@ -18,7 +18,7 @@ Challenging Feature
 
 The feature I am most proud of on this app is the login and sign up modals. I did not have much experience with modals prior to this project, and in the end the two modals took me about seven hours of research and experimentation to get done. At first I tried to use bootstrapping, but that did not really work out. Next, I tried putting the forms inside the modal component, but I realized after some time that the modal component would have too much functionality. The examples I had been using as reference had done so, but I realized that I could put another component inside of the modal component, i.e. the login and sign up containers. The decision to put the nest those containers inside the modal component really streamlined the process of getting the modals to function properly. While it does mean that the navigation bar on the main screen has two nested components inside of it, I appreciate the separation between all three components that allows for more focused work on each of the components.
 
-* The navbar component
+* The login section of the NavBar component
 
         <div className="login-modal-div">
                         <LoginModal show={this.state.loginShow}
