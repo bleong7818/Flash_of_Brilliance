@@ -1,6 +1,6 @@
 # README
 
-This is an [example link](https://flash-of-brilliance.herokuapp.com/#/).
+[Live website](https://flash-of-brilliance.herokuapp.com/#/).
 
 Flash of Brilliance is a flashcard website for people dedicated to learning and improvement. Users can log in, sign up, and log out from their user page. There is also a deck show page for existing decks. 
 
