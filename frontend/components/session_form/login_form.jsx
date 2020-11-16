@@ -43,7 +43,6 @@ class LoginForm extends React.Component {
     }
 
     render() {
-
         return (
             <div className="modal">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
