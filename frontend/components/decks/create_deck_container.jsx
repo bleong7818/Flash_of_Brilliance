@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { CreateDeck } from './create_deck';
+import CreateDeck from './create_deck';
 import { createDeck } from '../../actions/deck_actions';
 import { withRouter } from 'react-router-dom';
 

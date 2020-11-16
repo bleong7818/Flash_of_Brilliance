@@ -2,8 +2,10 @@ import React from "react";
 
 class CreateDeck extends React.Component {
     constructor(props) {
-        super(props)
-
+        super(props);
+        this.state = {
+            title: ""
+        };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -13,7 +15,12 @@ class CreateDeck extends React.Component {
         this.props.CreateDeck(deck).then(() => {
             this.props.history.push("/dashboard");
         });
+    }
 
+    update(field) {
+        return e => this.setState({
+            [field]: e.currentTarget.value
+        });
     }
 
     render() {
@@ -27,7 +34,7 @@ class CreateDeck extends React.Component {
                         </label>
                     </div>
                     <div className="deck-form-container">
-                        <button className="deck-button" type="submit">Create a Deck</button>
+                        <button className="deck-button" type="submit">Continue</button>
                     </div>
                 </form>
             </div>
