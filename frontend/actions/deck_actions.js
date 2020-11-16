@@ -52,7 +52,6 @@ export const requestDeck = (deckId) => {
 };
 
 export const createDeck = (deck) => dispatch => {
-
     return APIUtil.createDeck(deck)
         .then(
             newDeck => dispatch(receiveDeck(newDeck)),
