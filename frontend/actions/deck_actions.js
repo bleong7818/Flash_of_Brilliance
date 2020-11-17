@@ -9,8 +9,8 @@ const receiveDecks = (decks) => {
     return {
         type: RECEIVE_DECKS,
         decks
-    }
-}
+    };
+};
 
 const receiveDeck = (deck) => {
     return {
@@ -30,14 +30,15 @@ const receiveDeckErrors = (deckErrors)  => {
     return {
         type: RECEIVE_DECK_ERRORS,
         deckErrors
-    }
-}
+    };
+};
 
 export const requestDecks = () => {
+    debugger;
     return dispatch => {
         return APIUtil.fetchDecks()
             .then((decks) => {
-                return dispatch(receiveDecks(decks))
+                return dispatch(receiveDecks(decks));
             });
     };
 };
@@ -85,4 +86,3 @@ export const deleteDeck = (deckId) => {
             }); 
     };
 };
-

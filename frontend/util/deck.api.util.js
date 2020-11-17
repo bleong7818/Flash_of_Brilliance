@@ -1,15 +1,16 @@
 export const fetchDecks = () => {
+    debugger;
     return $.ajax ({
         url: "/api/decks",
         method: "GET"
-    })
-}
+    });
+};
 
 export const fetchDeck = (deckId) => {
     return $.ajax ({
         url: `/api/decks/${deckId}`,
         method: "GET"
-    })
+    });
 };
 
 export const createDeck = (deck) => {
@@ -17,7 +18,7 @@ export const createDeck = (deck) => {
         url: `/api/decks/`,
         method: 'POST',
         data: { deck }
-    })
+    });
 };
 
 export const updateDeck = (deck) => {
@@ -25,12 +26,12 @@ export const updateDeck = (deck) => {
         url: `/api/decks/${deck.id}`,
         method: "PATCH",
         data: { deck }
-    })
+    });
 };
 
 export const deleteDeck = (deckId) => {
     return $.ajax ({
         url: `/api/decks/${deckId}`,
         method: "DELETE"
-    })
+    });
 };

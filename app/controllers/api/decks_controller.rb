@@ -3,14 +3,15 @@ class Api::DecksController < ApplicationController
     before_action :require_logged_in, only: [:index, :create, :destroy, :update]
 
     def index
-        @decks = @current_user.decks
+        @decks = Deck.all
+        render :index
     end
 
     def create 
 
         @deck = Deck.new(deck_params)
         @deck.creator_id = current_user.id
-        debugger;
+        debugger
         if @deck.save
             render :show
         else

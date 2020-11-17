@@ -9,13 +9,14 @@ class Dashboard extends React.Component {
     }
 
     componentDidMount() {
-        this.props.requestUser(this.props.user.id)
+        this.props.requestUser(this.props.user.id);
+        this.props.requestDecks();
     }
 
     handleSubmit(e) {
-        e.preventDefault()
+        e.preventDefault();
         this.props.logout().then(() => {
-            this.props.history.push("/")})
+            this.props.history.push("/")});
     }
 
     render() {
