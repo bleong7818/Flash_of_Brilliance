@@ -12,10 +12,10 @@ class CreateDeck extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const deck = Object.assign({}, this.state);
-        debugger;
         this.props.createDeck(deck).then(() => {
-            this.props.history.push("/dashboard");
+            this.props.history.push(`dashboard}`);
         });
+
     }
 
     update(field) {
