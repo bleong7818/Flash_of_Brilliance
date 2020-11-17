@@ -24,8 +24,8 @@ class DeckShow extends React.Component {
                     <div>
                         flashcards
                     </div>
-                    <div> Back to the profile
-                        <Link to="/dashboard"></Link>
+                    <div> 
+                        <Link to="/dashboard"> Dashboard </Link>
                     </div>
                 </div>
             </div>

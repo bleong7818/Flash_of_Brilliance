@@ -7,11 +7,15 @@ class Api::DecksController < ApplicationController
     end
 
     def create 
+
         @deck = Deck.new(deck_params)
+        @deck.creator_id = current_user.id
+        debugger
         if @deck.save
             render :show
         else
             render json: @deck.errors.full_messages, status: 422
+
         end
     end
 
