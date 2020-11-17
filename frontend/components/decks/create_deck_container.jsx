@@ -10,6 +10,7 @@ const MSTP = (state, ownProps) => {
 };
 
 const MDTP = dispatch => {
+    // debugger;
     return {
         createDeck: (deck) => dispatch(createDeck(deck))
     };

@@ -12,7 +12,6 @@ class Api::DecksController < ApplicationController
             render :show
         else
             render json: @deck.errors.full_messages, status: 422
-
         end
     end
 

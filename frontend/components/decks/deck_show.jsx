@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class DeckShow extends React.Component {
     constructor(props) {
@@ -22,6 +23,9 @@ class DeckShow extends React.Component {
                     </div>
                     <div>
                         flashcards
+                    </div>
+                    <div> Back to the profile
+                        <Link to="/dashboard"></Link>
                     </div>
                 </div>
             </div>
