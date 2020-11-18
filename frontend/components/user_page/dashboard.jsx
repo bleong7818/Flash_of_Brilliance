@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import DeckShowContainer from '../decks/deck_show_container'
+import DeckShow from '../decks/deck_show';
 
 class Dashboard extends React.Component {
     constructor(props) {
@@ -21,7 +21,12 @@ class Dashboard extends React.Component {
 
     render() {
         if (!this.props.user) return null;
-
+        
+        const userDecks = this.props.decks.map(deck => {
+            if (deck.creator_id === this.props.user.id) {
+                return <DeckShow key={deck.id} deck={deck}/>
+            }
+        });
 
         return (
             <main className="Dashboard-main">
@@ -36,6 +41,9 @@ class Dashboard extends React.Component {
                         <i className="fas fa-cog"></i>
                         <button className="dashboard-logout" onClick={this.handleSubmit}>Log out</button>
                     </div>
+                    <ul>
+                        {userDecks}
+                    </ul>
                 </section>
                 <div className="current-deck">
                     current deck

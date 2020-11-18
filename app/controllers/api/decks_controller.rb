@@ -10,7 +10,7 @@ class Api::DecksController < ApplicationController
 
     def create 
         @deck = Deck.new(deck_params)
-        debugger;
+        debugger
         if @deck.save
             render :show
         else

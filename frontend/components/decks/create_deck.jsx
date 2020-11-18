@@ -4,7 +4,8 @@ class CreateDeck extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            title: ""
+            title: "",
+            creator_id: ""
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -12,9 +13,9 @@ class CreateDeck extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const deck = Object.assign({}, this.state);
-        debugger;
+        deck.creator_id = this.props.user.id;
         this.props.createDeck(deck).then(() => {
-            this.props.history.push(`dashboard}`);
+            this.props.history.push(`/dashboard`);
         });
 
     }

@@ -8,7 +8,7 @@ const MSTP = (state, ownProps) => {
     debugger;
     return {
         user: state.entities.users[state.session.id],
-        decks: state.entities.decks
+        decks: Object.values(state.entities.decks)
     }
 }
 
