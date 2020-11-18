@@ -16,11 +16,13 @@ class Dashboard extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.logout().then(() => {
-            this.props.history.push("/")});
+            this.props.history.push("/")})
     }
 
     render() {
         if (!this.props.user) return null;
+
+
         return (
             <main className="Dashboard-main">
                 <section className="dashboard-user-section">

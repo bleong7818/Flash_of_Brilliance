@@ -34,7 +34,6 @@ const receiveDeckErrors = (deckErrors)  => {
 };
 
 export const requestDecks = () => {
-    debugger;
     return dispatch => {
         return APIUtil.fetchDecks()
             .then((decks) => {
@@ -53,6 +52,7 @@ export const requestDeck = (deckId) => {
 };
 
 export const createDeck = (deck) => dispatch => {
+    debugger;
     return APIUtil.createDeck(deck)
         .then(
             newDeck => dispatch(receiveDeck(newDeck)),

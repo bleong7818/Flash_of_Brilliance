@@ -1,5 +1,4 @@
 export const fetchDecks = () => {
-    debugger;
     return $.ajax ({
         url: "/api/decks",
         method: "GET"

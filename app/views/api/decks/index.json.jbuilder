@@ -1,2 +1,1 @@
-debugger
-json.extract! "api/decks" decks: @decks
+json.array! @decks, :id, :title

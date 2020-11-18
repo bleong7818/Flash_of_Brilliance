@@ -5,12 +5,12 @@ import { withRouter } from 'react-router-dom';
 
 const MSTP = (state, ownProps) => {
     return {
-        decks: state.entities.decks 
+        decks: state.entities.decks, 
+        user: state.entities.users[state.session.id]
     };
 };
 
 const MDTP = dispatch => {
-    // debugger;
     return {
         createDeck: (deck) => dispatch(createDeck(deck))
     };
