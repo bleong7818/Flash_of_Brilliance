@@ -17,7 +17,6 @@ class CreateDeck extends React.Component {
         this.props.createDeck(deck).then(() => {
             this.props.history.push(`/dashboard`);
         });
-
     }
 
     update(field) {

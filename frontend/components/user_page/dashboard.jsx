@@ -24,7 +24,7 @@ class Dashboard extends React.Component {
         
         const userDecks = this.props.decks.map(deck => {
             if (deck.creator_id === this.props.user.id) {
-                return <DeckShow key={deck.id} deck={deck}/>
+            return <li>{deck.title}</li>
             }
         });
 
