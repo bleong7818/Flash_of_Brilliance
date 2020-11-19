@@ -6,6 +6,7 @@
 
 .dashboard-user-section {
     display: flex;
+    flex-direction: column;
     color: hsl(220, 8%, 93%);
     width: 27%;
     height: 100%;
@@ -13,9 +14,16 @@
     background-color: #324054;
 }
 
+.dashboard-user-side {
+    display: flex;
+    justify-content: space-around;
+}
+
 .dashboard-logo {
+    left: 10px;
+    top: 10px;
     width: 20%;
-    height: 100%;
+    height: 20%;
 }
 
 .current-deck {
