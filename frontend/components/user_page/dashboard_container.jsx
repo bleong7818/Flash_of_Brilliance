@@ -8,15 +8,15 @@ const MSTP = (state, ownProps) => {
     return {
         user: state.entities.users[state.session.id],
         decks: Object.values(state.entities.decks)
-    }
-}
+    };
+};
 
 const MDTP = dispatch => {
     return {
         requestDecks: () => dispatch(requestDecks()),
         requestUser: userId => dispatch(requestUser(userId)),
         logout: () => dispatch(logout())
-    }
-}
+    };
+};
 
 export default withRouter(connect(MSTP, MDTP)(Dashboard));
