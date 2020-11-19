@@ -14,6 +14,7 @@ class DeckShow extends React.Component {
 
     render() {
         if (!this.props.deck) return null;
+        debugger;
         return (
             <div className="deck-show">
                 <div className="first-row">

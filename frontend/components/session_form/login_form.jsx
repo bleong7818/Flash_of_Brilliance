@@ -15,7 +15,7 @@ class LoginForm extends React.Component {
         e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user).then( () => {
-            this.props.history.push("/dashboard")
+            this.props.history.push("/dashboard");
         }).then(() => this.props.hideModal());
     }
 

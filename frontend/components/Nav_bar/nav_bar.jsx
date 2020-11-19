@@ -28,16 +28,16 @@ class NavBar extends React.Component {
     }
 
     homepage() {
-        e.preventDefault()
-        this.props.history("/") 
+        e.preventDefault();
+        this.props.history("/"); 
     }
 
     demoSubmit(e) {
         e.preventDefault()
         this.props.login(this.props.demoUser).then(
             () => {
-            this.props.history.push("/dashboard")
-        })
+            this.props.history.push("/dashboard");
+        });
     }
 
     render () {

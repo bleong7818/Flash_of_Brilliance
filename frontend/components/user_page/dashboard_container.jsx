@@ -5,7 +5,6 @@ import { requestUser, logout } from '../../actions/session_actions';
 import { withRouter } from 'react-router-dom';
 
 const MSTP = (state, ownProps) => {
-    debugger;
     return {
         user: state.entities.users[state.session.id],
         decks: Object.values(state.entities.decks)

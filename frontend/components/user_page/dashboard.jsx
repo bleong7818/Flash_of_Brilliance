@@ -21,10 +21,9 @@ class Dashboard extends React.Component {
 
     render() {
         if (!this.props.user) return null;
-        
         const userDecks = this.props.decks.map(deck => {
             if (deck.creator_id === this.props.user.id) {
-            return <li>{deck.title}</li>
+            return <li> <Link to={`/decks/${deck.id}`}>{deck.title}</Link> </li>
             }
         });
 

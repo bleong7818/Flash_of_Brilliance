@@ -5,7 +5,7 @@ import NavBarContainer from './Nav_bar/nav_bar_container';
 // import LoginFormContainer from './session_form/login_form_container';
 // import SignupFormContainer from './session_form/signup_form_container';
 import DashboardContainer from './user_page/dashboard_container';
-import MainPageContainer from './main_page/main_page_container'
+import MainPageContainer from './main_page/main_page_container';
 import DeckShowContainer from './decks/deck_show_container';
 import CreateDeckContainer from './decks/create_deck_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
