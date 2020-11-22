@@ -6,6 +6,7 @@ class Dashboard extends React.Component {
     constructor(props) {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.deckRedirect = this.deckRedirect.bind(this);
     }
 
     componentDidMount() {
@@ -19,11 +20,25 @@ class Dashboard extends React.Component {
             this.props.history.push("/")})
     }
 
+    deckRedirect(deckId) {
+        return e => {
+        e.preventDefault();
+        this.props.history.push(`/decks/${deckId}`);
+        };
+    }
+
     render() {
         if (!this.props.user) return null;
-        const userDecks = this.props.decks.map(deck => {
+        const noDupes = this.props.decks.filter((value, index) => this.props.decks.indexOf(value) === index);
+        debugger;
+        const userDecks = noDupes.map(deck => {
             if (deck.creator_id === this.props.user.id) {
-            return <li className="deck-li"> <Link to={`/decks/${deck.id}`}>{deck.title}</Link> </li>
+                return (
+                <li className="deck-li" key={deck.id} onClick={this.deckRedirect(deck.id)}> 
+                    <div>{deck.title}</div>
+                </li>
+                )
+            // return <li className="deck-li"> <Link to={`/decks/${deck.id}`}>{deck.title}</Link> </li>
             }
         });
 

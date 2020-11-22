@@ -8,10 +8,10 @@ class User < ApplicationRecord
 
     after_initialize :ensure_session_token
 
-    has_many :decks,
-    primary_key: :id,
-    foreign_key: :creator_id,
-    class_name: :Deck
+    # has_many :decks,
+    # primary_key: :id,
+    # foreign_key: :creator_id,
+    # class_name: :Deck
 
     def self.find_by_credentials(email, password)
         user = User.find_by(email: email)
