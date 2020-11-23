@@ -37243,3 +37243,76 @@ Processing by Api::DecksController#show as JSON
 Completed 200 OK in 22ms (Views: 18.4ms | ActiveRecord: 1.3ms)
 
 
+Started GET "/" for ::1 at 2020-11-23 10:16:19 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "JvQ6pamBYWuWtgn3LU5MHA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendered api/users/_user.json.jbuilder (1.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (137.2ms)
+Completed 200 OK in 1771ms (Views: 1716.6ms | ActiveRecord: 47.7ms)
+
+
+Started GET "/api/decks/15" for ::1 at 2020-11-23 10:19:00 -0800
+Processing by Api::DecksController#show as JSON
+  Parameters: {"id"=>"15"}
+  [1m[36mDeck Load (7.3ms)[0m  [1m[34mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/api/decks_controller.rb:22
+  Rendering api/decks/show.json.jbuilder
+  Rendered api/decks/_deck.json.jbuilder (0.8ms)
+  Rendered api/decks/show.json.jbuilder (3.7ms)
+Completed 200 OK in 213ms (Views: 25.8ms | ActiveRecord: 131.7ms)
+
+
+Started GET "/" for ::1 at 2020-11-23 10:19:53 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "JvQ6pamBYWuWtgn3LU5MHA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 135ms (Views: 122.2ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/api/decks/15" for ::1 at 2020-11-23 10:19:58 -0800
+Processing by Api::DecksController#show as JSON
+  Parameters: {"id"=>"15"}
+  [1m[36mDeck Load (0.7ms)[0m  [1m[34mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/api/decks_controller.rb:22
+  Rendering api/decks/show.json.jbuilder
+  Rendered api/decks/_deck.json.jbuilder (0.8ms)
+  Rendered api/decks/show.json.jbuilder (5.9ms)
+Completed 200 OK in 28ms (Views: 25.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/users" for ::1 at 2020-11-23 10:21:22 -0800
+Processing by Api::UsersController#index as JSON
+  Parameters: {"title"=>"testing"}
+  Rendering api/users/index.json.jbuilder
+  [1m[36mUser Load (15.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/api/users/index.json.jbuilder:1
+  Rendered api/users/index.json.jbuilder (20.0ms)
+Completed 200 OK in 45ms (Views: 26.3ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/" for ::1 at 2020-11-23 10:21:55 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (62.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "JvQ6pamBYWuWtgn3LU5MHA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendered api/users/_user.json.jbuilder (1.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (152.7ms)
+Completed 200 OK in 2607ms (Views: 2538.4ms | ActiveRecord: 62.3ms)
+
+
+Started GET "/api/decks/15" for ::1 at 2020-11-23 10:21:59 -0800
+Processing by Api::DecksController#show as JSON
+  Parameters: {"id"=>"15"}
+  [1m[36mDeck Load (46.6ms)[0m  [1m[34mSELECT  "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/api/decks_controller.rb:22
+  Rendering api/decks/show.json.jbuilder
+  Rendered api/decks/_deck.json.jbuilder (0.7ms)
+  Rendered api/decks/show.json.jbuilder (5.0ms)
+Completed 200 OK in 67ms (Views: 18.7ms | ActiveRecord: 46.6ms)
+
+

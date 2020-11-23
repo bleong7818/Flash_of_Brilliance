@@ -3,7 +3,7 @@ import * as APIUtil from '../util/deck.api.util';
 export const RECEIVE_DECKS = 'RECEIVE_DECKS';
 export const RECEIVE_DECK = 'RECEIVE_DECK';
 export const REMOVE_DECK = 'DELETE_DECK';
-export const RECEIVE_DECK_ERRORS = 'RECEIVE_DECK_ERRORS'
+export const RECEIVE_DECK_ERRORS = 'RECEIVE_DECK_ERRORS';
 
 const receiveDecks = (decks) => {
     return {
@@ -46,7 +46,7 @@ export const requestDeck = (deckId) => {
     return dispatch => {
         return APIUtil.fetchDeck(deckId)
             .then(deck => {
-                dispatch(receiveDeck(deck))
+                dispatch(receiveDeck(deck));
             });
     };
 };
@@ -58,15 +58,6 @@ export const createDeck = (deck) => dispatch => {
             errors => dispatch(receiveDeckErrors(errors.responseJSON))
         );
 };
-
-// export const createDeck = deck => {
-//     return dispatch => {
-//         return APIUtil.createDeck(deck)
-//             .then(newDeck => {
-//                 return dispatch(createDeck(newDeck))
-//             }
-//     };
-// };
 
 export const updateDeck = (deck) => {
     return dispatch => {

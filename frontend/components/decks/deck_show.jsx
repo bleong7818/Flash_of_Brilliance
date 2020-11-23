@@ -9,7 +9,7 @@ class DeckShow extends React.Component {
 
     componentDidMount() {
         // this.props.requestDeck(this.props.decks.id)
-        debugger;
+        this.props.requestUsers();
         this.props.requestDeck(this.props.deckId);
         // this.props.requestUser(this.props.deck.creator_id);
     }
