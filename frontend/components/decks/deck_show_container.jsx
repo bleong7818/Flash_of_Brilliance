@@ -5,11 +5,10 @@ import { updateDeck, deleteDeck, requestDeck } from '../../actions/deck_actions'
 import { withRouter } from 'react-router-dom';
 
 const MSTP = (state, ownProps) => {
-
     return {
         deck: state.entities.decks[ownProps.match.params.deckId],
         deckId: ownProps.match.params.deckId,
-        users: state.entities.users
+        users: Object.values(state.entities.users)
         // creatorId: state.entities.decks[ownProps.match.params.deckId].creator_id
     };
 };
@@ -19,7 +18,7 @@ const MDTP = dispatch => {
         updateDeck: (deck) => dispatch(updateDeck(deck)),
         deleteDeck: (deckId) => dispatch(deleteDeck(deckId)),
         requestDeck: (deckId) => dispatch(requestDeck(deckId)),
-        requestUsers: () => dispatch(reuqestUsers())
+        requestUsers: () => dispatch(requestUsers())
         // requestUser: (creatorId) => dispatch(requestUser(creatorId))
     };
 };

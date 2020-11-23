@@ -16,6 +16,17 @@ class DeckShow extends React.Component {
 
     render() {
         if (!this.props.deck) return null;
+        let creator = this.props.users.forEach(user => {
+            let maker = [];
+            if (user.id === this.props.deck.creator_id) {
+                maker.push(user)
+            }
+            debugger;
+            return maker;
+            // debugger;
+        });
+        // debugger;
+        
         // if (!this.props.deck.creator) return null;
         return (
             <div className="deck-show">
