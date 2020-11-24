@@ -9,6 +9,7 @@ class DeckShow extends React.Component {
 
     componentDidMount() {
         // this.props.requestDeck(this.props.decks.id)
+        debugger;
         this.props.requestUsers();
         this.props.requestDeck(this.props.deckId);
         // this.props.requestUser(this.props.deck.creator_id);
@@ -16,24 +17,15 @@ class DeckShow extends React.Component {
 
     render() {
         if (!this.props.deck) return null;
-        let creator = this.props.users.forEach(user => {
-            let maker = [];
-            if (user.id === this.props.deck.creator_id) {
-                maker.push(user)
-            }
-            debugger;
-            return maker;
-            // debugger;
-        });
+        const creator = this.props.users.filter(user => user.id === this.props.deck.creator_id)
         // debugger;
-        
         // if (!this.props.deck.creator) return null;
         return (
             <div className="deck-show">
                 <div className="first-row">
                     <div className="pack-header-main">
                         <h1 className="deck-title">{this.props.deck.title}</h1>
-                        {/* <div className="deck-show-creator">Creator: {this.props.deck.creator.first_name + " " +this.props.deck.creator.last_name}</div> */}
+                        <div className="deck-show-creator">Creator: {creator[0].first_name + " " + creator[0].last_name}</div>
                     </div>
                     <div>
                         flashcards

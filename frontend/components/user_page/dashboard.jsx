@@ -10,6 +10,7 @@ class Dashboard extends React.Component {
     }
 
     componentDidMount() {
+        debugger;
         this.props.requestUser(this.props.user.id);
         this.props.requestDecks();
     }
@@ -30,7 +31,7 @@ class Dashboard extends React.Component {
     render() {
         if (!this.props.user) return null;
         const noDupes = this.props.decks.filter((value, index) => this.props.decks.indexOf(value) === index);
-        debugger;
+        // debugger;
         const userDecks = noDupes.map(deck => {
             if (deck.creator_id === this.props.user.id) {
                 return (
