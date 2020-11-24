@@ -11,14 +11,16 @@ class Dashboard extends React.Component {
 
     componentDidMount() {
         debugger;
-        this.props.requestUser(this.props.user.id);
+        if (this.props.user) {
+            this.props.requestUser(this.props.user.id);
+        }
         this.props.requestDecks();
     }
 
     handleSubmit(e) {
         e.preventDefault();
         this.props.logout().then(() => {
-            this.props.history.push("/")})
+            this.props.history.push("/")});
     }
 
     deckRedirect(deckId) {
@@ -30,6 +32,7 @@ class Dashboard extends React.Component {
 
     render() {
         if (!this.props.user) return null;
+        // debugger;
         const noDupes = this.props.decks.filter((value, index) => this.props.decks.indexOf(value) === index);
         // debugger;
         const userDecks = noDupes.map(deck => {

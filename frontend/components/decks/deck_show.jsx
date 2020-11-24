@@ -8,17 +8,15 @@ class DeckShow extends React.Component {
     }
 
     componentDidMount() {
-        // this.props.requestDeck(this.props.decks.id)
-        debugger;
         this.props.requestUsers();
         this.props.requestDeck(this.props.deckId);
-        // this.props.requestUser(this.props.deck.creator_id);
+        
     }
 
     render() {
         if (!this.props.deck) return null;
-        const creator = this.props.users.filter(user => user.id === this.props.deck.creator_id)
-        // debugger;
+        const creator = this.props.users.filter(user => user.id === this.props.deck.creator_id);
+        if (creator.length === 0) return null;
         // if (!this.props.deck.creator) return null;
         return (
             <div className="deck-show">
