@@ -3,14 +3,13 @@ import { Link } from 'react-router-dom';
 
 class DeckShow extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
 
     }
 
     componentDidMount() {
         this.props.requestUsers();
         this.props.requestDeck(this.props.deckId);
-        
     }
 
     render() {

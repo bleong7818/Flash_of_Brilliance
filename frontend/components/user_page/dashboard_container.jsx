@@ -5,9 +5,12 @@ import { requestUser, logout } from '../../actions/session_actions';
 import { withRouter } from 'react-router-dom';
 
 const MSTP = (state, ownProps) => {
-    // debugger;
+    debugger;
     return {
+        session_id: state.session.id,
         user: state.entities.users[state.session.id],
+        // user: Object.values(state.entities.users).length === 1 ? state.entities.users[state.session.id] : 
+        // state.entities.users.filter(user => user.id === state.session.id)[0],
         decks: Object.values(state.entities.decks)
     };
 };
