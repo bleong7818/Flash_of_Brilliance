@@ -16,6 +16,7 @@ class DeckShow extends React.Component {
         if (!this.props.deck) return null;
         const creator = this.props.users.filter(user => user.id === this.props.deck.creator_id);
         if (creator.length === 0) return null;
+        debugger;
         // if (!this.props.deck.creator) return null;
         return (
             <div className="deck-show">

@@ -32,11 +32,20 @@ class Dashboard extends React.Component {
         // debugger;
         if (!this.props.user) return null;
         // debugger;
-        const noDupes = this.props.decks.filter((value, index) => this.props.decks.indexOf(value) === index);
-        const userDecks = noDupes.map(deck => {
+        // const noDupes = this.props.decks.filter((value, index) => this.props.decks.indexOf(value) === index);
+        const nooDupes = [];
+
+        this.props.decks.forEach(deck => {
+            if (!nooDupes.includes(deck)) {
+                nooDupes.push(deck);
+            }
+        });
+        debugger;
+
+        const userDecks = nooDupes.map(deck => {
             if (deck.creator_id === this.props.user.id) {
                 return (
-                <li className="deck-li" key={deck.id} onClick={this.deckRedirect(deck.id)}> 
+                <li className="deck-li" onClick={this.deckRedirect(deck.id)}> 
                     <div>{deck.title}</div>
                 </li>
                 )

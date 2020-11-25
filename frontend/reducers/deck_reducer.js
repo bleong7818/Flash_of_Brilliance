@@ -11,7 +11,8 @@ const DecksReducer = (oldState = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_DECKS:
-            return action.decks;
+            newState = action.decks;
+            return newState;
         case RECEIVE_DECK:
             newState[action.deck.id] = action.deck;
             return newState;

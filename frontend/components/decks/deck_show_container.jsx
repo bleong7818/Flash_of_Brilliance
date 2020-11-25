@@ -5,7 +5,7 @@ import { updateDeck, deleteDeck, requestDeck } from '../../actions/deck_actions'
 import { withRouter } from 'react-router-dom';
 
 const MSTP = (state, ownProps) => {
-    debugger;
+    // debugger;
     return {
         deck: state.entities.decks[ownProps.match.params.deckId],
         deckId: ownProps.match.params.deckId,
