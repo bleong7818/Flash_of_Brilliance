@@ -52,11 +52,11 @@ class Dashboard extends React.Component {
 
         return (
             <main className="Dashboard-main">
-                <section className="dashboard-user-section">
+                <div className="dashboard-user-section">
                     <header className="dashboard-user-side">
                         <img className="dashboard-logo" src="https://www.brainscape.com/assets/bsc-share-icon.png" alt=""/>
                         <div className="greetings-and-info">
-                            <p className="greeting">{this.props.user.first_name} {this.props.user.last_name}</p>
+                            <p className="greeting"> Welcome, {this.props.user.first_name} {this.props.user.last_name}</p>
                             {numberOfDecks}
                         </div> 
                         {/* <div>
@@ -71,12 +71,15 @@ class Dashboard extends React.Component {
                         <h4 className="no-of-decks">My Decks ({userDecks.length})</h4>
                         <h1 className="add-deck-button" onClick={this.createDeckRedirect}>Create a Deck</h1>
                     </div>
-                    <ul className="deck-list">
-                        {userDecks}
-                    </ul>
-                </section>
-                <div className="current-deck">
-                    current deck
+                    <div className="created-section">
+                        <ul className="deck-list">
+                            {userDecks}
+                        </ul>
+                    </div>
+                    <div className="study-section">
+                        Studying decks
+                    </div>
+                    <div className="to-be-deleted">placeholder</div>
                 </div>
             </main>   
         )

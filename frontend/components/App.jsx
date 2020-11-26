@@ -8,6 +8,7 @@ import DashboardContainer from './user_page/dashboard_container';
 import MainPageContainer from './main_page/main_page_container';
 import DeckShowContainer from './decks/deck_show_container';
 import CreateDeckContainer from './decks/create_deck_container';
+import DeckIndexContainer from './decks/deck_index_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import MainPage from './main_page/main_page';
 
@@ -18,6 +19,7 @@ const App = () => (
             <AuthRoute exact path={`/dashboard`} component={DashboardContainer}/>
             <ProtectedRoute exact path="/decks/:deckId" component={DeckShowContainer} />
             <ProtectedRoute exact path="/dashboard/newDeck" component={CreateDeckContainer}/>
+            <ProtectedRoute exact path ="/decks" component={DeckIndexContainer}/>
             <Route path="/" component={MainPageContainer} />
         </Switch>
     </div>

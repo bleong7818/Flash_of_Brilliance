@@ -1,18 +1,18 @@
-// import { connect } from 'react-redux';
-// import { receiveDecks, removeDeck } from '../../actions/deck_actions';
-// import EventIndex from './event_index'
+import { connect } from 'react-redux';
+import { requestDecks } from '../../actions/deck_actions';
+import { withRouter } from 'react-router-dom';
+import DeckIndex from './deck_index';
 
-// const MSTP = (state, ownProps) => {
-//     return {
-//         decks: Object.values(state.entities.decks[ownProps.match.params.userId)
-//     };
-// };
+const MSTP = (state, ownProps) => {
+    return {
+        decks: Object.values(state.entities.decks)
+    };
+};
 
-// const MDTP = dispatch => {
-//     return {
-//         receiveDecks: () => dispatch(receiveDecks()),
-//         removeDeck: (deckId) => dispatch(removeDeck(deckId))
-//     }
-// }
+const MDTP = dispatch => {
+    return {
+        requestDecks: () => dispatch(requestDecks())
+    };
+};
 
-// export default connect(MSTP, MDTP)(EventIndex)
+export default withRouter(connect(MSTP, MDTP)(DeckIndex));
