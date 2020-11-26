@@ -42,11 +42,11 @@ class Dashboard extends React.Component {
         // const noDupes = this.props.decks.filter((value, index) => this.props.decks.indexOf(value) === index);
         const filteredDecks = this.props.decks.filter(deck => deck.creator_id === this.props.user.id);
         const userDecks = filteredDecks.map(deck => {
-                return (
+            return (
                 <li className="deck-li"> 
                     <div className="deck-button" key={deck.id} onClick={this.deckRedirect(deck.id)}>{deck.title}</div>
                 </li>
-                )
+            )
         });
         const numberOfDecks = userDecks.length === 0 ? null : <p className="usermade-decks">{userDecks.length} decks created</p>
 
@@ -79,6 +79,7 @@ class Dashboard extends React.Component {
                     <div className="study-section">
                         Studying decks
                     </div>
+                    <Link to="/decks"> Deck index link for testing </Link>
                     <div className="to-be-deleted">placeholder</div>
                 </div>
             </main>   

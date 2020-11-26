@@ -11,8 +11,19 @@ class DeckIndex extends React.Component {
     }
 
     render() {
+        const allDecks = this.props.decks.map(deck => {
+            return (
+            <li className="deck-testing" key={deck.id}>{deck.title}</li>
+            )
+        })
         return (
-            <div>testing</div>
+            <main className="deck-index-main">
+                <ul>
+                    {allDecks}
+                </ul>
+                <Link to="/dashboard"> Dashboard </Link>
+            </main>
+            
         );
     }
 
