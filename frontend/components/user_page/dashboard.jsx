@@ -41,7 +41,6 @@ class Dashboard extends React.Component {
         // debugger;
         // const noDupes = this.props.decks.filter((value, index) => this.props.decks.indexOf(value) === index);
         const filteredDecks = this.props.decks.filter(deck => deck.creator_id === this.props.user.id);
-        // console.log(userDeckss);
         const userDecks = filteredDecks.map(deck => {
                 return (
                 <li className="deck-li"> 
