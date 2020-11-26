@@ -7,6 +7,7 @@ class Dashboard extends React.Component {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.deckRedirect = this.deckRedirect.bind(this);
+        this.createDeckRedirect = this.createDeckRedirect.bind(this);
     }
 
     componentDidMount() {
@@ -29,6 +30,11 @@ class Dashboard extends React.Component {
         };
     }
 
+    createDeckRedirect(e) {
+        e.preventDefault();
+        this.props.history.push(`/dashboard/newDeck`);
+    }
+
     render() {
         // debugger;
         if (!this.props.user) return null;
@@ -38,12 +44,12 @@ class Dashboard extends React.Component {
         // console.log(userDeckss);
         const userDecks = filteredDecks.map(deck => {
                 return (
-                <li className="deck-li" key={deck.id} onClick={this.deckRedirect(deck.id)}> 
-                    <div>{deck.title}</div>
+                <li className="deck-li"> 
+                    <div className="deck-button" key={deck.id} onClick={this.deckRedirect(deck.id)}>{deck.title}</div>
                 </li>
                 )
         });
-        const numberOfDecks = userDecks.length === 0 ? null : <p className="number-of-decks">{userDecks.length} decks created</p>
+        const numberOfDecks = userDecks.length === 0 ? null : <p className="usermade-decks">{userDecks.length} decks created</p>
 
         return (
             <main className="Dashboard-main">
@@ -51,17 +57,21 @@ class Dashboard extends React.Component {
                     <header className="dashboard-user-side">
                         <img className="dashboard-logo" src="https://www.brainscape.com/assets/bsc-share-icon.png" alt=""/>
                         <div className="greetings-and-info">
-                            <p className="greeting">Hello, {this.props.user.first_name} {this.props.user.last_name}</p>
+                            <p className="greeting">{this.props.user.first_name} {this.props.user.last_name}</p>
                             {numberOfDecks}
                         </div> 
-                        <div>
+                        {/* <div>
                             <Link to ="/dashboard/newDeck"> Create </Link>
-                        </div>
+                        </div> */}
                         <div className="dashboard-dropdown">
                             <i className="fas fa-cog"></i>
                             <button className="dashboard-logout" onClick={this.handleSubmit}>Log out</button>
                         </div>
                     </header>
+                    <div className="dashboard-second-row">
+                        <h4 className="no-of-decks">My Decks ({userDecks.length})</h4>
+                        <h1 className="add-deck-button" onClick={this.createDeckRedirect}>Create a Deck</h1>
+                    </div>
                     <ul className="deck-list">
                         {userDecks}
                     </ul>

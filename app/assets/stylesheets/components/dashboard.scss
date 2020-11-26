@@ -7,6 +7,7 @@
 .dashboard-user-section {
     display: flex;
     flex-direction: column;
+    align-items: center;
     color: hsl(220, 8%, 93%);
     width: 27%;
     height: 100%;
@@ -27,6 +28,10 @@
     height: 10%;
 }
 
+.dashboard-logo:hover {
+    cursor: pointer;
+}
+
 .greetings-and-info {
     display: flex;
     align-items: center;
@@ -37,7 +42,7 @@
     font-size: 18px;
 }
 
-.number-of-decks {
+.usermade-decks {
     font-size: 14px;
 }
 
@@ -71,12 +76,45 @@
 
 .dashboard-dropdown:hover .dashboard-logout {
     display: block;
+    cursor: pointer;
 }
+
 
 .dashboard-logout:hover {
     background-color: skyblue;
+    cursor: pointer;
 }
 
 .deck-li {
-    padding: 20px;
+    padding: 14px;
+    color: #A3A9B1;
+}
+
+.deck-button:hover {
+    cursor: pointer;
+    color: whitesmoke;
+}
+
+.dashboard-second-row {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    // padding: 18px;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    border-bottom: solid 1px gray;
+}
+
+.no-of-decks {
+    font-size: 16px
+}
+
+.add-deck-button {
+    font-size: 16px;
+    // padding-bottom: 10px;
+}
+
+.add-deck-button:hover {
+    color: rgb(173, 212, 230);
+    cursor: pointer;
 }
