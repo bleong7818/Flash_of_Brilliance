@@ -1,6 +1,7 @@
 import { requestDeck, deleteDeck } from '../../actions/deck_actions';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+import Deckbox from './deckbox';
 
 const MSTP = (state, ownProps) => {
     return {
@@ -15,4 +16,5 @@ const MDTP = dispatch => {
     };
 };
 
-export default withRouter(connect(MSTP, MDTP));
+export default withRouter(connect(MSTP, MDTP)(Deckbox));
+// export default withRouter(connect(MSTP, MDTP)(DeckIndex));

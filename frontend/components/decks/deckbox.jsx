@@ -6,8 +6,9 @@ class Deckbox extends React.Component {
     }
 
     render() {
+        // debugger;
         return (
-            <div>{this.props.deck.title}</div>
+            <li>{this.props.deck.title}</li>
         )
     }
 
