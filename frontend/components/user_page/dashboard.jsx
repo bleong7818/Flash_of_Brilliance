@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import DeckShow from '../decks/deck_show';
+import DeckboxContainer from '../decks/deckbox_container';
 
 class Dashboard extends React.Component {
     constructor(props) {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.deckRedirect = this.deckRedirect.bind(this);
+        
         this.createDeckRedirect = this.createDeckRedirect.bind(this);
     }
 
@@ -43,9 +44,7 @@ class Dashboard extends React.Component {
         const filteredDecks = this.props.decks.filter(deck => deck.creator_id === this.props.user.id);
         const userDecks = filteredDecks.map(deck => {
             return (
-                <li className="deck-li"> 
-                    <div className="deck-button" key={deck.id} onClick={this.deckRedirect(deck.id)}>{deck.title}</div>
-                </li>
+                <DeckboxContainer key={deck.id} deck={deck}></DeckboxContainer>
             )
         });
         const numberOfDecks = userDecks.length === 0 ? null : <p className="usermade-decks">{userDecks.length} decks created</p>

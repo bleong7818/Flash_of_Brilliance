@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom';
 import Deckbox from './deckbox';
 
 const MSTP = (state, ownProps) => {
+    // debugger;
     return {
         currentUser: state.session
     };

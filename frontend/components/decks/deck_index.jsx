@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
-import Deckbox from './deckbox';
+import DeckboxContainer from './deckbox_container';
 
 class DeckIndex extends React.Component {
     constructor(props) {
@@ -15,7 +15,7 @@ class DeckIndex extends React.Component {
     render() {
         const allDecks = this.props.decks.map(deck => {
             return (
-                <Deckbox key={deck.id} deck={deck}></Deckbox>
+                <DeckboxContainer key={deck.id} deck={deck}></DeckboxContainer>
             )
         })
         // const allDecks = this.props.decks.map(deck => {
