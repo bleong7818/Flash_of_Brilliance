@@ -18,22 +18,10 @@ class DeckIndex extends React.Component {
                 <DeckboxContainer key={deck.id} deck={deck}></DeckboxContainer>
             )
         })
-        // const allDecks = this.props.decks.map(deck => {
-        //     return (
-        //     <li className="deck-testing" key={deck.id}>{deck.title}</li>
-        //     )
-        // })
-        //     < ul >
-        // {
-        //     this.props.decks.map(deck => (
-        //         <Deckbox key={deck.id} deck={deck} />
-        //     ))
-        // }
-        //         </ul >
-        // debugger;
+        
         return (
             <main className="deck-index-main">
-                <h1>testing</h1>
+                <h1>Browse all the flashcards created by top users and Flash of Brilliance!</h1>
                 <ul>
                     {allDecks}
                 </ul>

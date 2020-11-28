@@ -76,17 +76,8 @@
 
 .deck-list {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-}
-
-.deck-li {
-    padding: 14px;
-    color: #A3A9B1;
-}
-
-.deck-li:hover {
-    cursor: pointer;
-    color: whitesmoke;
 }
 
 .dashboard-second-row {

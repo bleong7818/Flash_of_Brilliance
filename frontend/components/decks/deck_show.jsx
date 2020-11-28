@@ -22,7 +22,7 @@ class DeckShow extends React.Component {
             <div className="deck-show">
                 <div className="first-row">
                     <div className="pack-header-main">
-                        <h1 className="deck-title">{this.props.deck.title}</h1>
+                        <h1 className="deck-title-show">{this.props.deck.title}</h1>
                         <div className="deck-show-creator">Creator: {creator[0].first_name + " " + creator[0].last_name}</div>
                     </div>
                     <div>

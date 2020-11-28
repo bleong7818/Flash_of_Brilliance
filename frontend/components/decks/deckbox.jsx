@@ -18,7 +18,11 @@ class Deckbox extends React.Component {
     render() {
         // debugger;
         return (
-            <li className="deck-li" onClick={this.deckRedirect(this.props.deck.id)}>{this.props.deck.title}</li>
+            <li className="deck-list">
+                <div className="deck-li">
+                    <h3 className="deck-title" onClick={this.deckRedirect(this.props.deck.id)}>{this.props.deck.title}</h3>
+                </div>
+            </li>
         )
     }
 
