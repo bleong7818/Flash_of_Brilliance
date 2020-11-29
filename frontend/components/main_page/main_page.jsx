@@ -9,9 +9,7 @@ class MainPage extends React.Component {
     render() {
         return (
             <main className="main">
-                <nav>
-                    <NavBarContainer />
-                </nav>
+                <div>testing</div>
             </main>
         )
     }

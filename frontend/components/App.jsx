@@ -14,9 +14,9 @@ import MainPage from './main_page/main_page';
 
 const App = () => (
     <div className="front-page">
-        <header></header>
+        <NavBarContainer />
         <Switch>
-            <AuthRoute exact path={`/dashboard`} component={DashboardContainer}/>
+            <AuthRoute exact path="/dashboard" component={DashboardContainer}/>
             <ProtectedRoute exact path="/decks/:deckId" component={DeckShowContainer} />
             <ProtectedRoute exact path="/dashboard/newDeck" component={CreateDeckContainer}/>
             <ProtectedRoute exact path ="/decks" component={DeckIndexContainer}/>

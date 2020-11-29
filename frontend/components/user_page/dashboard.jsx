@@ -57,7 +57,6 @@ class Dashboard extends React.Component {
                         <div className="greetings-and-info">
                             <p className="greeting"> Welcome, {this.props.user.first_name} {this.props.user.last_name}</p>
                             {numberOfDecks}
-                            <Link to="/decks"> Deck index link for testing </Link>
                         </div> 
                         {/* <div>
                             <Link to ="/dashboard/newDeck"> Create </Link>

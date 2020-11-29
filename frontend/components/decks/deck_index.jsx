@@ -22,7 +22,6 @@ class DeckIndex extends React.Component {
         return (
             <main className="deck-index-main">
                 <h1 className="deck-index-title">Browse all the flashcards created by top users and Flash of Brilliance!</h1>
-                <Link to="/dashboard"> Dashboard </Link>
                 <ul className="deck-index-ul">
                     {allDecks}
                 </ul>

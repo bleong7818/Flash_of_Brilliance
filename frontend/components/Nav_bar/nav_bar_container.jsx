@@ -1,10 +1,11 @@
 import { connect } from 'react-redux';
 import React from 'react';
-import { requestUser, login } from '../../actions/session_actions';
+import { requestUser, login, logout } from '../../actions/session_actions';
 import  NavBar from './nav_bar';
 import {withRouter} from 'react-router-dom';
 
 const MSTP = (state, ownProps) => {
+    // debugger;
     return {
         currentUser: state.entities.users[state.session.id],
         errors: state.errors.session,
@@ -18,7 +19,8 @@ const MSTP = (state, ownProps) => {
 const MDTP = (dispatch) => {
     return {
         requestUser: userId => dispatch(requestUser(userId)),
-        login: user => dispatch(login(user))
+        login: user => dispatch(login(user)), 
+        logout: () => dispatch(logout())
     };
 };
 

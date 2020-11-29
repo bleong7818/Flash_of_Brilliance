@@ -13,6 +13,10 @@ class NavBar extends React.Component {
         this.hideModal = this.hideModal.bind(this);
         this.homepage = this.homepage.bind(this);
         this.demoSubmit = this.demoSubmit.bind(this);
+        this.profileRedirect = this.profileRedirect.bind(this);
+        this.mainPage = this.mainPage.bind(this);
+        this.deckIndex = this.deckIndex.bind(this);
+        this.handleLogout = this.handleLogout.bind(this);
     }
 
     showModal(type) {
@@ -40,9 +44,38 @@ class NavBar extends React.Component {
         });
     }
 
+    profileRedirect(e) {
+        e.preventDefault();
+        this.props.history.push("/dashboard")
+    }
+
+    mainPage(e) {
+        e.preventDefault();
+        this.props.history.push("/");
+    }
+
+    deckIndex(e) {
+        e.preventDefault(e);
+        this.props.history.push("/decks")
+    }
+
+    handleLogout(e) {
+        e.preventDefault();
+        this.props.logout().then(() => {
+            this.props.history.push("/")
+        });
+    }
+
     render () {
+        // debugger;
         const display = this.props.currentUser ? (
-           <DashboardContainer />
+        //    <DashboardContainer />
+        <div className="logged-in-nav">
+            <div className="main-page-link" onClick={this.mainPage}>Flash of Brilliance</div>
+            <button className="deck-index-button" onClick={this.deckIndex}>View All Decks</button>
+            <button className="profile-button" onClick={this.profileRedirect}>Dashboard</button>
+            <button className="logout-button-navbar" onClick={this.handleLogout}>Log Out</button>
+        </div>
         ) : (
             <div className="modal-nav">
                 <img className="nav-logo" onClick={this.homepage} src="https://www.brainscape.com/blog/wp-content/uploads/2018/07/Transparent-Background.png" />
