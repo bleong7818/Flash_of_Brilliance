@@ -1,4 +1,27 @@
 .logged-in-nav {
     display: flex;
     justify-content: space-around;
+    background-color: gray;
 }
+
+.create-deck-button {
+    border: none;
+    background-color: green;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.deck-index-button {
+    border: none;
+    background-color: orange;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.profile-button {
+    border: none;
+    background-color: skyblue;
+    height: 50px;
+    border-radius: 5px;
+}
+

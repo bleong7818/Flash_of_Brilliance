@@ -20,6 +20,10 @@ class NavBar extends React.Component {
         this.createRedirect = this.createRedirect.bind(this);
     }
 
+    componentDidMount() {
+        this.props.requestUser(this.props.session_id);
+    }
+
     showModal(type) {
         this.setState({ [type]: true });
     }
@@ -47,7 +51,7 @@ class NavBar extends React.Component {
 
     profileRedirect(e) {
         e.preventDefault();
-        this.props.history.push("/dashboard")
+        this.props.history.push("/dashboard");
     }
 
     mainPage(e) {
@@ -57,31 +61,31 @@ class NavBar extends React.Component {
 
     deckIndex(e) {
         e.preventDefault(e);
-        this.props.history.push("/decks")
+        this.props.history.push("/decks");
     }
 
     handleLogout(e) {
         e.preventDefault();
         this.props.logout().then(() => {
-            this.props.history.push("/")
+            this.props.history.push("/");
         });
     }
 
     createRedirect(e) {
         e.preventDefault()
-        this.props.history.push("/dashboard/newDeck")
+        this.props.history.push("/dashboard/newDeck");
     }
 
     render () {
         // debugger;
-        const display = this.props.logged_in ? (
+        const display = this.props.session_id ? (
         //    <DashboardContainer />
         <div className="logged-in-nav">
             <div className="main-page-link" onClick={this.mainPage}>Flash of Brilliance</div>
-            <div>Welcome, {this.props.currentUser.first_name + " " + this.props.currentUser.last_name}</div>
             <button className="create-deck-button" onClick={this.createRedirect}>Create a deck</button>
             <button className="deck-index-button" onClick={this.deckIndex}>View All Decks</button>
             <button className="profile-button" onClick={this.profileRedirect}>Dashboard</button>
+            <div>Welcome, {this.props.currentUser.first_name + " " + this.props.currentUser.last_name}</div>
             <button className="logout-button-navbar" onClick={this.handleLogout}>Log Out</button>
         </div>
         ) : (

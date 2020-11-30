@@ -6,7 +6,7 @@ import {withRouter} from 'react-router-dom';
 
 const MSTP = (state, ownProps) => {
     return {
-        logged_in: state.session.id,
+        session_id: state.session.id,
         currentUser: state.session,
         errors: state.errors.session,
         demoUser: {
