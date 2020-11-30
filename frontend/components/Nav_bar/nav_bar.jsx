@@ -17,6 +17,7 @@ class NavBar extends React.Component {
         this.mainPage = this.mainPage.bind(this);
         this.deckIndex = this.deckIndex.bind(this);
         this.handleLogout = this.handleLogout.bind(this);
+        this.createRedirect = this.createRedirect.bind(this);
     }
 
     showModal(type) {
@@ -66,12 +67,19 @@ class NavBar extends React.Component {
         });
     }
 
+    createRedirect(e) {
+        e.preventDefault()
+        this.props.history.push("/dashboard/newDeck")
+    }
+
     render () {
         // debugger;
-        const display = this.props.currentUser ? (
+        const display = this.props.logged_in ? (
         //    <DashboardContainer />
         <div className="logged-in-nav">
             <div className="main-page-link" onClick={this.mainPage}>Flash of Brilliance</div>
+            <div>Welcome, {this.props.currentUser.first_name + " " + this.props.currentUser.last_name}</div>
+            <button className="create-deck-button" onClick={this.createRedirect}>Create a deck</button>
             <button className="deck-index-button" onClick={this.deckIndex}>View All Decks</button>
             <button className="profile-button" onClick={this.profileRedirect}>Dashboard</button>
             <button className="logout-button-navbar" onClick={this.handleLogout}>Log Out</button>
