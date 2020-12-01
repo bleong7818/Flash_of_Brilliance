@@ -1,7 +1,7 @@
 .logged-in-nav {
     display: flex;
     justify-content: space-around;
-    background-color: gray;
+    background-color: gainsboro;
 }
 
 .create-deck-button {
@@ -18,10 +18,56 @@
     border-radius: 5px;
 }
 
+.deck-index-button:hover, .deck-index-button:focus {
+  outline: none;
+}
+
+.deck-index-button:hover {
+    background-color: rgb(255, 145, 0);
+}
+
 .profile-button {
-    border: none;
+    // border: none;
     background-color: skyblue;
     height: 50px;
     border-radius: 5px;
+    width: 80px;
 }
 
+.profile-button:hover {
+    background-color: #2185D0;
+}
+
+.profile-button:hover, .profile-button:focus {
+  outline: none;
+}
+
+.name-and-decks {
+    display: flex;
+    // align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.username {
+    display: flex;
+    justify-content: center;
+}
+
+.see-decks {
+    display: flex;
+    justify-content: center;
+}
+
+.logout-button-navbar {
+    border-radius: 5px;
+    background-color: rgb(158, 158, 158);
+}
+
+.logout-button-navbar:hover {
+    background-color: rgb(88, 88, 88);
+}
+
+.logout-button-navbar:hover, .logout-button-navbar:focus {
+  outline: none;
+}

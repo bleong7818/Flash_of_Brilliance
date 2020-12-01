@@ -84,8 +84,12 @@ class NavBar extends React.Component {
             <div className="main-page-link" onClick={this.mainPage}>Flash of Brilliance</div>
             <button className="create-deck-button" onClick={this.createRedirect}>Create a deck</button>
             <button className="deck-index-button" onClick={this.deckIndex}>View All Decks</button>
-            <button className="profile-button" onClick={this.profileRedirect}>Dashboard</button>
-            <div>Welcome, {this.props.currentUser.first_name + " " + this.props.currentUser.last_name}</div>
+            <button className="profile-button" onClick={this.profileRedirect}>Profile</button>
+            {/* <div className="name-and-decks" onClick={this.profileRedirect}>
+                <div className="username">Welcome, {this.props.currentUser.first_name + " " + this.props.currentUser.last_name}</div>
+                <div className="see-decks">Click here to see your decks</div>
+            </div> */}
+            {/* <div>Welcome, {this.props.currentUser.first_name + " " + this.props.currentUser.last_name}</div> */}
             <button className="logout-button-navbar" onClick={this.handleLogout}>Log Out</button>
         </div>
         ) : (
