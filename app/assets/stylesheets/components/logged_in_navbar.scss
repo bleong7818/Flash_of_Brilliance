@@ -2,16 +2,36 @@
     display: flex;
     justify-content: space-around;
     background-color: gainsboro;
+    // opacity: 0.5;
+}
+
+.main-page-link {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .create-deck-button {
+    font-family: 'Open Sans', sans-serif;
     border: none;
-    background-color: green;
+    background-color: skyblue;
     height: 50px;
     border-radius: 5px;
 }
 
+.create-deck-button:hover {
+    background-color: #2185D0;
+    cursor: pointer;
+}
+
+.create-deck-button:hover, .create-deck-button:focus {
+  outline: none;
+}
+
 .deck-index-button {
+    font-family: 'Open Sans', sans-serif;
     border: none;
     background-color: orange;
     height: 50px;
@@ -24,10 +44,12 @@
 
 .deck-index-button:hover {
     background-color: rgb(255, 145, 0);
+    cursor: pointer;
 }
 
 .profile-button {
     // border: none;
+    font-family: 'Open Sans', sans-serif;
     background-color: skyblue;
     height: 50px;
     border-radius: 5px;
@@ -36,6 +58,7 @@
 
 .profile-button:hover {
     background-color: #2185D0;
+    cursor: pointer;
 }
 
 .profile-button:hover, .profile-button:focus {
@@ -50,22 +73,26 @@
 }
 
 .username {
+    font-family: 'Open Sans', sans-serif;
     display: flex;
     justify-content: center;
 }
 
 .see-decks {
+    font-family: 'Open Sans', sans-serif;
     display: flex;
     justify-content: center;
 }
 
 .logout-button-navbar {
+    font-family: 'Open Sans', sans-serif;
     border-radius: 5px;
     background-color: rgb(158, 158, 158);
 }
 
 .logout-button-navbar:hover {
     background-color: rgb(88, 88, 88);
+    cursor: pointer;
 }
 
 .logout-button-navbar:hover, .logout-button-navbar:focus {

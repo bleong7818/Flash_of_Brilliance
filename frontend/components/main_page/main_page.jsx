@@ -9,7 +9,7 @@ class MainPage extends React.Component {
     render() {
         return (
             <main className="main">
-                <div>testing</div>
+                <img className="flashcard-image" src="https://www.brainscape.com/blog/wp-content/uploads/2011/08/tumblr_njevg7orp01u8ccjmo1_1280.jpg" alt="flashcard-image"/>
             </main>
         )
     }

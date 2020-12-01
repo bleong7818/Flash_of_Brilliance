@@ -94,7 +94,7 @@ class NavBar extends React.Component {
         </div>
         ) : (
             <div className="modal-nav">
-                <img className="nav-logo" onClick={this.homepage} src="https://www.brainscape.com/blog/wp-content/uploads/2018/07/Transparent-Background.png" />
+                <div className="logo">Flash of Brilliance</div>
                 <div className="nav-bar-buttons">
                     <button className="demo-button" type="submit" onClick={this.demoSubmit}>Demo log in</button>
                     <div className="login-modal-div">
