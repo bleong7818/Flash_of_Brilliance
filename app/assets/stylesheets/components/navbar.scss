@@ -5,6 +5,7 @@
 }
 
 .logo {
+    padding-left: 30px;
     display: flex;
     align-items: center;
     font-family: 'Permanent Marker', cursive;
@@ -26,9 +27,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80px;
+    width: 100px;
     height: 50px;
     font-weight: 500;
+    font-family: 'Open Sans', sans-serif;
     background-color: #FDF8F7;
     border: none
 }
@@ -43,6 +45,7 @@
     width: 120px;
     height: 50px;
     border: none;
+    font-family: 'Open Sans', sans-serif;
     background-color: #FF8A48;
 }
 
@@ -53,12 +56,14 @@
 // }
 
 .sign-up-button:hover {
-    // width: 108px;
-    // height: 55px;
+    
     font-size: 14px;
     cursor: pointer;
     background-color: #ff8243;
+}
 
+.sign-up-button:hover, .sign-up-button:focus {
+  outline: none;
 }
 
 // .sign-up-button:hover .login-button {
@@ -69,6 +74,10 @@
     font-size: 14px;
     cursor: pointer;
     background-color: #faf6f6;
+}
+
+.login-button:hover, .login-button:focus {
+    outline: none;
 }
 
 .nav-logo {
@@ -83,6 +92,7 @@
     align-items: center;
     width: 120px;
     height: 50px;
+    font-family: 'Open Sans', sans-serif;
     background: lightblue;
     border: none
 }
@@ -90,4 +100,8 @@
 .demo-button:hover {
     font-size: 14px;
     cursor: pointer;
+}
+
+.demo-button:hover, .demo-button:focus {
+    outline: none;
 }

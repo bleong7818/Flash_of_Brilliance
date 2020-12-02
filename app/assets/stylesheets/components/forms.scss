@@ -1,10 +1,12 @@
 .modal-nav {
     // position: absolute;
     // opacity: 0.5;
-    background-color: gray;
+    background-color: rgba(128, 128, 128, 0.452);
+    width: 100%;
+    position: absolute;
     display: flex;
     justify-content: space-between;
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
  .modal {
@@ -76,6 +78,7 @@
     position: absolute;
     right: 10px;
     top: 10px;
+    font-size: 25px;
     background-color: none;
     background: transparent;
     border: none;

@@ -19,7 +19,8 @@
 .dashboard-user-side {
     padding-top: 10px;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    // justify-content: space-around;
 }
 
 .dashboard-logo {
@@ -40,7 +41,11 @@
 }
 
 .greeting {
-    font-size: 18px;
+    font-size: 20px;
+}
+
+.greeting-pt2 {
+    font-size: 18px
 }
 
 .usermade-decks {

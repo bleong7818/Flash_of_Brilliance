@@ -7,8 +7,6 @@ class Dashboard extends React.Component {
     constructor(props) {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
-        
-        this.createDeckRedirect = this.createDeckRedirect.bind(this);
     }
 
     componentDidMount() {
@@ -31,11 +29,6 @@ class Dashboard extends React.Component {
         };
     }
 
-    createDeckRedirect(e) {
-        e.preventDefault();
-        this.props.history.push(`/dashboard/newDeck`);
-    }
-
     render() {
         // debugger;
         if (!this.props.user) return null;
@@ -53,22 +46,16 @@ class Dashboard extends React.Component {
             <main className="Dashboard-main">
                 <div className="dashboard-user-section">
                     <header className="dashboard-user-side">
-                        <img className="dashboard-logo" src="https://www.brainscape.com/assets/bsc-share-icon.png" alt=""/>
+                        {/* <img className="dashboard-logo" src="https://www.brainscape.com/assets/bsc-share-icon.png" alt=""/> */}
                         <div className="greetings-and-info">
                             <p className="greeting"> Welcome, {this.props.user.first_name} {this.props.user.last_name}</p>
-                            {numberOfDecks}
-                        </div> 
-                        {/* <div>
-                            <Link to ="/dashboard/newDeck"> Create </Link>
-                        </div> */}
-                        <div className="dashboard-dropdown">
-                            <i className="fas fa-cog"></i>
-                            <button className="dashboard-logout" onClick={this.handleSubmit}>Log out</button>
+                            {/* {numberOfDecks} */}
                         </div>
+                        <div className="greeting-pt2">This is your profile page! Here you can look at decks that you've made and decks that you are studying.</div>
                     </header>
                     <div className="dashboard-second-row">
-                        <h4 className="no-of-decks">My Decks ({userDecks.length})</h4>
-                        <h1 className="add-deck-button" onClick={this.createDeckRedirect}>Create a Deck</h1>
+                        <h4 className="no-of-decks">Your Created Decks ({userDecks.length})</h4>
+                        {/* <h1 className="add-deck-button" onClick={this.createDeckRedirect}>Create a Deck</h1> */}
                     </div>
                     <div className="created-section">
                         <ul className="deck-list">
