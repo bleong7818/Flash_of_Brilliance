@@ -1,0 +1,58 @@
+.modal-bg {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+}
+
+.bg-active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.create-deck-modal {
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 10px;
+    background-color: white;
+    width: 30%;
+    height: 30%;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.create-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+}
+
+.modal-create-button {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #21d07e;
+    // height: 50px;
+}
+
+.modal-create-button:hover {
+    background-color: #15b43c;
+    cursor: pointer;
+}
+
+.modal-create-button:hover, .modal-create-button:focus {
+  outline: none;
+}
+
+.create-close-button:hover {
+    cursor: pointer;
+}

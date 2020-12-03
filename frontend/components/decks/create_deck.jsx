@@ -39,6 +39,7 @@ class CreateDeck extends React.Component {
                         <button className="deck-button" type="submit">Continue</button>
                     </div>
                 </form>
+                {/* <div className="create-close-button" >×</div> */}
             </div>
         )
     }

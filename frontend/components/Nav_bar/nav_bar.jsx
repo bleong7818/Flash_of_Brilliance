@@ -1,8 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
 import { Link } from 'react-router-dom';
 import LoginModal from '../login_module/login_modal';
 import SignInModal from '../login_module/signup_modal';
+import CreateDeckContainer from '../decks/create_deck_container';
 import DashboardContainer from '../user_page/dashboard_container';
 
 class NavBar extends React.Component {
@@ -22,6 +23,28 @@ class NavBar extends React.Component {
 
     componentDidMount() {
         this.props.requestUser(this.props.session_id);
+        let modalBtn = document.querySelector('.modal-create-button');
+        let modalBg = document.querySelector('.modal-bg');
+        let modalClose = document.querySelector('.create-close-button');
+        debugger;
+
+        if (modalBtn) {
+            // debugger;
+            modalBtn.addEventListener('click', function(){
+            modalBg.classList.add('bg-active');
+            });
+        }
+
+        if (modalClose) {
+            modalClose.addEventListener('click', function (){
+            modalBg.classList.remove('bg-active');
+            });
+        }
+    }
+
+    componentWillUnmount() {
+        // debugger;
+        // modalBtn.removeEventListener('click');
     }
 
     showModal(type) {
@@ -72,7 +95,7 @@ class NavBar extends React.Component {
     }
 
     createRedirect(e) {
-        e.preventDefault()
+        e.preventDefault();
         this.props.history.push("/dashboard/newDeck");
     }
 
@@ -83,10 +106,17 @@ class NavBar extends React.Component {
         <div className="logged-in-nav">
             <div className="main-page-link" onClick={this.mainPage}>Flash of Brilliance</div>
             <div className="logged-in-nav-buttons">
-                <button className="create-deck-button" onClick={this.createRedirect}>Create a deck</button>
+                <button className="modal-create-button">Create button modal</button>
+                {/* <button className="create-deck-button" onClick={this.createRedirect}>Create a deck</button> */}
                 <button className="deck-index-button" onClick={this.deckIndex}>View All Decks</button>
                 <button className="profile-button" onClick={this.profileRedirect}>Profile</button>
                 <button className="logout-button-navbar" onClick={this.handleLogout}>Log Out</button>
+            </div>
+            <div className="modal-bg">
+                <div className="create-deck-modal">
+                    <CreateDeckContainer />
+                    <div className="create-close-button">×</div>
+                </div>
             </div>
             {/* <div className="name-and-decks" onClick={this.profileRedirect}>
                 <div className="username">Welcome, {this.props.currentUser.first_name + " " + this.props.currentUser.last_name}</div>

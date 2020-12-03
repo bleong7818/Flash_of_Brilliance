@@ -1,8 +1,8 @@
 import React from 'react';
-import LoginFormContainer from '../session_form/login_form_container'
+import LoginFormContainer from '../session_form/login_form_container';
 
 const LoginModal = (props) => {
-    const showHideClassname = props.show ? "modal-display-block" : "modal-display-none"
+    const showHideClassname = props.show ? "modal-display-block" : "modal-display-none";
     
     return (
         <div className={showHideClassname}>

@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.createDeck = createDeck;
     window.deleteDeck = deleteDeck;
     window.getUsers = requestUsers;
+    //test
 
     const root = document.getElementById('root');
     ReactDOM.render(<Root store={store} />, root);

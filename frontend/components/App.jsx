@@ -14,12 +14,12 @@ import MainPage from './main_page/main_page';
 
 const App = () => (
     <div className="front-page">
-        <head>
+        <div>
             <link rel="preconnect" href="https://fonts.gstatic.com"/>
             <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet"/>
             <link rel="preconnect" href="https://fonts.gstatic.com"/>
             <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Permanent+Marker&display=swap" rel="stylesheet"/>
-        </head>
+        </div>
         <NavBarContainer />
         <Switch>
             <AuthRoute exact path="/dashboard" component={DashboardContainer}/>
