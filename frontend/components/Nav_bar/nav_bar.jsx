@@ -48,11 +48,6 @@ class NavBar extends React.Component {
         // }
     }
 
-    componentWillUnmount() {
-        // debugger;
-        // modalBtn.removeEventListener('click');
-    }
-
     showModal(type) {
         this.setState({ [type]: true });
     }
@@ -118,7 +113,7 @@ class NavBar extends React.Component {
                 <button className="profile-button" onClick={this.profileRedirect}>Profile</button>
                 <button className="logout-button-navbar" onClick={this.handleLogout}>Log Out</button>
             </div>
-            <div>
+            <div className="logged-in-nav-create-modal">
                 <CreateDeckContainer />
             </div>
             {/* <div className="modal-bg"> */}
