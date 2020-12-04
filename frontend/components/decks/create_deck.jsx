@@ -18,6 +18,12 @@ class CreateDeck extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const deck = Object.assign({}, this.state);
+        // debugger;
+        // let deckSubmit = document.querySelector('.deck-button');
+
+        if (deck.title.length !== 0) {
+            modalBg.classList.remove('bg-active');
+        }
         deck.creator_id = this.props.user.id;
         this.props.createDeck(deck).then(() => {
             this.props.history.push(`/dashboard`);
@@ -42,22 +48,33 @@ class CreateDeck extends React.Component {
         )
     }
 
+    // <div className="modal-bg">
+    //     <div className="create-deck-modal">
+    //         <CreateDeckContainer />
+    //         {/* <div className="create-close-button">×</div> */}
+    //     </div>
+    // </div>
+
     render() {
         return (
-            <div className="deck-creator">
-                <form onSubmit={this.handleSubmit} className="deck-form-box">
-                    <h2 className="instructions">Create a Deck</h2>
-                    <div className="deck-creation-form">
-                        <label>
-                            <input type="text" onChange={this.update('title')} placeholder="e.g. Bio 101, HTML terms"/>
-                        </label>
+            <div className="modal-bg">
+                <div className="create-deck-modal">
+                    <div className="deck-creator">
+                        <form onSubmit={this.handleSubmit} className="deck-form-box">
+                            <h2 className="instructions">Create a Deck</h2>
+                            <div className="deck-creation-form">
+                                <label>
+                                    <input type="text" onChange={this.update('title')} placeholder="e.g. Bio 101, HTML terms"/>
+                                </label>
+                            </div>
+                            <div className="deck-form-container">
+                                <button className="deck-button" type="submit">Continue</button>
+                            </div>
+                            <h3 className="deck-errors">{this.renderErrors()}</h3>
+                        </form>
+                        <div className="create-close-button" onClick={this.handleClose}>×</div>
                     </div>
-                    <div className="deck-form-container">
-                        <button className="deck-button" type="submit">Continue</button>
-                    </div>
-                    <h3 className="deck-errors">{this.renderErrors()}</h3>
-                </form>
-                <div className="create-close-button" onClick={this.handleClose}>×</div>
+                </div>
             </div>
         )
     }

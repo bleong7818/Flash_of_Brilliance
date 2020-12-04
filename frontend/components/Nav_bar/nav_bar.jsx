@@ -26,8 +26,7 @@ class NavBar extends React.Component {
         let modalBtn = document.querySelector('.modal-create-button');
         let modalBg = document.querySelector('.modal-bg');
         let modalClose = document.querySelector('.create-close-button');
-        // debugger;
-        let deckSubmit = document.querySelector('.deck-button');
+        // let deckSubmit = document.querySelector('.deck-button');
 
         if (modalBtn) {
             // debugger;
@@ -42,11 +41,11 @@ class NavBar extends React.Component {
             });
         }
 
-        if (deckSubmit) {
-            deckSubmit.addEventListener('click', function () {
-                modalBg.classList.remove('bg-active');
-            });
-        }
+        // if (deckSubmit) {
+        //     deckSubmit.addEventListener('click', function () {
+        //         modalBg.classList.remove('bg-active');
+        //     });
+        // }
     }
 
     componentWillUnmount() {
@@ -119,17 +118,14 @@ class NavBar extends React.Component {
                 <button className="profile-button" onClick={this.profileRedirect}>Profile</button>
                 <button className="logout-button-navbar" onClick={this.handleLogout}>Log Out</button>
             </div>
-            <div className="modal-bg">
-                <div className="create-deck-modal">
-                    <CreateDeckContainer />
-                    {/* <div className="create-close-button">×</div> */}
-                </div>
+            <div>
+                <CreateDeckContainer />
             </div>
-            {/* <div className="name-and-decks" onClick={this.profileRedirect}>
-                <div className="username">Welcome, {this.props.currentUser.first_name + " " + this.props.currentUser.last_name}</div>
-                <div className="see-decks">Click here to see your decks</div>
-            </div> */}
-            {/* <div>Welcome, {this.props.currentUser.first_name + " " + this.props.currentUser.last_name}</div> */}
+            {/* <div className="modal-bg"> */}
+                {/* <div className="create-deck-modal"> */}
+                    {/* <div className="create-close-button">×</div> */}
+                {/* </div> */}
+            {/* </div> */}
         </div>
         ) : (
             <div className="modal-nav">
