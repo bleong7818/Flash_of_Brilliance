@@ -8,6 +8,11 @@ class CreateDeck extends React.Component {
             creator_id: ""
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleClose = this.handleClose.bind(this);
+    }
+
+    componentDidMount() {
+
     }
 
     handleSubmit(e) {
@@ -19,17 +24,29 @@ class CreateDeck extends React.Component {
         });
     }
 
+    handleClose(e) {
+        this.props.removeDeckErrors();
+    }
+
     update(field) {
         return e => this.setState({
             [field]: e.currentTarget.value
         });
     }
 
+    renderErrors() {
+        return(
+            <div>
+                {this.props.errors}
+            </div>
+        )
+    }
+
     render() {
         return (
             <div className="deck-creator">
                 <form onSubmit={this.handleSubmit} className="deck-form-box">
-                    <h2>Create a Deck</h2>
+                    <h2 className="instructions">Create a Deck</h2>
                     <div className="deck-creation-form">
                         <label>
                             <input type="text" onChange={this.update('title')} placeholder="e.g. Bio 101, HTML terms"/>
@@ -38,8 +55,9 @@ class CreateDeck extends React.Component {
                     <div className="deck-form-container">
                         <button className="deck-button" type="submit">Continue</button>
                     </div>
+                    <h3 className="deck-errors">{this.renderErrors()}</h3>
                 </form>
-                {/* <div className="create-close-button" >×</div> */}
+                <div className="create-close-button" onClick={this.handleClose}>×</div>
             </div>
         )
     }

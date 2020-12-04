@@ -21,7 +21,7 @@ const DecksReducer = (oldState = {}, action) => {
             return newState;
         default:
             return newState;
-    };
+    }
 };
 
 export default DecksReducer;

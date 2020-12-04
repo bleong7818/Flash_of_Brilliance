@@ -1,0 +1,34 @@
+.deck-creator {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.deck-creation-form {
+    display: flex;
+    justify-content: center;
+}
+
+.instructions {
+    top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.deck-form-container {
+    display: flex;
+    justify-content: center;
+}
+
+.deck-errors {
+    display: flex;
+    justify-content: center;
+    color: #bb0000;
+    font-family: sans-serif;
+    line-height: 16.8px;
+    font-size: 12px;
+    font-style: italic;
+    text-align: left;
+}

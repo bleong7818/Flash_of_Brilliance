@@ -4,6 +4,7 @@ export const RECEIVE_DECKS = 'RECEIVE_DECKS';
 export const RECEIVE_DECK = 'RECEIVE_DECK';
 export const REMOVE_DECK = 'DELETE_DECK';
 export const RECEIVE_DECK_ERRORS = 'RECEIVE_DECK_ERRORS';
+export const REMOVE_DECK_ERRORS = 'REMOVE_DECK_ERRORS';
 
 const receiveDecks = (decks) => {
     return {
@@ -30,6 +31,12 @@ const receiveDeckErrors = (deckErrors)  => {
     return {
         type: RECEIVE_DECK_ERRORS,
         deckErrors
+    };
+};
+
+export const removeDeckErrors = () => {
+    return {
+        type: REMOVE_DECK_ERRORS
     };
 };
 

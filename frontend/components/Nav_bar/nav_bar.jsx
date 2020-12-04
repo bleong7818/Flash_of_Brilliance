@@ -26,7 +26,8 @@ class NavBar extends React.Component {
         let modalBtn = document.querySelector('.modal-create-button');
         let modalBg = document.querySelector('.modal-bg');
         let modalClose = document.querySelector('.create-close-button');
-        debugger;
+        // debugger;
+        let deckSubmit = document.querySelector('.deck-button');
 
         if (modalBtn) {
             // debugger;
@@ -38,6 +39,12 @@ class NavBar extends React.Component {
         if (modalClose) {
             modalClose.addEventListener('click', function (){
             modalBg.classList.remove('bg-active');
+            });
+        }
+
+        if (deckSubmit) {
+            deckSubmit.addEventListener('click', function () {
+                modalBg.classList.remove('bg-active');
             });
         }
     }
@@ -115,7 +122,7 @@ class NavBar extends React.Component {
             <div className="modal-bg">
                 <div className="create-deck-modal">
                     <CreateDeckContainer />
-                    <div className="create-close-button">×</div>
+                    {/* <div className="create-close-button">×</div> */}
                 </div>
             </div>
             {/* <div className="name-and-decks" onClick={this.profileRedirect}>
