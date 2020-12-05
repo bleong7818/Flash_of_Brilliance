@@ -20,8 +20,9 @@ class CreateDeck extends React.Component {
         const deck = Object.assign({}, this.state);
         // debugger;
         // let deckSubmit = document.querySelector('.deck-button');
-
+        let modalBg = document.querySelector('.modal-bg');
         if (deck.title.length !== 0) {
+            debugger;
             modalBg.classList.remove('bg-active');
         }
         deck.creator_id = this.props.user.id;
@@ -63,12 +64,10 @@ class CreateDeck extends React.Component {
                         <form onSubmit={this.handleSubmit} className="deck-form-box">
                             <h2 className="instructions">Create a Deck</h2>
                             <div className="deck-creation-form">
-                                <label>
-                                    <input type="text" onChange={this.update('title')} placeholder="e.g. Bio 101, HTML terms"/>
-                                </label>
+                                <input className="create-deck-title" type="text" onChange={this.update('title')} placeholder="e.g. Bio 101, HTML terms"/>
                             </div>
                             <div className="deck-form-container">
-                                <button className="deck-button" type="submit">Continue</button>
+                                <button className="deck-button" type="submit">Create Deck</button>
                             </div>
                             <h3 className="deck-errors">{this.renderErrors()}</h3>
                         </form>

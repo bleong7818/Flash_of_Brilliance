@@ -108,7 +108,6 @@ class NavBar extends React.Component {
             <div className="main-page-link" onClick={this.mainPage}>Flash of Brilliance</div>
             <div className="logged-in-nav-buttons">
                 <button className="modal-create-button">Create button modal</button>
-                {/* <button className="create-deck-button" onClick={this.createRedirect}>Create a deck</button> */}
                 <button className="deck-index-button" onClick={this.deckIndex}>View All Decks</button>
                 <button className="profile-button" onClick={this.profileRedirect}>Profile</button>
                 <button className="logout-button-navbar" onClick={this.handleLogout}>Log Out</button>
@@ -116,11 +115,6 @@ class NavBar extends React.Component {
             <div className="logged-in-nav-create-modal">
                 <CreateDeckContainer />
             </div>
-            {/* <div className="modal-bg"> */}
-                {/* <div className="create-deck-modal"> */}
-                    {/* <div className="create-close-button">×</div> */}
-                {/* </div> */}
-            {/* </div> */}
         </div>
         ) : (
             <div className="modal-nav">
