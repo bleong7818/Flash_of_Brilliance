@@ -5,6 +5,7 @@
 
 .deck-li {
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     padding: 20px;
@@ -29,4 +30,19 @@
 .deck-title:hover {
     cursor: pointer;
     color: skyblue;
+}
+
+.delete-deck-button {
+    color: rgb(102, 181, 207);
+    font-size: 18px;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    border: none;
+}
+
+.delete-deck-button:hover {
+    cursor: pointer;
+    color: rgb(15, 145, 189);
+    // font-size: 18px;
 }

@@ -23,7 +23,7 @@ class Deckbox extends React.Component {
     render() {
         // debugger;
         const deleteButton = this.props.deck.creator_id === this.props.currentUser.id ? (
-            <button className="delete-deck-button" >Delete Deck</button>
+            <div className="delete-deck-button" onClick={this.deleteRedirect(this.props.deck.id)}>Delete Deck</div>
         ) : null;
 
         return (
