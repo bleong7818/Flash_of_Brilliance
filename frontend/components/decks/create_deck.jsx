@@ -25,7 +25,6 @@ class CreateDeck extends React.Component {
         this.props.createDeck(deck).then(() => {
             this.props.history.push(`/dashboard`);
         });
-        debugger;
         this.setState(this.nullState);
     }
 

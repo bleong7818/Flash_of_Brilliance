@@ -3,10 +3,11 @@ import React from 'react';
 class LoginForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
+        this.nullState = {
             email: "",
             password: ""
         };
+        this.state = this.nullState;
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleClose = this.handleClose.bind(this);
     }
@@ -17,6 +18,7 @@ class LoginForm extends React.Component {
         this.props.processForm(user).then( () => {
             this.props.history.push("/dashboard");
         }).then(() => this.props.hideModal());
+        this.setState(this.nullState);
     }
 
     update(field) {
@@ -28,6 +30,7 @@ class LoginForm extends React.Component {
     handleClose(event) {
         this.props.removeSessionErrors();
         this.props.hideModal();
+        this.setState(this.nullState);
     }
 
     renderErrors() {
@@ -49,10 +52,10 @@ class LoginForm extends React.Component {
                     <h1 className="login-link">Log In</h1>
                     <div className="login-form">
                         <label>
-                            <input type="email" onChange={this.update('email')} placeholder="Email" className="login-email" />
+                            <input type="email" onChange={this.update('email')} placeholder="Email" className="login-email" value={this.state.email}/>
                         </label>
                         <label>
-                             <input type="password" onChange={this.update('password')} placeholder="Password" className="login-password" />
+                             <input type="password" onChange={this.update('password')} placeholder="Password" className="login-password" value={this.state.password}/>
                         </label>
                     </div>
                         <div className="log-in-container">
