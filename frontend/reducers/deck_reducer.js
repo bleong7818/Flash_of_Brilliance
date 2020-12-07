@@ -17,6 +17,7 @@ const DecksReducer = (oldState = {}, action) => {
             newState[action.deck.id] = action.deck;
             return newState;
         case REMOVE_DECK: 
+            debugger;
             delete newState[action.deckId];
             return newState;
         default:

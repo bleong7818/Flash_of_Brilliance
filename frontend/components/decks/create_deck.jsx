@@ -3,36 +3,36 @@ import React from "react";
 class CreateDeck extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
+        this.nullState = {
             title: "",
             creator_id: ""
         };
+        this.state = this.nullState;
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleClose = this.handleClose.bind(this);
-    }
-
-    componentDidMount() {
-
     }
 
     handleSubmit(e) {
         e.preventDefault();
         const deck = Object.assign({}, this.state);
-        // debugger;
+
         // let deckSubmit = document.querySelector('.deck-button');
         let modalBg = document.querySelector('.modal-bg');
         if (deck.title.length !== 0) {
-            debugger;
             modalBg.classList.remove('bg-active');
         }
         deck.creator_id = this.props.user.id;
         this.props.createDeck(deck).then(() => {
             this.props.history.push(`/dashboard`);
         });
+        debugger;
+        this.setState(this.nullState);
     }
 
     handleClose(e) {
         this.props.removeDeckErrors();
+        this.setState(this.nullState);
+        // debugger;
     }
 
     update(field) {
@@ -64,7 +64,7 @@ class CreateDeck extends React.Component {
                         <form onSubmit={this.handleSubmit} className="deck-form-box">
                             <h2 className="instructions">Create a Deck</h2>
                             <div className="deck-creation-form">
-                                <input className="create-deck-title" type="text" onChange={this.update('title')} placeholder="e.g. Bio 101, HTML terms"/>
+                                <input className="create-deck-title" type="text" onChange={this.update('title')} placeholder="e.g. Bio 101, HTML terms" value={this.state.title}/>
                             </div>
                             <div className="deck-form-container">
                                 <button className="deck-button" type="submit">Create Deck</button>

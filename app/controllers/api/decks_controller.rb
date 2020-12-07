@@ -30,7 +30,8 @@ class Api::DecksController < ApplicationController
 
 
     def destroy 
-        @deck = current_user.decks.find_by(id: params[:id])
+        @deck = Deck.find_by(id: params[:id])
+        debugger
 
         if @deck && @deck.destroy
             render "api/dashboard"

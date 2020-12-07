@@ -19,10 +19,12 @@
 .instructions {
     font-family: 'Open Sans', sans-serif;
     // top: 50%;
-    padding-top: 8%;
+    padding-top: 20px;
+    padding-bottom: 20px;
     display: flex;
     justify-content: center;
 }
+
 
 .create-deck-title {
     text-align: center;
@@ -31,13 +33,25 @@
     height: 100%;
 }
 
+.deck-creation-form {
+    // padding-bottom: 20x;
+}
+
 .deck-form-container {
+    padding-top: 20px;
+    padding-bottom: 10px;
     display: flex;
     justify-content: center;
 }
 
 .deck-button {
     font-family: 'Open Sans', sans-serif;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+.deck-button:hover {
+    cursor: pointer;
 }
 
 .deck-errors {
