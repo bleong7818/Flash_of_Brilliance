@@ -16,22 +16,21 @@ class Deckbox extends React.Component {
         };
     }
 
-    deleteRedirect(deckId) {
-        this.props.deleteDeck(deckId);
+    deleteRedirect() {
+        debugger;
+        this.props.deleteDeck(this.props.deck.id);
     }
     // onClick = { this.deleteRedirect(this.props.deck.id) }
     render() {
         // debugger;
         const deleteButton = this.props.deck.creator_id === this.props.currentUser.id ? (
-            <div className="delete-deck-button" onClick={this.deleteRedirect(this.props.deck.id)}>Delete Deck</div>
+            <div className="delete-deck-button" onClick={this.deleteRedirect}>Delete Deck</div>
         ) : null;
 
         return (
-            <li className="deck-list">
-                <div className="deck-li">
-                    <h3 className="deck-title" onClick={this.deckRedirect(this.props.deck.id)}>{this.props.deck.title}</h3>
-                    {deleteButton}
-                </div>
+            <li className="deck-li">
+                <h3 className="deck-title" onClick={this.deckRedirect(this.props.deck.id)}>{this.props.deck.title}</h3>
+                {deleteButton}
             </li>
         )
     }

@@ -68,7 +68,7 @@ class CreateDeck extends React.Component {
                             <div className="deck-form-container">
                                 <button className="deck-button" type="submit">Create Deck</button>
                             </div>
-                            <h3 className="deck-errors">{this.renderErrors()}</h3>
+                            <h3 className="deck-errors">{this.renderErrors}</h3>
                         </form>
                         <div className="create-close-button" onClick={this.handleClose}>×</div>
                     </div>

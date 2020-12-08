@@ -1,9 +1,7 @@
-.deck-list {
-    // padding: 30px;
-    margin: 20px 20px 20px 20px;
-}
+
 
 .deck-li {
+    margin: 20px 20px 20px 20px;
     display: flex;
     position: relative;
     justify-content: center;
@@ -15,6 +13,7 @@
     background-color: rgb(233, 233, 233);
     -webkit-box-shadow: 5px 5px 8px 5px rgba(0,0,0,0.55); 
     box-shadow: 5px 5px 8px 5px rgba(0,0,0,0.55);
+    z-index: 0;
 }
 
 .deck-title {

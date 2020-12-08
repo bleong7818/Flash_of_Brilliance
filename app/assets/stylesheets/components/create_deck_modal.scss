@@ -11,6 +11,7 @@
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.5s;
+    z-index: 2;
 }
 
 .bg-active {
@@ -25,6 +26,7 @@
     width: 45%;
     height: 45%;
     position: relative;
+    // z-index: 5;
     // display: flex;
     // justify-content: space-around;
     // align-items: center;

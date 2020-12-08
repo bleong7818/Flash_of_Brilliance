@@ -31,10 +31,10 @@ class Api::DecksController < ApplicationController
 
     def destroy 
         @deck = Deck.find_by(id: params[:id])
-        debugger
+        # debugger
 
         if @deck && @deck.destroy
-            render "api/dashboard"
+            render :index
         else
             render json: ["Deck not found"], status: 404
         end

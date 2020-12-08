@@ -40,7 +40,7 @@ class Dashboard extends React.Component {
                 <DeckboxContainer key={deck.id} deck={deck}></DeckboxContainer>
             )
         });
-        const numberOfDecks = userDecks.length === 0 ? null : <p className="usermade-decks">{userDecks.length} decks created</p>
+        // const numberOfDecks = userDecks.length === 0 ? null : <p className="usermade-decks">{userDecks.length} decks created</p>
 
         return (
             <main className="Dashboard-main">
