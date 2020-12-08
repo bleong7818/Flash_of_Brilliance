@@ -19,6 +19,7 @@ class NavBar extends React.Component {
         this.deckIndex = this.deckIndex.bind(this);
         this.handleLogout = this.handleLogout.bind(this);
         this.createRedirect = this.createRedirect.bind(this);
+        this.showCreateModal = this.showCreateModal.bind(this);
     }
 
     componentDidMount() {
@@ -28,18 +29,18 @@ class NavBar extends React.Component {
         let modalClose = document.querySelector('.create-close-button');
         // let deckSubmit = document.querySelector('.deck-button');
 
-        if (modalBtn) {
-            // debugger;
-            modalBtn.addEventListener('click', function(){
-            modalBg.classList.add('bg-active');
-            });
-        }
+        // if (modalBtn) {
+        //     // debugger;
+        //     modalBtn.addEventListener('click', function(){
+        //     modalBg.classList.add('bg-active');
+        //     });
+        // }
 
-        if (modalClose) {
-            modalClose.addEventListener('click', function (){
-            modalBg.classList.remove('bg-active');
-            });
-        }
+        // if (modalClose) {
+        //     modalClose.addEventListener('click', function (){
+        //     modalBg.classList.remove('bg-active');
+        //     });
+        // }
 
         // if (deckSubmit) {
         //     deckSubmit.addEventListener('click', function () {
@@ -100,6 +101,12 @@ class NavBar extends React.Component {
         this.props.history.push("/dashboard/newDeck");
     }
 
+    showCreateModal() {
+        // let modalBtn = document.querySelector('.modal-create-button');
+        let modalBg = document.querySelector('.modal-bg');
+        modalBg.classList.add('bg-active');
+    }
+
     render () {
         // debugger;
         const display = this.props.session_id ? (
@@ -107,7 +114,7 @@ class NavBar extends React.Component {
         <div className="logged-in-nav">
             <div className="main-page-link" onClick={this.mainPage}>Flash of Brilliance</div>
             <div className="logged-in-nav-buttons">
-                <button className="modal-create-button">Create button modal</button>
+                <button className="modal-create-button" onClick={this.showCreateModal}>Create button modal</button>
                 <button className="deck-index-button" onClick={this.deckIndex}>View All Decks</button>
                 <button className="profile-button" onClick={this.profileRedirect}>Profile</button>
                 <button className="logout-button-navbar" onClick={this.handleLogout}>Log Out</button>
