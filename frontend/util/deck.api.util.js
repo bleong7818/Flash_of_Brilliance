@@ -17,7 +17,6 @@ export const createDeck = (deck) => {
         url: `/api/decks/`,
         method: 'POST',
         data: { deck }
-        
     });
 };
 

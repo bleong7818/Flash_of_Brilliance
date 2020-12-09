@@ -19,6 +19,7 @@ class Deckbox extends React.Component {
     deleteRedirect() {
         // debugger;
         this.props.deleteDeck(this.props.deck.id);
+        // debugger;
         this.props.history.push(`/dashboard`);
     }
     // onClick = { this.deleteRedirect(this.props.deck.id) }

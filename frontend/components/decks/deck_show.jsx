@@ -25,9 +25,6 @@ class DeckShow extends React.Component {
                         <h1 className="deck-title-show">{this.props.deck.title}</h1>
                         <div className="deck-show-creator">Creator: {creator[0].first_name + " " + creator[0].last_name}</div>
                     </div>
-                    <div>
-                        flashcards
-                    </div>
                     <div> 
                         <Link to="/dashboard"> Dashboard </Link>
                     </div>
