@@ -14,7 +14,7 @@ export const fetchDeck = (deckId) => {
 
 export const createDeck = (deck) => {
     return $.ajax ({
-        url: `/api/decks/`,
+        url: `/api/decks`,
         method: 'POST',
         data: { deck }
     });
