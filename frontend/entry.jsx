@@ -4,6 +4,7 @@ import configureStore from './store/store';
 import Root from './components/root';
 import { createDeck, deleteDeck, requestDecks } from './actions/deck_actions';
 import { requestUser, requestUsers } from './actions/session_actions';
+import { createCard, deleteCard } from './actions/card_actions';
 
 document.addEventListener("DOMContentLoaded", () => {
     let store;
@@ -26,6 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
     window.createDeck = createDeck;
     window.deleteDeck = deleteDeck;
     window.getUsers = requestUsers;
+    window.createCard = createCard;
+    window.deleteCard = deleteCard;
     //test
 
     const root = document.getElementById('root');
