@@ -10,6 +10,7 @@ const CardsReducer = (oldState = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_CARDS:
+            // debugger;
             newState = action.cards;
             return newState;
         case RECEIVE_CARD:

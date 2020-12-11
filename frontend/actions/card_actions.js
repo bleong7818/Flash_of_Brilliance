@@ -4,7 +4,7 @@ export const RECEIVE_CARDS = 'RECEIVE_CARDS';
 export const RECEIVE_CARD = 'RECEIVE_CARD';
 export const REMOVE_CARD = 'REMOVE_CARD';
 export const RECEIVE_CARD_ERRORS = 'RECEIVE_CARD_ERRORS';
-export const REMOVE_CARD_ERRRORS = 'REMOVE_CARD_ERRORS';
+export const REMOVE_CARD_ERRORS = 'REMOVE_CARD_ERRORS';
 
 const receiveCards = (cards) => {
     return {
