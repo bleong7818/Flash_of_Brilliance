@@ -59,6 +59,7 @@ export const requestCard = (cardId) => {
 };
 
 export const createCard = (card) => {
+    debugger;
     return APIUtil.createCard(card)
         .then(
             newCard => dispatch(receiveCard(newCard)),

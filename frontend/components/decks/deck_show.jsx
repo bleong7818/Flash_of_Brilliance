@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Cardbox from '../cards/cardbox';
+import CreateCard from '../cards/create_card';
 
 class DeckShow extends React.Component {
     constructor(props) {
@@ -38,6 +39,9 @@ class DeckShow extends React.Component {
                         <ul className="deck-card-list">
                             {deckCards}
                         </ul>
+                    </div>
+                    <div>
+                        <CreateCard></CreateCard>
                     </div>
                 </div>
             </div>

@@ -21,7 +21,7 @@ const MDTP = dispatch => {
         deleteDeck: (deckId) => dispatch(deleteDeck(deckId)),
         requestDeck: (deckId) => dispatch(requestDeck(deckId)),
         requestUsers: () => dispatch(requestUsers()),
-        requestCards: () => dispatch(requestCards())
+        requestCards: () => dispatch(requestCards()),
         // requestUser: (creatorId) => dispatch(requestUser(creatorId))
     };
 };

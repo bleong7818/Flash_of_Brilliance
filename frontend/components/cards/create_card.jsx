@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 class CreateCard extends React.Component {
     constructor(props) {
         super(props);
+        // debugger;
         this.nullState = {
             front_side: "",
             back_side: ""
@@ -14,6 +15,13 @@ class CreateCard extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
+        const card = Object.assign({}, this.state);
+        card.deck_id = this.props.deck.id;
+        debugger;
+        this.props.createCard(card);
+        // debugger;
+        // this.props.history.push(`/decks/${this.props.deck.id}`);
+        this.setState(this.nullState);
     }
 
     update(field) {
@@ -39,7 +47,7 @@ class CreateCard extends React.Component {
                         <h2>Create a Card</h2>
                         <div className="create-card-fields">
                             <label>Key Term/Question
-                                <input className="create-card-front" onChange={this.update('front_side')} 
+                                <input className="create-card-front" type="text" onChange={this.update('front_side')} 
                                 placeholder="Who performed the hit song 'I Want it that Way?'" value={this.state.front_side}/>
                             </label>
                             <label>Definition/Answer
