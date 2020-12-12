@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Cardbox from '../cards/cardbox';
-import CreateCard from '../cards/create_card';
+import CreateCardContainer from '../cards/create_card_container';
 
 class DeckShow extends React.Component {
     constructor(props) {
@@ -41,7 +41,7 @@ class DeckShow extends React.Component {
                         </ul>
                     </div>
                     <div>
-                        <CreateCard></CreateCard>
+                        <CreateCardContainer/>
                     </div>
                 </div>
             </div>

@@ -16,4 +16,4 @@ const MDTP = dispatch => {
     };
 };
 
-export default withRouter(connect(MSTP, MDTP)(Cardbox))
+export default withRouter(connect(MSTP, MDTP)(Cardbox));

@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 class CreateCard extends React.Component {
     constructor(props) {
         super(props);
-        // debugger;
         this.nullState = {
             front_side: "",
             back_side: ""
@@ -18,9 +17,10 @@ class CreateCard extends React.Component {
         const card = Object.assign({}, this.state);
         card.deck_id = this.props.deck.id;
         debugger;
-        this.props.createCard(card);
-        // debugger;
-        // this.props.history.push(`/decks/${this.props.deck.id}`);
+        this.props.createCard(card).then(() => {
+            debugger;
+            this.props.history.push(`/decks/${this.props.deck.id}`);
+        });
         this.setState(this.nullState);
     }
 
@@ -31,9 +31,11 @@ class CreateCard extends React.Component {
     }
 
     renderCardErrors() {
+        const errors = this.props.cardErrors;
+        // debugger;
         return (
             <div>
-                {this.props.cardErrors}
+                errors
             </div>
         )
     }

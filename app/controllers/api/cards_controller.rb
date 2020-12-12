@@ -10,7 +10,7 @@ class Api::CardsController < ApplicationController
 
     def create
         @card = Card.new(card_params)
-        debugger
+        # debugger
         if @card.save
             render :show
         else
