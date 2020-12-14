@@ -28,8 +28,9 @@ class DeckShow extends React.Component {
             }
         });
 
-        
-        // if (!this.props.deck.creator) return null;
+        // debugger;
+        const create = this.props.currentUser.id === this.props.deck.creator_id ? <CreateCardContainer /> : null
+        // debugger;
         return (
             <div className="deck-show">
                 <div className="first-row">
@@ -43,7 +44,7 @@ class DeckShow extends React.Component {
                         </ul>
                     </div>
                     <div>
-                        <CreateCardContainer/>
+                        {create}
                     </div>
                 </div>
             </div>

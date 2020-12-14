@@ -42,7 +42,6 @@ class CreateDeck extends React.Component {
     }
 
     renderErrors() {
-        // debugger;
         return(
             <div>
                 {this.props.errors}

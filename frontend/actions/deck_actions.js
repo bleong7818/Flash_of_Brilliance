@@ -28,7 +28,6 @@ const removeDeck = (deckId) => {
 };
 
 const receiveDeckErrors = (deckErrors)  => {
-    debugger;
     return {
         type: RECEIVE_DECK_ERRORS,
         deckErrors

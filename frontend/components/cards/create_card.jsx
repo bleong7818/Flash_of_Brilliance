@@ -30,7 +30,6 @@ class CreateCard extends React.Component {
 
     renderCardErrors() {
         const errors = Object.values(this.props.cardErrors);
-        // debugger
         return (
             <div>errors
                 {errors}

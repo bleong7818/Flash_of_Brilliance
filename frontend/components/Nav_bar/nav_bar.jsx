@@ -30,7 +30,7 @@ class NavBar extends React.Component {
         // let deckSubmit = document.querySelector('.deck-button');
 
         // if (modalBtn) {
-        //     // debugger;
+        //     
         //     modalBtn.addEventListener('click', function(){
         //     modalBg.classList.add('bg-active');
         //     });

@@ -9,7 +9,6 @@ const CardErrorsReducer = (oldState = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_CARD_ERRORS:
-            debugger;
             newState = action.cardErrors;
             return newState;
         case REMOVE_CARD_ERRORS:
