@@ -3,13 +3,11 @@ import React from "react";
 class Deckbox extends React.Component {
     constructor(props) {
         super(props);
-        // debugger;
         this.deckRedirect = this.deckRedirect.bind(this);
         this.deleteRedirect = this.deleteRedirect.bind(this);
     }
 
     deckRedirect(deckId) {
-        // debugger;
         return e => {
             e.preventDefault();
             this.props.history.push(`/decks/${deckId}`);
@@ -17,14 +15,11 @@ class Deckbox extends React.Component {
     }
 
     deleteRedirect() {
-        // debugger;
         this.props.deleteDeck(this.props.deck.id);
-        // debugger;
         this.props.history.push(`/dashboard`);
     }
     // onClick = { this.deleteRedirect(this.props.deck.id) }
     render() {
-        // debugger;
         const deleteButton = this.props.deck.creator_id === this.props.currentUser.id ? (
             <div className="delete-deck-button" onClick={this.deleteRedirect}>Delete Deck</div>
         ) : null;

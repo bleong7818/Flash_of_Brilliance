@@ -28,6 +28,7 @@ const removeDeck = (deckId) => {
 };
 
 const receiveDeckErrors = (deckErrors)  => {
+    debugger;
     return {
         type: RECEIVE_DECK_ERRORS,
         deckErrors
@@ -70,7 +71,7 @@ export const updateDeck = (deck) => {
     return dispatch => {
         return APIUtil.updateDeck(deck)
             .then(updatedDeck => {
-                return dispatch(receiveDeck(updatedDeck))
+                return dispatch(receiveDeck(updatedDeck));
             });
     };
 };

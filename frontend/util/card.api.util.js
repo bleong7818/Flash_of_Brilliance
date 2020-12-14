@@ -13,7 +13,6 @@ export const fetchCard = (cardId) => {
 };
 
 export const createCard = (card) => {
-    debugger
     return $.ajax ({
         url: "/api/cards",
         method: 'POST',

@@ -7,8 +7,9 @@ const CardErrorsReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
     let newState = Object.assign({}, oldState);
 
-    switch(action.type) {
+    switch (action.type) {
         case RECEIVE_CARD_ERRORS:
+            debugger;
             newState = action.cardErrors;
             return newState;
         case REMOVE_CARD_ERRORS:

@@ -33,7 +33,6 @@ class CreateDeck extends React.Component {
         this.setState(this.nullState);
         let modalBg = document.querySelector('.modal-bg');
         modalBg.classList.remove('bg-active');
-        // debugger;
     }
 
     update(field) {
@@ -43,6 +42,7 @@ class CreateDeck extends React.Component {
     }
 
     renderErrors() {
+        // debugger;
         return(
             <div>
                 {this.props.errors}

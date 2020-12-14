@@ -1,10 +1,23 @@
-.cardbox {
+// .cardbox {
+//     display: flex;
+//     justify-content: center;
+//     // flex-direction: column;
+// }
+
+.card-descriptions {
+    display: flex;
+    justify-content: space-around;
+    color: white;
+}
+
+.actual-cards {
     display: flex;
     justify-content: space-around;
 }
 
 .card-front_side {
     margin: 20px 20px 20px 20px;
+    font-size: 20px;
     display: flex;
     position: relative;
     justify-content: center;
@@ -17,11 +30,13 @@
     -webkit-box-shadow: 5px 5px 8px 5px rgba(0,0,0,0.55); 
     box-shadow: 5px 5px 8px 5px rgba(0,0,0,0.55);
     z-index: 0;
-
 }
+
+
 
 .card-back_side {
     margin: 20px 20px 20px 20px;
+    font-size: 20px;
     display: flex;
     position: relative;
     justify-content: center;

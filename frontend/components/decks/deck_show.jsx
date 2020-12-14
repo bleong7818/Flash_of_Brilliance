@@ -27,6 +27,8 @@ class DeckShow extends React.Component {
                 )
             }
         });
+
+        
         // if (!this.props.deck.creator) return null;
         return (
             <div className="deck-show">

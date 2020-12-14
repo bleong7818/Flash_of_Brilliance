@@ -16,9 +16,7 @@ class CreateCard extends React.Component {
         e.preventDefault();
         const card = Object.assign({}, this.state);
         card.deck_id = this.props.deck.id;
-        debugger;
         this.props.createCard(card).then(() => {
-            debugger;
             this.props.history.push(`/decks/${this.props.deck.id}`);
         });
         this.setState(this.nullState);
@@ -31,11 +29,11 @@ class CreateCard extends React.Component {
     }
 
     renderCardErrors() {
-        const errors = this.props.cardErrors;
-        // debugger;
+        const errors = Object.values(this.props.cardErrors);
+        // debugger
         return (
-            <div>
-                errors
+            <div>errors
+                {errors}
             </div>
         )
     }

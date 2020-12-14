@@ -28,13 +28,14 @@ const removeCard = (cardId) => {
 };
 
 const receiveCardErrors = (cardErrors) => {
+    debugger;
     return {
         type: RECEIVE_CARD_ERRORS,
         cardErrors
     };
 };
 
-const removeCardErrors = () => {
+export const removeCardErrors = () => {
     return {
         type: REMOVE_CARD_ERRRORS
     };
@@ -58,12 +59,12 @@ export const requestCard = (cardId) => {
     };
 };
 
-export const createCard = (card) => {
+export const createCard = (card) => dispatch => {
     debugger;
     return APIUtil.createCard(card)
         .then(
             newCard => dispatch(receiveCard(newCard)),
-            errors => dispatch(receiveCardErrors(errors))
+            errors => dispatch(receiveCardErrors(errors.responseJSON))
         );
 };
 

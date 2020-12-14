@@ -10,11 +10,10 @@ class Api::CardsController < ApplicationController
 
     def create
         @card = Card.new(card_params)
-        # debugger
         if @card.save
             render :show
         else
-            render json: @deck.errors.full_messages, status: 422
+            render json: @card.errors.full_messages, status: 422
         end
     end
 

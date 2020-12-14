@@ -10,7 +10,6 @@ class Dashboard extends React.Component {
     }
 
     componentDidMount() {
-        // debugger;
         this.props.requestUser(this.props.session_id);
         this.props.requestDecks();
     }
@@ -22,7 +21,6 @@ class Dashboard extends React.Component {
     }
 
     deckRedirect(deckId) {
-        // debugger;
         return e => {
         e.preventDefault();
         this.props.history.push(`/decks/${deckId}`);
@@ -30,9 +28,7 @@ class Dashboard extends React.Component {
     }
 
     render() {
-        // debugger;
         if (!this.props.user) return null;
-        // debugger;
         // const noDupes = this.props.decks.filter((value, index) => this.props.decks.indexOf(value) === index);
         const filteredDecks = this.props.decks.filter(deck => deck.creator_id === this.props.user.id);
         const userDecks = filteredDecks.map(deck => {

@@ -31,7 +31,6 @@ class Api::DecksController < ApplicationController
 
     def destroy 
         @deck = Deck.find_by(id: params[:id])
-        # debugger
 
         if @deck && @deck.destroy
             render :index

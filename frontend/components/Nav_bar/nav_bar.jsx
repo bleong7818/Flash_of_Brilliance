@@ -108,13 +108,11 @@ class NavBar extends React.Component {
     }
 
     render () {
-        // debugger;
         const display = this.props.session_id ? (
-        //    <DashboardContainer />
         <div className="logged-in-nav">
             <div className="main-page-link" onClick={this.mainPage}>Flash of Brilliance</div>
             <div className="logged-in-nav-buttons">
-                <button className="modal-create-button" onClick={this.showCreateModal}>Create button modal</button>
+                <button className="modal-create-button" onClick={this.showCreateModal}>Create a Deck</button>
                 <button className="deck-index-button" onClick={this.deckIndex}>View All Decks</button>
                 <button className="profile-button" onClick={this.profileRedirect}>Profile</button>
                 <button className="logout-button-navbar" onClick={this.handleLogout}>Log Out</button>

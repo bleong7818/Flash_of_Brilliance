@@ -4,7 +4,6 @@ import { createDeck, removeDeckErrors } from '../../actions/deck_actions';
 import { withRouter } from 'react-router-dom';
 
 const MSTP = (state, ownProps) => {
-    // debugger;
     return {
         decks: state.entities.decks, 
         errors: state.errors.decks,

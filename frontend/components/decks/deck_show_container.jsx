@@ -6,7 +6,6 @@ import { requestCards } from '../../actions/card_actions';
 import { withRouter } from 'react-router-dom';
 
 const MSTP = (state, ownProps) => {
-    // debugger;
     return {
         deck: state.entities.decks[ownProps.match.params.deckId],
         deckId: ownProps.match.params.deckId,
