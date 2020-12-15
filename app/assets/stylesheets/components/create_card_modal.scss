@@ -29,11 +29,94 @@
     border-radius: 10px;
     background-color: white;
     width: 45%;
-    height: 45%;
+    height: 48%;
     position: relative;
-    // z-index: 5;
-    // display: flex;
-    // justify-content: space-around;
-    // align-items: center;
-    // flex-direction: column;
+}
+
+.create-card-close {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.card-creator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.create-card-form {
+    padding: 10px;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.create-card-button {
+    display: flex;
+    justify-content: center;
+}
+
+.create-card-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.card-errors {
+    display: flex;
+    justify-content: center;
+}
+
+.first-field {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.front-description {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+.create-card-front {
+    width: 70vh;
+    height: 50px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.second-field {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.back-description {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+.create-card-back {
+    text-align: center;
+    height: 50px;
+    font-size: 16px;
+    // width: 400px;
+}
+
+.card-errors {
+    font-size: 14px;
+    color: #bb0000;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+}
+
+.card-error {
+    padding: 5px;
 }

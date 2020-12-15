@@ -44,11 +44,22 @@ class CreateCard extends React.Component {
     }
 
     renderCardErrors() {
-        const errors = Object.values(this.props.cardErrors);
+        // <ul>
+        //     {(this.props.errors).map((error, i) => (
+        //         <li key={`error-${i}`}>
+        //             {error}
+        //         </li>
+        //     ))}
+        // </ul>
+        // debugger;
         return (
-            <div>errors
-                {errors}
-            </div>
+            <ul>
+                {(this.props.cardErrors).map((error, i) => (
+                    <li className="card-error" key={`error-${i}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
         )
     }
 
@@ -60,15 +71,19 @@ class CreateCard extends React.Component {
                     <form onSubmit={this.handleSubmit} className="create-card-form">
                         <h2>Create a Card</h2>
                         <div className="create-card-fields">
-                            <label>Key Term/Question
+                            <div className="first-field">
+                                <h2 className="front-description">Key Term/Question</h2>
                                 <input className="create-card-front" type="text" onChange={this.update('front_side')} 
-                                placeholder="Who performed the hit song 'I Want it that Way?'" value={this.state.front_side}/>
-                            </label>
-                            <label>Definition/Answer
+                                placeholder="Who performed the hit song 'I Want It That Way?'" value={this.state.front_side}/>
+                            </div>
+                            <div className="second-field">
+                                <h2 className="back-description">Definition/Answer</h2>
                                 <input className="create-card-back" type="text" onChange={this.update('back_side')}
                                 placeholder="The Backstreet Boys" value={this.state.back_side}/>
-                            </label>
-                            <button className="create-card-button" type="submit">Create</button>
+                            </div>
+                            <div className="create-card-button-container">
+                                <button className="create-card-button" type="submit">Create</button>
+                            </div>
                             <h3 className="card-errors">{this.renderCardErrors()}</h3>
                         </div>
                     </form>
