@@ -10,6 +10,7 @@ class CreateCard extends React.Component {
         };
         this.state = this.nullState;
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleClose = this.handleClose.bind(this);
     }
 
     handleSubmit(e) {
@@ -20,6 +21,17 @@ class CreateCard extends React.Component {
             this.props.history.push(`/decks/${this.props.deck.id}`);
         });
         this.setState(this.nullState);
+    }
+
+    handleClose(e) {
+        // e.preventDefault();
+        this.props.removeCardErrors();
+        this.setState(this.nullState);
+        const cardBg = document.querySelector('.card-modal-bg');
+        cardBg.classList.remove('.bg-active');
+        debugger;
+        // let modalBg = document.querySelector('.modal-bg');
+        // modalBg.classList.remove('bg-active');
     }
 
     update(field) {
@@ -57,6 +69,7 @@ class CreateCard extends React.Component {
                             <h3 className="card-errors">{this.renderCardErrors()}</h3>
                         </div>
                     </form>
+                    <div className="create-card-close" onClick={this.handleClose}>×</div>
                 </div>  
             </div>
         </div>

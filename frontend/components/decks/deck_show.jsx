@@ -6,13 +6,24 @@ import CreateCardContainer from '../cards/create_card_container';
 class DeckShow extends React.Component {
     constructor(props) {
         super(props);
-
     }
 
     componentDidMount() {
         this.props.requestUsers();
         this.props.requestDeck(this.props.deckId);
         this.props.requestCards();
+    }
+
+    creatCardModal() {
+        let modalCardBg = document.querySelector('.card-modal-bg');
+        modalCardBg.classList.add('bg-active');
+        // debugger;
+    }
+
+    showCreateModal() {
+        // let modalBtn = document.querySelector('.modal-create-button');
+        let modalBg = document.querySelector('.modal-bg');
+        modalBg.classList.add('bg-active');
     }
 
     render() {
@@ -27,8 +38,9 @@ class DeckShow extends React.Component {
                 )
             }
         });
-
-        // debugger;
+        const createButton = this.props.currentUser.id === this.props.deck.creator_id ? (
+            <button className="create-card-button" onClick={this.creatCardModal}>Create a card</button>
+        ) : null
         const create = this.props.currentUser.id === this.props.deck.creator_id ? <CreateCardContainer /> : null
         // debugger;
         return (
@@ -38,13 +50,16 @@ class DeckShow extends React.Component {
                         <h1 className="deck-title-show">{this.props.deck.title}</h1>
                         <div className="deck-show-creator">Creator: {creator[0].first_name + " " + creator[0].last_name}</div>
                     </div>
+                    <div className="deck-options">
+                        {createButton}
+                    </div>
+                    <div>
+                        {create}
+                    </div>
                     <div className="deck-cards">
                         <ul className="deck-card-list">
                             {deckCards}
                         </ul>
-                    </div>
-                    <div>
-                        {create}
                     </div>
                 </div>
             </div>
