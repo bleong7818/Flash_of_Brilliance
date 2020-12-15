@@ -12,6 +12,7 @@ const CardErrorsReducer = (oldState = {}, action) => {
             newState = action.cardErrors;
             return newState;
         case REMOVE_CARD_ERRORS:
+            // debugger;
             return [];
         default:
             return newState;

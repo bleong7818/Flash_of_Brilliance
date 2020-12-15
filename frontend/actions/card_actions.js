@@ -35,8 +35,9 @@ const receiveCardErrors = (cardErrors) => {
 };
 
 export const removeCardErrors = () => {
+    // debugger;
     return {
-        type: REMOVE_CARD_ERRRORS
+        type: REMOVE_CARD_ERRORS
     };
 };
 
