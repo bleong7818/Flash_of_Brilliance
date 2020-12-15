@@ -25,11 +25,11 @@ class CreateCard extends React.Component {
 
     handleClose(e) {
         // e.preventDefault();
+        debugger;
         this.props.removeCardErrors();
         this.setState(this.nullState);
         const cardBg = document.querySelector('.card-modal-bg');
         cardBg.classList.remove('.bg-active');
-        debugger;
         // let modalBg = document.querySelector('.modal-bg');
         // modalBg.classList.remove('bg-active');
     }
@@ -70,6 +70,7 @@ class CreateCard extends React.Component {
                         </div>
                     </form>
                     <div className="create-card-close" onClick={this.handleClose}>×</div>
+                    {/* <div className="create-card-close-button" onClick={this.handleClose}>×</div> */}
                 </div>  
             </div>
         </div>

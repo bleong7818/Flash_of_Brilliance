@@ -29,6 +29,7 @@ class CreateDeck extends React.Component {
     }
 
     handleClose(e) {
+        debugger;
         this.props.removeDeckErrors();
         this.setState(this.nullState);
         let modalBg = document.querySelector('.modal-bg');
