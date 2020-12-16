@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Cardbox from '../cards/cardbox';
+import CardboxContainer from '../cards/cardbox_container';
 import CreateCardContainer from '../cards/create_card_container';
 
 class DeckShow extends React.Component {
@@ -17,7 +18,6 @@ class DeckShow extends React.Component {
     creatCardModal() {
         let modalCardBg = document.querySelector('.card-modal-bg');
         modalCardBg.classList.add('bg-active');
-        // debugger;
     }
 
     showCreateModal() {
@@ -34,7 +34,7 @@ class DeckShow extends React.Component {
         let deckCards = this.props.cards.map(card => {
             if (card.deck_id === this.props.deck.id) {
                 return (
-                    <Cardbox key={card.id} card={card}></Cardbox>
+                    <CardboxContainer key={card.id} deck={this.props.deck} card={card}></CardboxContainer>
                 )
             }
         });
@@ -42,7 +42,6 @@ class DeckShow extends React.Component {
             <button className="create-card-modal-button" onClick={this.creatCardModal}>Create a card</button>
         ) : null
         const create = this.props.currentUser.id === this.props.deck.creator_id ? <CreateCardContainer /> : null
-        // debugger;
         return (
             <div className="deck-show">
                 <div className="first-row">

@@ -10,6 +10,7 @@ const MSTP = (state, ownProps) => {
 };
 
 const MDTP = dispatch => {
+    
     return {
         requestCard: (cardId) => dispatch(requestCard(cardId)),
         deleteCard: (cardId) => dispatch(deleteCard(cardId))

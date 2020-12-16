@@ -29,13 +29,11 @@ class CreateCard extends React.Component {
 
     handleClose(e) {
         // e.preventDefault();
-        // debugger;
         this.props.removeCardErrors();
         this.setState(this.nullState);
         let cardBg = document.querySelector('.card-modal-bg');
         cardBg.classList.remove('bg-active');
         // modalBg.classList.remove('bg-active');
-        // debugger;
         // let modalBg = document.querySelector('.modal-bg');
         // modalBg.classList.remove('bg-active');
     }

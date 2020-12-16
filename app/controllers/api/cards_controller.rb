@@ -27,9 +27,8 @@ class Api::CardsController < ApplicationController
         end
     end
 
-    def delete
+    def destroy
         @card = Card.find_by(id: params[:id])
-
         if @card && @card.destroy
             render :index
         else
