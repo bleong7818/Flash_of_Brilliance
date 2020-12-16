@@ -18,11 +18,9 @@ class CreateCard extends React.Component {
         const card = Object.assign({}, this.state);
         card.deck_id = this.props.deck.id;
         let cardBg = document.querySelector('.card-modal-bg');
-        debugger;
         if (card.front_side.length !==0 && card.back_side.length !==0) {
             cardBg.classList.remove('bg-active');
         }
-
         this.props.createCard(card).then(() => {
             this.props.history.push(`/decks/${this.props.deck.id}`);
         });
@@ -78,16 +76,20 @@ class CreateCard extends React.Component {
                         <div className="create-card-fields">
                             <div className="first-field">
                                 <h2 className="front-description">Key Term/Question</h2>
-                                <input className="create-card-front" type="text" onChange={this.update('front_side')} 
-                                placeholder="Who performed the hit song 'I Want It That Way?'" value={this.state.front_side}/>
+                                <div className="first-input">
+                                    <input className="create-card-front" type="text" onChange={this.update('front_side')} 
+                                    placeholder="Who performed the hit song 'I Want It That Way?'" value={this.state.front_side}/>
+                                </div>
                             </div>
                             <div className="second-field">
                                 <h2 className="back-description">Definition/Answer</h2>
-                                <input className="create-card-back" type="text" onChange={this.update('back_side')}
-                                placeholder="The Backstreet Boys" value={this.state.back_side}/>
+                                <div className="second-input">
+                                    <input className="create-card-back" type="text" onChange={this.update('back_side')}
+                                    placeholder="The Backstreet Boys" value={this.state.back_side}/>
+                                </div>
                             </div>
                             <div className="create-card-button-container">
-                                <button className="create-card-button" type="submit">Create</button>
+                                <button className="create-card-button" type="submit">Create a Card</button>
                             </div>
                             <h3 className="card-errors">{this.renderCardErrors()}</h3>
                         </div>

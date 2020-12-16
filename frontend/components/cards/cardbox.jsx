@@ -6,7 +6,6 @@ class Cardbox extends React.Component {
     }
 
 
-
     render() {
         return (
             <div className="cardbox">

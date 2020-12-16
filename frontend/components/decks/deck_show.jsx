@@ -39,7 +39,7 @@ class DeckShow extends React.Component {
             }
         });
         const createButton = this.props.currentUser.id === this.props.deck.creator_id ? (
-            <button className="create-card-button" onClick={this.creatCardModal}>Create a card</button>
+            <button className="create-card-modal-button" onClick={this.creatCardModal}>Create a card</button>
         ) : null
         const create = this.props.currentUser.id === this.props.deck.creator_id ? <CreateCardContainer /> : null
         // debugger;

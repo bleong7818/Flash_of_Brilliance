@@ -14,6 +14,15 @@
     z-index: 2;
 }
 
+.create-card-modal {
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 10px;
+    background-color: white;
+    width: 45%;
+    height: 50%;
+    position: relative;
+}
+
 .bg-card-active {
     visibility: active;
     opacity: 1;
@@ -23,15 +32,6 @@
 //     visibility: visible;
 //     opacity: 1;
 // }
-
-.create-card-modal {
-    font-family: 'Montserrat', sans-serif;
-    border-radius: 10px;
-    background-color: white;
-    width: 45%;
-    height: 48%;
-    position: relative;
-}
 
 .create-card-close {
     position: absolute;
@@ -46,7 +46,15 @@
     flex-direction: column;
 }
 
+.create-card-fields {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .create-card-form {
+    width: 100%;
     padding: 10px;
     font-family: 'Open Sans', sans-serif;
     display: flex;
@@ -55,25 +63,17 @@
     flex-direction: column;
 }
 
-.create-card-button {
-    display: flex;
-    justify-content: center;
-}
-
 .create-card-button-container {
     display: flex;
     justify-content: center;
 }
 
-.card-errors {
-    display: flex;
-    justify-content: center;
-}
-
 .first-field {
+    // width: 100%;
     padding: 10px;
     display: flex;
     justify-content: center;
+    // align-items: center;
     flex-direction: column;
 }
 
@@ -83,8 +83,14 @@
     padding: 5px;
 }
 
+.first-input {
+    display: flex;
+    justify-content: center;
+}
+
+
 .create-card-front {
-    width: 70vh;
+    width: 80%;
     height: 50px;
     text-align: center;
     font-size: 16px;
@@ -92,6 +98,7 @@
 
 .second-field {
     padding: 10px;
+    // width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -103,14 +110,30 @@
     padding: 5px;
 }
 
+.second-input {
+    display: flex;
+    justify-content: center;
+}
+
 .create-card-back {
-    text-align: center;
+    width: 80%;
     height: 50px;
+    text-align: center;
     font-size: 16px;
-    // width: 400px;
+}
+
+.create-card-button {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(180, 180, 180);
+    // height: 25px;
+    // width: 50px;
+    border-radius: 5px;
 }
 
 .card-errors {
+    display: flex;
+    justify-content: center;
     font-size: 14px;
     color: #bb0000;
     font-family: 'Open Sans', sans-serif;
