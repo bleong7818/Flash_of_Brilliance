@@ -1,5 +1,6 @@
 class Deck < ApplicationRecord
     validates :title, presence: true
+    validates :title, uniqueness: true
     
     # belongs_to :creator,
     # primary_key: :id,

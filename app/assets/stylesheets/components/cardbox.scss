@@ -64,5 +64,22 @@
     -webkit-box-shadow: 5px 5px 8px 5px rgba(0,0,0,0.55); 
     box-shadow: 5px 5px 8px 5px rgba(0,0,0,0.55);
     z-index: 0;
+}
 
+.delete-card-button {
+    height: 50px;
+    width: 100px;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(81, 128, 216);
+    border-radius: 5px;
+}
+
+.delete-card-button:hover {
+    cursor: pointer;
+    background-color: rgb(80, 80, 230);
+}
+
+.delete-card-button:hover, .delete-card-button:focus {
+    outline: none;
 }

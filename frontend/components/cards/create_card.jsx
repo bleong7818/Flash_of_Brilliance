@@ -13,9 +13,13 @@ class CreateCard extends React.Component {
         this.handleClose = this.handleClose.bind(this);
     }
 
+
+
     handleSubmit(e) {
         e.preventDefault();
         const card = Object.assign({}, this.state);
+
+        
         card.deck_id = this.props.deck.id;
         let cardBg = document.querySelector('.card-modal-bg');
         if (card.front_side.length !==0 && card.back_side.length !==0) {

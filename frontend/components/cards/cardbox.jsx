@@ -18,7 +18,7 @@ class Cardbox extends React.Component {
         return (
             <div className="cardbox">
                 <div className="delete-div">
-                    <button onClick={this.deleteRedirect}>Delete card</button>
+                    <button className="delete-card-button" onClick={this.deleteRedirect}>Delete card</button>
                 </div>
                 <div className="front-side">
                     <h2 className="card-descriptions">Key Term/Question</h2>

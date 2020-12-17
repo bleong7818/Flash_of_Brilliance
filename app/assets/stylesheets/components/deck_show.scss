@@ -23,8 +23,9 @@
     display: flex;
     justify-content: center;
     padding-bottom: 20px;
-    font-family: sans-serif;
-    font-size: 36px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    font-weight: 450;
     color: #28a5dc;
 }
 
@@ -32,10 +33,29 @@
     display: flex;
     justify-content: center;
     color: white;
+    font-size: 28px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .deck-options {
     display: flex;
     justify-content: center;
     padding-bottom: 30px;
+}
+
+.create-card-modal-button {
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 5px;
+    height: 50px;
+    width: 100px;
+    background-color: rgb(255, 94, 0);
+}
+
+.create-card-modal-button:hover {
+    cursor: pointer;
+    background-color: rgb(255, 74, 2);
+}
+
+.create-card-modal-button:hover, .create-card-modal-button:focus {
+  outline: none;
 }

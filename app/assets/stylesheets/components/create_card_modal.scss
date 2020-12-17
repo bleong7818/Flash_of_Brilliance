@@ -131,6 +131,14 @@
     border-radius: 5px;
 }
 
+.create-card-button:hover {
+    cursor: pointer;
+}
+
+// .create-card-button:hover, .create-card-button:focus {
+//     outline: none;
+// }
+
 .card-errors {
     display: flex;
     justify-content: center;

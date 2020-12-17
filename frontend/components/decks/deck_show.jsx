@@ -47,7 +47,7 @@ class DeckShow extends React.Component {
                 <div className="first-row">
                     <div className="pack-header-main">
                         <h1 className="deck-title-show">{this.props.deck.title}</h1>
-                        <div className="deck-show-creator">Creator: {creator[0].first_name + " " + creator[0].last_name}</div>
+                        <div className="deck-show-creator">Deck Creator: {creator[0].first_name + " " + creator[0].last_name}</div>
                     </div>
                     <div className="deck-options">
                         {createButton}
