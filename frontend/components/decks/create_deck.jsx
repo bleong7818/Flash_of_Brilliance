@@ -21,10 +21,12 @@ class CreateDeck extends React.Component {
         if (deck.title.length !== 0) {
             modalBg.classList.remove('bg-active');
         }
+        debugger;
         deck.creator_id = this.props.user.id;
-        this.props.createDeck(deck).then(() => {
-            this.props.history.push(`/dashboard`);
-        });
+
+        this.props.createDeck(deck);
+        debugger;
+        // this.props.history.push(`/dashboard`);
         this.setState(this.nullState);
     }
 

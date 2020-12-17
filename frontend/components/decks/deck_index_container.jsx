@@ -5,7 +5,8 @@ import DeckIndex from './deck_index';
 
 const MSTP = (state, ownProps) => {
     return {
-        decks: Object.values(state.entities.decks)
+        decks: Object.values(state.entities.decks),
+        user: state.entities.users[state.session.id]
     };
 };
 

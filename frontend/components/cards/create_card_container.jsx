@@ -8,7 +8,8 @@ const MSTP = (state, ownProps) => {
     return {
         cards: state.entities.cards,
         deck: state.entities.decks[ownProps.match.params.deckId],
-        cardErrors: Object.values(state.errors.cards)
+        cardErrors: Object.values(state.errors.cards),
+        user: state.entities.users[state.session.id]
     };
 };
 
