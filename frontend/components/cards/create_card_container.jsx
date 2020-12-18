@@ -6,7 +6,7 @@ import { withRouter } from 'react-router-dom';
 const MSTP = (state, ownProps) => {
     // debugger;
     return {
-        cards: state.entities.cards,
+        cards: Object.values(state.entities.cards),
         deck: state.entities.decks[ownProps.match.params.deckId],
         cardErrors: Object.values(state.errors.cards),
         user: state.entities.users[state.session.id]

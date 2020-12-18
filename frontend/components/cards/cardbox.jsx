@@ -11,15 +11,17 @@ class Cardbox extends React.Component {
         // e.preventDefault();
         this.props.deleteCard(this.props.card.id);
         this.props.history.push(`/decks/${this.props.deck.id}`);
-
     }
 
     render() {
+        const deleteButton = this.props.deck.creator_id === this.props.currentUser.id ? (
+        <div className="delete-div">
+            <button className="delete-card-button" onClick={this.deleteRedirect}>Delete card</button>
+        </div>
+        ) : null
         return (
             <div className="cardbox">
-                <div className="delete-div">
-                    <button className="delete-card-button" onClick={this.deleteRedirect}>Delete card</button>
-                </div>
+                {deleteButton}
                 <div className="front-side">
                     <h2 className="card-descriptions">Key Term/Question</h2>
                     <div className="card-front_side">{this.props.card.front_side}</div>
