@@ -12,6 +12,7 @@ class DeckShow extends React.Component {
     componentDidMount() {
         this.props.requestUsers();
         this.props.requestDeck(this.props.deckId);
+        // this.props.requestDecks();
         this.props.requestCards();
     }
 

@@ -12,6 +12,10 @@ class CreateDeck extends React.Component {
         this.handleClose = this.handleClose.bind(this);
     }
 
+    componentDidMount() {
+        this.props.requestDecks();
+    }
+
     handleSubmit(e) {
         e.preventDefault();
         const deck = Object.assign({}, this.state);
@@ -21,18 +25,20 @@ class CreateDeck extends React.Component {
             return deck.title;
         });
         // debugger;
-        console.log(deckTitles);
+        // console.log(deckTitles);
         // let deckSubmit = document.querySelector('.deck-button');
         let modalBg = document.querySelector('.modal-bg');
         if (deck.title.length !== 0 && !deckTitles.includes(deck.title)) {
             modalBg.classList.remove('bg-active');
         }
         // debugger;
-        deck.creator_id = this.props.user.id;
-
+        deck.creator_id = this.props.currentUser.id;
+        debugger;
         this.props.createDeck(deck);
         // debugger;
-        // this.props.history.push(`/dashboard`);
+        debugger;
+        this.props.history.push("/dashboard");
+        // this.props.history.push(`/decks/${deck.id}`);
         this.setState(this.nullState);
     }
 
