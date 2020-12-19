@@ -14,8 +14,8 @@ user1 = User.create({first_name: 'Kloe', last_name: 'Rinz', email: "Sieg@Liberl.
 user2 = User.create({first_name: 'Estelle', last_name: 'Bright', email: "BigStick@liberl.orb", password: "Shines"})
 user3 = User.create({first_name: 'Joshua', last_name: 'Bright', email: "JYBright@liberl.orb", password: "KarinAndLoewe"})
 
-deck1 = Deck.create({title: "The White Madrigal", creator_id: user1.id})
-deck2 = Deck.create({title: "Bracer Rules", creator_id: user2.id})
-deck3 = Deck.create({title: "How to be happy", creator_id: user3.id})
+deck1 = Deck.create({id: 1, title: "The White Madrigal", creator_id: user1.id})
+deck2 = Deck.create({id: 2, title: "Bracer Rules", creator_id: user2.id})
+deck3 = Deck.create({id: 3, title: "How to be happy", creator_id: user3.id})
 
 card1 = Card.create({front_side: "Oscar", back_side: "Julius", deck_id: 1})

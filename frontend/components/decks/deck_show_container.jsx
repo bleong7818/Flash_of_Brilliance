@@ -6,11 +6,13 @@ import { requestCards } from '../../actions/card_actions';
 import { withRouter } from 'react-router-dom';
 
 const MSTP = (state, ownProps) => {
-    // debugger;
+    const deckId2 = ownProps.match.params.deckId;
+    debugger;
     return {
         deck: state.entities.decks[ownProps.match.params.deckId],
-        // decks: Object.values(state.entities.decks),
         deckId: ownProps.match.params.deckId,
+        deck2: Object.values(state.entities.decks).filter((deck) => deck.id === deckId2),
+        // decks: Object.values(state.entities.decks),
         users: Object.values(state.entities.users),
         cards: Object.values(state.entities.cards),
         currentUser: state.session

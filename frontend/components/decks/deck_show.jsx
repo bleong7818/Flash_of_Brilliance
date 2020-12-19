@@ -16,7 +16,7 @@ class DeckShow extends React.Component {
         this.props.requestCards();
     }
 
-    creatCardModal() {
+    createCardModal() {
         let modalCardBg = document.querySelector('.card-modal-bg');
         modalCardBg.classList.add('bg-active');
     }
@@ -31,7 +31,7 @@ class DeckShow extends React.Component {
         if (!this.props.deck) return null;
         const creator = this.props.users.filter(user => user.id === this.props.deck.creator_id);
         if (creator.length === 0) return null;
-        
+        console.log(this.props.deck2);
         let deckCards = this.props.cards.map(card => {
             if (card.deck_id === this.props.deck.id) {
                 return (
@@ -40,9 +40,10 @@ class DeckShow extends React.Component {
             }
         });
         const createButton = this.props.currentUser.id === this.props.deck.creator_id ? (
-            <button className="create-card-modal-button" onClick={this.creatCardModal}>Create a card</button>
+            <button className="create-card-modal-button" onClick={this.createCardModal}>Create a card</button>
         ) : null
         const create = this.props.currentUser.id === this.props.deck.creator_id ? <CreateCardContainer /> : null
+        debugger;
         return (
             <div className="deck-show">
                 <div className="first-row">
