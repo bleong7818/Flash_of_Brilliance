@@ -11,6 +11,7 @@ class DeckShow extends React.Component {
     }
 
     componentDidMount() {
+        // debugger;
         this.props.requestUsers();
         this.props.requestDeck(this.props.deckId);
         this.props.requestCards();
@@ -29,9 +30,11 @@ class DeckShow extends React.Component {
 
     render() {
         if (!this.props.deck) return null;
+        // debugger;
+        // if (this.props.deck.id !== this.props.deckId) return null;
         const creator = this.props.users.filter(user => user.id === this.props.deck.creator_id);
         if (creator.length === 0) return null;
-        debugger;
+        // debugger;
         let deckCards = this.props.cards.map(card => {
             if (card.deck_id === this.props.deck.id) {
                 return (
