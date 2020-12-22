@@ -6,6 +6,7 @@ export const fetchDecks = () => {
 };
 
 export const fetchDeck = (deckId) => {
+    debugger;
     return $.ajax ({
         url: `/api/decks/${deckId}`,
         method: "GET"

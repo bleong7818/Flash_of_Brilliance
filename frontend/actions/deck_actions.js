@@ -14,6 +14,7 @@ const receiveDecks = (decks) => {
 };
 
 const receiveDeck = (deck) => {
+    debugger;
     return {
         type: RECEIVE_DECK,
         deck
@@ -50,10 +51,11 @@ export const requestDecks = () => {
 };
 
 export const requestDeck = (deckId) => {
+    debugger;
     return dispatch => {
         return APIUtil.fetchDeck(deckId)
             .then(deck => {
-                dispatch(receiveDeck(deck));
+                return dispatch(receiveDeck(deck));
             });
     };
 };

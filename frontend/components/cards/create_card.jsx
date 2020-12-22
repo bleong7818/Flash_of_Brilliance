@@ -37,6 +37,7 @@ class CreateCard extends React.Component {
             }
         }
         this.props.createCard(card).then(() => {
+            // debugger;
             this.props.history.push(`/decks/${this.props.deck.id}`);
         });
         this.setState(this.nullState);

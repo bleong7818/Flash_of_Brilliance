@@ -21,7 +21,6 @@ const receiveCard = (card) => {
 };
 
 const removeCard = (cardId) => {
-
     return {
         type: REMOVE_CARD,
         cardId
@@ -36,7 +35,6 @@ const receiveCardErrors = (cardErrors) => {
 };
 
 export const removeCardErrors = () => {
-
     return {
         type: REMOVE_CARD_ERRORS
     };

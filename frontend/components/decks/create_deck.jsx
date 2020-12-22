@@ -13,6 +13,7 @@ class CreateDeck extends React.Component {
     }
 
     componentDidMount() {
+        // debugger;
         this.props.requestDecks();
     }
 
@@ -34,12 +35,18 @@ class CreateDeck extends React.Component {
         // debugger;
         deck.creator_id = this.props.currentUser.id;
         // debugger;
-        this.props.createDeck(deck).then((res) => {
-            console.log(res);
-            // this.props.history.push(`/decks/${res.id}`);
+        // this.props.createDeck(deck).then(res => {
+        //     console.log(res);
+        //     debugger;
+        //     // this.props.history.push(`/decks/${res.id}`);
+        //     this.props.history.push(`/dashboard`);
+        // });
+        this.props.createDeck(deck).then(() => {
+            // debugger;
             this.props.history.push(`/dashboard`);
+            // this.props.history.push(`/decks/${this.props.deck.id}`);
         });
-        // this.props.history.push("/decks")
+        
         this.setState(this.nullState);
     }
 
