@@ -4,10 +4,9 @@ import CreateCard from './create_card';
 import { withRouter } from 'react-router-dom';
 
 const MSTP = (state, ownProps) => {
-    // debugger;
     return {
         cards: Object.values(state.entities.cards),
-        deck: state.entities.decks[ownProps.match.params.deckId],
+        deck: state.entities.decks.current,
         cardErrors: Object.values(state.errors.cards),
         user: state.entities.users[state.session.id]
     };

@@ -13,28 +13,23 @@ class CreateDeck extends React.Component {
     }
 
     componentDidMount() {
-        // debugger;
         this.props.requestDecks();
     }
 
     handleSubmit(e) {
         e.preventDefault();
         const deck = Object.assign({}, this.state);
-        // debugger;
         
         let deckTitles = this.props.decks.map(deck => {
             return deck.title;
         });
-        // debugger;
         // console.log(deckTitles);
         // let deckSubmit = document.querySelector('.deck-button');
         let modalBg = document.querySelector('.modal-bg');
         if (deck.title.length !== 0 && !deckTitles.includes(deck.title)) {
             modalBg.classList.remove('bg-active');
         }
-        // debugger;
         deck.creator_id = this.props.currentUser.id;
-        // debugger;
         // this.props.createDeck(deck).then(res => {
         //     console.log(res);
         //     debugger;

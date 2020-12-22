@@ -5,17 +5,16 @@ import {
     RECEIVE_DECK_ERRORS
 } from '../actions/deck_actions';
 
-const DecksReducer = (oldState = {}, action) => {
-    Object.freeze(oldState)
+const DecksReducer = (oldState = { all: {}, current: {} }, action) => {
+    Object.freeze(oldState);
     let newState = Object.assign({}, oldState);
 
     switch (action.type) {
         case RECEIVE_DECKS:
-            newState = action.decks;
+            newState.all = action.decks;
             return newState;
         case RECEIVE_DECK:
-            newState[action.deck.id] = action.deck;
-            debugger;
+            newState.current = action.deck.deck;
             return newState;
         case REMOVE_DECK: 
             delete newState[action.deckId];

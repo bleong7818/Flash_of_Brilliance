@@ -12,8 +12,8 @@ class DeckShow extends React.Component {
 
     componentDidMount() {
         this.props.requestUsers();
-        debugger;
         this.props.requestDeck(this.props.deckId);
+        this.props.requestCards();
     }
 
     createCardModal() {
@@ -27,26 +27,11 @@ class DeckShow extends React.Component {
         modalBg.classList.add('bg-active');
     }
 
-    // filter() {
-    //     const perfectDeck = [];
-    //     const deckId2 = this.props.deckId;
-    //     // debugger;
-    //     this.props.decks.forEach(deck => {
-    //         // debugger;
-    //         if (deck.id === deckId2) {
-    //             // debugger;
-    //             perfectDeck.push(deck);
-    //         } 
-    //     });
-
-    //     return perfectDeck;
-    // }
-
     render() {
         if (!this.props.deck) return null;
         const creator = this.props.users.filter(user => user.id === this.props.deck.creator_id);
         if (creator.length === 0) return null;
-        console.log(this.props.deck2);
+        debugger;
         let deckCards = this.props.cards.map(card => {
             if (card.deck_id === this.props.deck.id) {
                 return (
@@ -58,20 +43,6 @@ class DeckShow extends React.Component {
             <button className="create-card-modal-button" onClick={this.createCardModal}>Create a card</button>
         ) : null
         const create = this.props.currentUser.id === this.props.deck.creator_id ? <CreateCardContainer /> : null
-        // const perfectDeck = [];
-        // const deckId2 = this.props.deckId
-        // debugger;
-        // this.props.decks.forEach(deck => {
-        //     debugger;
-        //     if (deck.id === deckId2) {
-        //         debugger
-        //         perfectDeck.push(deck);
-        //     } 
-        // })
-        // const deck = this.filter();
-        // console.log(deck);
-        // console.log(perfectDeck);
-        debugger;
         return (
             <div className="deck-show">
                 <div className="first-row">

@@ -23,7 +23,6 @@ class Api::DecksController < ApplicationController
         @deck = Deck.find_by(id: params[:id])
 
         if @deck 
-            # debugger
             render :show
         else
             render json: @deck.errors.full_messages, status: 404

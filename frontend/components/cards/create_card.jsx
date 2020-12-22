@@ -18,26 +18,20 @@ class CreateCard extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const card = Object.assign({}, this.state);
-        // debugger;
         card.deck_id = this.props.deck.id;
-        // debugger;
         const frontSides = this.props.cards.map((card) => {
             return card.front_side;
         });
         const backSides = this.props.cards.map((card) => {
             return card.back_side;
         });
-        // debugger;
         let cardBg = document.querySelector('.card-modal-bg');
         if (card.front_side.length !==0 && card.back_side.length !==0) {
-            // debugger;
             if (!frontSides.includes(card.front_side) && !backSides.includes(card.back_side)) {
-                // debugger;
             cardBg.classList.remove('bg-active');
             }
         }
         this.props.createCard(card).then(() => {
-            // debugger;
             this.props.history.push(`/decks/${this.props.deck.id}`);
         });
         this.setState(this.nullState);
@@ -65,7 +59,6 @@ class CreateCard extends React.Component {
         //         </li>
         //     ))}
         // </ul>
-        // debugger;
         return (
             <ul>
                 {(this.props.cardErrors).map((error, i) => (

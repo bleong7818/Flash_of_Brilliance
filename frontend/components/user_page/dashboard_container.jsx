@@ -10,7 +10,7 @@ const MSTP = (state, ownProps) => {
         user: state.entities.users[state.session.id],
         // user: Object.values(state.entities.users).length === 1 ? state.entities.users[state.session.id] : 
         // state.entities.users.filter(user => user.id === state.session.id)[0],
-        decks: Object.values(state.entities.decks)
+        decks: Object.values(state.entities.decks.all)
     };
 };
 

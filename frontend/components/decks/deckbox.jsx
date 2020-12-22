@@ -16,10 +16,8 @@ class Deckbox extends React.Component {
 
     deleteRedirect() {
         this.props.deleteDeck(this.props.deck.id);
-        // debugger;
         this.props.history.push(`/dashboard`);
     }
-    // onClick = { this.deleteRedirect(this.props.deck.id) }
     render() {
         const deleteButton = this.props.deck.creator_id === this.props.currentUser.id ? (
             <div className="delete-deck-button" onClick={this.deleteRedirect}>Delete Deck</div>
