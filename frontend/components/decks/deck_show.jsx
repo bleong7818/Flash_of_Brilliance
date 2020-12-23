@@ -8,6 +8,7 @@ class DeckShow extends React.Component {
 
         // this.filter = this.filter.bind(this);
         // this.props.deckId = this.props.deckId.bind(this);
+        this.studyRedirect = this.studyRedirect.bind(this);
     }
 
     componentDidMount() {
@@ -15,6 +16,12 @@ class DeckShow extends React.Component {
         this.props.requestUsers();
         this.props.requestDeck(this.props.deckId);
         this.props.requestCards();
+    }
+
+    studyRedirect(e) {
+        e.preventDefault();
+        debugger;
+        this.props.history.push(`/decks/${this.props.deckId}/study`);
     }
 
     createCardModal() {
@@ -54,6 +61,7 @@ class DeckShow extends React.Component {
                     </div>
                     <div className="deck-options">
                         {createButton}
+                        <button className="study-deck-button" onClick={this.studyRedirect}>Study</button>
                     </div>
                     <div>
                         {create}

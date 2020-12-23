@@ -9,6 +9,7 @@ import MainPageContainer from './main_page/main_page_container';
 import DeckShowContainer from './decks/deck_show_container';
 // import CreateDeckContainer from './decks/create_deck_container';
 import DeckIndexContainer from './decks/deck_index_container';
+import DeckReviewContainer from './deck_review/deck_review_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import MainPage from './main_page/main_page';
 
@@ -26,6 +27,7 @@ const App = () => (
         <Switch>
             <AuthRoute exact path="/dashboard" component={DashboardContainer}/>
             <ProtectedRoute exact path="/decks/:deckId" component={DeckShowContainer} />
+            <ProtectedRoute exact path = "/decks/:deckId/study" component={DeckReviewContainer}/>
             {/* <ProtectedRoute exact path="/dashboard/newDeck" component={CreateDeckContainer}/> */}
             <ProtectedRoute exact path ="/decks" component={DeckIndexContainer}/>
             <Route path="/" component={MainPageContainer} />
