@@ -13,8 +13,6 @@ class CreateCard extends React.Component {
         this.handleClose = this.handleClose.bind(this);
     }
 
-
-
     handleSubmit(e) {
         e.preventDefault();
         const card = Object.assign({}, this.state);
