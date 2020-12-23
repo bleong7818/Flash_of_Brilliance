@@ -38,8 +38,6 @@ class CreateDeck extends React.Component {
         // });
         // debugger;
         this.props.createDeck(deck).then(res => {
-            console.log(res);
-            debugger;
             // this.props.history.push(`/dashboard`);
             this.props.history.push(`/decks/${res.deck.deck.id}`);
         });
