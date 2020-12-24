@@ -8,11 +8,12 @@ class DeckReview extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchDeck();
-        this.props.fetchCards();
+        this.props.requestDeck(this.props.deckId);
+        this.props.requestCards();
     }
 
     render() {
+        if (!this.props.deck) return null;
         debugger;
         return (
             <div>  

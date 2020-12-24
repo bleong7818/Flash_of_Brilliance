@@ -18,7 +18,7 @@ class Deckbox extends React.Component {
         // debugger;
         this.props.deleteDeck(this.props.deck.id);
         // debugger;
-        this.props.history.push(`/dashboard`);
+        // this.props.history.push(`/dashboard`);
     }
     render() {
         const deleteButton = this.props.deck.creator_id === this.props.currentUser.id ? (

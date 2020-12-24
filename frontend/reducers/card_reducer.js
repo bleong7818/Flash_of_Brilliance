@@ -16,6 +16,7 @@ const CardsReducer = (oldState = {}, action) => {
             newState[action.card.id] = action.card;
             return newState;
         case REMOVE_CARD:
+            debugger;
             delete newState[action.cardId];
             return newState;        
         default:

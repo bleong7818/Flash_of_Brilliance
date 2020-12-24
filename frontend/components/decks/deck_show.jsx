@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import CardboxContainer from '../cards/cardbox_container';
 import CreateCardContainer from '../cards/create_card_container';
 
@@ -20,7 +21,7 @@ class DeckShow extends React.Component {
 
     studyRedirect(e) {
         e.preventDefault();
-        debugger;
+        // debugger;
         this.props.history.push(`/decks/${this.props.deckId}/study`);
     }
 
@@ -48,6 +49,9 @@ class DeckShow extends React.Component {
                 )
             }
         });
+        let studyCards = this.props.cards.filter(card => parseInt(card.deck_id, 10) === this.props.deck.id);
+        // parseInt(this.props.deckId, 10))
+        // debugger;
         const createButton = this.props.currentUser.id === this.props.deck.creator_id ? (
             <button className="create-card-modal-button" onClick={this.createCardModal}>Create a card</button>
         ) : null
@@ -61,7 +65,8 @@ class DeckShow extends React.Component {
                     </div>
                     <div className="deck-options">
                         {createButton}
-                        <button className="study-deck-button" onClick={this.studyRedirect}>Study</button>
+                        <Link to={`/decks/${this.props.deck.id}/study`} >Study this deck</Link>
+                        <button className="study-deck-button" onClick={this.studyRedirect} >Study</button>
                     </div>
                     <div>
                         {create}

@@ -1,14 +1,14 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { fetchCards } from '../../actions/card_actions';
-import { fetchDeck } from '../../actions/deck_actions';
+import { requestCards } from '../../actions/card_actions';
+import { requestDeck } from '../../actions/deck_actions';
 import DeckReview from './deck_review';
 
 const MSTP = (state, ownProps) => {
-    debugger;
+    // debugger;
     return {
         deck: state.entities.decks.current,
-        cards: Object.values(state.entities.cards),
+        deckCards: Object.values(state.entities.cards).filter(card => card.deck_id === state.entities.decks.current.id),
         deckId: ownProps.match.params.deckId,
         currentUser: state.session
     };
@@ -16,8 +16,8 @@ const MSTP = (state, ownProps) => {
 
 const MDTP = dispatch => {
     return {
-        fetchCards: () => dispatch(fetchCards()),
-        fetchDeck: (deckId) => dispatch(fetchDeck(deckId))
+        requestCards: () => dispatch(requestCards()),
+        requestDeck: (deckId) => dispatch(requestDeck(deckId)),
     };
 };
 
