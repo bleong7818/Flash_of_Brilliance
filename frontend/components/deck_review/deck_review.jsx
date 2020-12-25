@@ -23,9 +23,9 @@ class DeckReview extends React.Component {
         if (this.props.deckCards.length === 0) return null;
         debugger;
         return (
-            <div>  
-                <div>{this.props.deck.title}</div>
-                <div>
+            <div className="deck-review-page">  
+                <div className="deck-review-title">{this.props.deck.title}</div>
+                <div className="current-card">
                     {this.props.deckCards[0].back_side}
                 </div>
             </div>
