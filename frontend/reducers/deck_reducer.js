@@ -17,7 +17,7 @@ const DecksReducer = (oldState = { all: {}, current: {} }, action) => {
             newState.current = action.deck.deck;
             return newState;
         case REMOVE_DECK: 
-            // debugger
+            debugger
             for(let j = 0; j < newState.all.length; j++) {
                 if (newState.all[j].id === action.deckId) {
                     delete newState.all[j];

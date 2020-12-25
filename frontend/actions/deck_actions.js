@@ -79,7 +79,6 @@ export const deleteDeck = (deckId) => {
     return dispatch => {
         return APIUtil.deleteDeck(deckId)
             .then((res) => {
-                debugger;
                 return dispatch(removeDeck(deckId));
             }); 
     };
