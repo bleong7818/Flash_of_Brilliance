@@ -16,12 +16,9 @@ const CardsReducer = (oldState = {}, action) => {
             newState[action.card.id] = action.card;
             return newState;
         case REMOVE_CARD:
-            debugger
             let cardArray = Object.values(newState);
-            // delete newState[action.cardId];
             for(let i = 0; i < cardArray.length; i++) {
                 if (cardArray[i].id === action.cardId ) {
-                    debugger;
                     delete cardArray[i];
                 }
             }

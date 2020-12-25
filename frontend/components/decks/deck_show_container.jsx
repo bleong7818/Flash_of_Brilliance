@@ -12,6 +12,7 @@ const MSTP = (state, ownProps) => {
     return {
         // deck: state.entities.decks[ownProps.match.params.deckId],
         deck: state.entities.decks.current,
+        deckCards: Object.values(state.entities.cards).filter(card => card.deck_id === state.entities.decks.current.id),
         decks: Object.values(state.entities.decks.all),
         deckId: ownProps.match.params.deckId,
         // deck2: deck2,

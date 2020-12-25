@@ -42,14 +42,19 @@ class DeckShow extends React.Component {
         const creator = this.props.users.filter(user => user.id === this.props.deck.creator_id);
         if (creator.length === 0) return null;
         // debugger;
-        let deckCards = this.props.cards.map(card => {
+        let deck2Cards = this.props.cards.map(card => {
             if (card.deck_id === this.props.deck.id) {
                 return (
                     <CardboxContainer key={card.id} deck={this.props.deck} card={card}></CardboxContainer>
                 )
             }
         });
-        let studyCards = this.props.cards.filter(card => parseInt(card.deck_id, 10) === this.props.deck.id);
+        debugger;
+
+        // let studyCards = this.props.cards.filter(card => parseInt(card.deck_id, 10) === this.props.deck.id);
+        const studyButton = this.props.deckCards.length !== 0 ? ( <button className="study-deck-button" onClick={this.studyRedirect} >Study</button>
+        ) : null
+        // <button className="study-deck-button" onClick={this.studyRedirect} >Study</button>
         // parseInt(this.props.deckId, 10))
         // debugger;
         const createButton = this.props.currentUser.id === this.props.deck.creator_id ? (
@@ -63,17 +68,19 @@ class DeckShow extends React.Component {
                         <h1 className="deck-title-show">{this.props.deck.title}</h1>
                         <div className="deck-show-creator">Deck Creator: {creator[0].first_name + " " + creator[0].last_name}</div>
                     </div>
-                    <div className="deck-options">
-                        {createButton}
-                        <Link to={`/decks/${this.props.deck.id}/study`} >Study this deck</Link>
-                        <button className="study-deck-button" onClick={this.studyRedirect} >Study</button>
+                    <div className="deck-options-container">
+                        <div className="deck-options">
+                            {createButton}
+                            {studyButton}
+                            {/* <button className="study-deck-button" onClick={this.studyRedirect} >Study</button> */}
+                        </div>
                     </div>
                     <div>
                         {create}
                     </div>
                     <div className="deck-cards">
                         <ul className="deck-card-list">
-                            {deckCards}
+                            {deck2Cards}
                         </ul>
                     </div>
                 </div>
