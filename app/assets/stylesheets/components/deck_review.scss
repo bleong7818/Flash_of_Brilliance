@@ -14,3 +14,26 @@
     color: #28a5dc;
 }
 
+.deck-review-card {
+    display: flex;
+    justify-content: center;
+}
+
+.current-card {
+    margin: 20px 20px 20px 20px;
+    display: flex;
+    font-size: 36px;
+    font-family: 'Montserrat', sans-serif;
+    // font-family: 'Open Sans', sans-serif;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 400px;
+    width: 700px;
+    border-radius: 10px;
+    background-color: rgb(233, 233, 233);
+    -webkit-box-shadow: 5px 5px 8px 5px rgba(0,0,0,0.55); 
+    box-shadow: 5px 5px 8px 5px rgba(0,0,0,0.55);
+    z-index: 0;
+}
+

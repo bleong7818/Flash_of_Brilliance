@@ -21,12 +21,14 @@ class DeckReview extends React.Component {
     render() {
         if (!this.props.deck) return null;
         if (this.props.deckCards.length === 0) return null;
-        debugger;
+        // debugger;
         return (
             <div className="deck-review-page">  
                 <div className="deck-review-title">{this.props.deck.title}</div>
-                <div className="current-card">
-                    {this.props.deckCards[0].back_side}
+                <div className ="deck-review-card">
+                    <div className="current-card">
+                        {this.props.deckCards[this.state.currentCardIdx].back_side}
+                    </div>
                 </div>
             </div>
         )
