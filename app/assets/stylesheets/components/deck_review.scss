@@ -17,6 +17,7 @@
 .deck-review-card {
     display: flex;
     justify-content: center;
+    // flex-direction: column;
 }
 
 .current-card {
@@ -37,3 +38,19 @@
     z-index: 0;
 }
 
+.card-review-button {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.next-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 700px;
+    background-color: #4CA5DB;
+    // padding-bottom: 20px;
+}
+    

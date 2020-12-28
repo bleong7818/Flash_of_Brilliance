@@ -9,13 +9,20 @@ class DeckReview extends React.Component {
         this.state = {
             reviewCards: [],
             currentCardIdx: 0,
-            markedCards: []
+            markedCards: [],
         };
+
+        this.nextCard = this.nextCard.bind(this);
     }
 
     componentDidMount() {
         this.props.requestDeck(this.props.deckId);
         this.props.requestCards();
+    }
+
+    nextCard() {
+        debugger;
+        this.setState({currentCardIdx: this.state.currentCardIdx + 1});
     }
 
     render() {
@@ -30,6 +37,10 @@ class DeckReview extends React.Component {
                         {this.props.deckCards[this.state.currentCardIdx].back_side}
                     </div>
                 </div>
+                <div className="card-review-button">
+                    <div onClick={this.nextCard} className="next-card">Go Hard</div>
+                </div>
+                {/* <button className="reveal-button">Reveal Answer</button> */}
             </div>
         )
     }
