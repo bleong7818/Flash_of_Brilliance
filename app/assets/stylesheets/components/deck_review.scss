@@ -38,19 +38,74 @@
     z-index: 0;
 }
 
-.card-review-button {
+.deck-review-card-back {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+}
+
+.card-review-button {
+    display: flex;
+    justify-content: space-around;
     padding-bottom: 20px;
 }
 
-.next-card {
+.next-card-button {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100px;
-    width: 700px;
+    width: 350px;
     background-color: #4CA5DB;
+    border-radius: 10px;
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
+    -moz-animation: fadeIn ease 2s;
+    -o-animation: fadeIn ease 2s;
+    -ms-animation: fadeIn ease 2s;
+    // transform: translate(-50%,-50%);;
     // padding-bottom: 20px;
 }
+
+.next-card-button:hover {
+    cursor: pointer;
+}
+
+.prev-card-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    height: 100px;
+    width: 350px;
+    background-color: #4CA5DB;
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
+    -moz-animation: fadeIn ease 2s;
+    -o-animation: fadeIn ease 2s;
+    -ms-animation: fadeIn ease 2s;
+}
+
+.prev-card-button:hover {
+    cursor: pointer;
+}
     
+.next-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    height: 100px;
+    width: 350px;
+    background-color: #4CA5DB;
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
+    -moz-animation: fadeIn ease 2s;
+    -o-animation: fadeIn ease 2s;
+    -ms-animation: fadeIn ease 2s;
+    // padding-bottom: 20px;
+}
+
+.next-card:hover {
+    cursor: pointer;
+}
