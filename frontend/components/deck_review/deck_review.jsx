@@ -43,6 +43,14 @@ class DeckReview extends React.Component {
         if (!this.props.deck) return null;
         if (this.props.deckCards.length === 0) return null;
         // debugger;
+        debugger;
+        const noCard = this.props.deckCards[this.state.currentCardIdx] ? null : (
+            <div>
+                The end
+            </div>
+        )
+
+        
         const prevCard = this.state.currentCardIdx !== 0 ? (
             <div className="prev-card-button" onClick={this.previousCard}>Go Back To the Previous Card</div>
         ) : null
