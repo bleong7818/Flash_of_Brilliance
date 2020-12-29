@@ -43,22 +43,25 @@ class DeckReview extends React.Component {
         if (!this.props.deck) return null;
         if (this.props.deckCards.length === 0) return null;
         // debugger;
-        debugger;
-        const noCard = this.props.deckCards[this.state.currentCardIdx] ? null : (
-            <div>
-                The end
-            </div>
-        )
+        // debugger;
 
-        
+        const frontSide = this.props.deckCards[this.state.currentCardIdx] ? (
+            this.props.deckCards[this.state.currentCardIdx].front_side
+        ) : null
+
+        const backSide = this.props.deckCards[this.state.currentCardIdx] ? (
+            this.props.deckCards[this.state.currentCardIdx].back_side
+        ) : null
+
         const prevCard = this.state.currentCardIdx !== 0 ? (
             <div className="prev-card-button" onClick={this.previousCard}>Go Back To the Previous Card</div>
         ) : null
+
         const frontOrBack = this.state.front === true ? (
             <div className="card-review-front">
                 <div className="deck-review-card">
                     <div className="current-card">
-                        {this.props.deckCards[this.state.currentCardIdx].front_side}
+                        {frontSide}
                     </div>
                 </div>
                 <div className="card-review-button">
@@ -70,7 +73,7 @@ class DeckReview extends React.Component {
             <div className="card-review-back">
                 <div className="deck-review-card">
                     <div className="current-card">
-                        {this.props.deckCards[this.state.currentCardIdx].back_side}
+                        {backSide}
                     </div>
                 </div>
                 <div className="card-review-button">
@@ -78,17 +81,18 @@ class DeckReview extends React.Component {
                     <div onClick={this.nextCard} className="next-card">Next Card</div>
                 </div>
             </div>
-        )
-        // const studyAgain = this.state.currentCardIdx === this.props.deckCards.length ? (
-        //     <div>
-        //         The End
-        //     </div>
-        // ) : frontOrBack 
+        ) 
+        debugger;
+        const noCard = this.props.deckCards[this.state.currentCardIdx] === undefined ? (
+            <div>
+                The End
+            </div>
+        ) : frontOrBack 
         // debugger;
         return (
             <div className="deck-review-page">  
                 <div className="deck-review-title">{this.props.deck.title}</div>
-                {frontOrBack}
+                {noCard}
             </div>
         )
     }
