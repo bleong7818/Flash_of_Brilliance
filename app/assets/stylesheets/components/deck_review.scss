@@ -23,7 +23,7 @@
 .current-card {
     margin: 20px 20px 20px 20px;
     display: flex;
-    font-size: 36px;
+    font-size: 44px;
     font-family: 'Montserrat', sans-serif;
     // font-family: 'Open Sans', sans-serif;
     justify-content: center;
@@ -54,40 +54,46 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
     height: 100px;
-    width: 350px;
+    width: 400px;
     background-color: #4CA5DB;
     border-radius: 10px;
-    animation: fadeIn ease 2s;
-    -webkit-animation: fadeIn ease 2s;
-    -moz-animation: fadeIn ease 2s;
-    -o-animation: fadeIn ease 2s;
-    -ms-animation: fadeIn ease 2s;
+    // animation: fadeIn ease 2s;
+    // -webkit-animation: fadeIn ease 2s;
+    // -moz-animation: fadeIn ease 2s;
+    // -o-animation: fadeIn ease 2s;
+    // -ms-animation: fadeIn ease 2s;
     // transform: translate(-50%,-50%);;
     // padding-bottom: 20px;
 }
 
 .next-card-button:hover {
     cursor: pointer;
+    background-color: rgb(0, 110, 255);
 }
 
 .prev-card-button {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
     border-radius: 10px;
     height: 100px;
-    width: 350px;
+    width: 400px;
     background-color: #4CA5DB;
-    animation: fadeIn ease 2s;
-    -webkit-animation: fadeIn ease 2s;
-    -moz-animation: fadeIn ease 2s;
-    -o-animation: fadeIn ease 2s;
-    -ms-animation: fadeIn ease 2s;
+    // animation: fadeIn ease 2s;
+    // -webkit-animation: fadeIn ease 2s;
+    // -moz-animation: fadeIn ease 2s;
+    // -o-animation: fadeIn ease 2s;
+    // -ms-animation: fadeIn ease 2s;
 }
 
 .prev-card-button:hover {
     cursor: pointer;
+    background-color: rgb(0, 110, 255);
 }
     
 .next-card {
@@ -95,17 +101,20 @@
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
     height: 100px;
-    width: 350px;
+    width: 400px;
     background-color: #4CA5DB;
-    animation: fadeIn ease 2s;
-    -webkit-animation: fadeIn ease 2s;
-    -moz-animation: fadeIn ease 2s;
-    -o-animation: fadeIn ease 2s;
-    -ms-animation: fadeIn ease 2s;
+    // animation: fadeIn ease 2s;
+    // -webkit-animation: fadeIn ease 2s;
+    // -moz-animation: fadeIn ease 2s;
+    // -o-animation: fadeIn ease 2s;
+    // -ms-animation: fadeIn ease 2s;
     // padding-bottom: 20px;
 }
 
 .next-card:hover {
     cursor: pointer;
+    background-color: rgb(0, 110, 255);
 }

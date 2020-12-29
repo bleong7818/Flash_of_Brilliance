@@ -70,14 +70,16 @@ class DeckReview extends React.Component {
                 </div>
             </div>
         )
+        const studyAgain = this.state.currentCardIdx === this.props.deckCards.length ? (
+            <div>
+                The End
+            </div>
+        ) : frontOrBack 
+        debugger;
         return (
             <div className="deck-review-page">  
                 <div className="deck-review-title">{this.props.deck.title}</div>
-                {frontOrBack}
-                {/* <div className="card-review-button">
-                    <div onClick={this.nextCard} className="next-card">Go Hard</div>
-                </div> */}
-                {/* <button className="reveal-button">Reveal Answer</button> */}
+                {studyAgain}
             </div>
         )
     }
