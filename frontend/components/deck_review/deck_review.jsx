@@ -16,6 +16,7 @@ class DeckReview extends React.Component {
         this.nextCard = this.nextCard.bind(this);
         this.previousCard = this.previousCard.bind(this);
         this.revealAnswer = this.revealAnswer.bind(this);
+        this.reset = this.reset.bind(this);
     }
 
     componentDidMount() {
@@ -37,6 +38,10 @@ class DeckReview extends React.Component {
 
     previousCard() {
         this.setState({ currentCardIdx: this.state.currentCardIdx - 1});
+    }
+
+    reset() {
+        this.setState({ currentCardIdx: 0});
     }
 
     render() {
@@ -85,7 +90,14 @@ class DeckReview extends React.Component {
         debugger;
         const noCard = this.props.deckCards[this.state.currentCardIdx] === undefined ? (
             <div>
-                The End
+                <div className="deck-review-card">
+                    <div className="current-card">
+                        You have reached the end of the cards for this deck. Would you like to study this deck again?
+                    </div>
+                </div>
+                <div className="card-review-button">
+                    <div onClick={this.reset} className="review-reset">Study Again</div>
+                </div>
             </div>
         ) : frontOrBack 
         // debugger;
