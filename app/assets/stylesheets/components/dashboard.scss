@@ -1,5 +1,5 @@
 .Dashboard-main {
-    height: 100%;
+    height: 100vh;
     background-image: url("https://i.pinimg.com/originals/aa/43/50/aa4350ce5aed12fc4b0518f0dead4e1e.png");
     // background-color: #324054; 
 }
@@ -10,7 +10,7 @@
     flex-direction: column;
     align-items: center;
     color: hsl(220, 8%, 93%);
-    height: 100%;
+    height: 100vh;
     justify-content: space-around;
     // background-color: #3D73A9;
     // background-image: url("https://i.pinimg.com/originals/aa/43/50/aa4350ce5aed12fc4b0518f0dead4e1e.png");
