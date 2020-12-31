@@ -15,7 +15,7 @@ class UsersDeck < ApplicationRecord
     foreign_key: :user_id,
     class_name: :User
 
-    belongs :deck,
+    belongs_to :deck,
     foreign_key: :deck_id,
     class_name: :Deck
 end
