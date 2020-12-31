@@ -50,6 +50,23 @@ class Api::DecksController < ApplicationController
         end
     end
 
+    def add_to_user_decks 
+        @deck = Deck.find_by(id: params[:id])
+
+        if current_user.decks.find_by(id: params[:id])
+            render json: ["Deck is already assigned"]
+        else
+            current_user.decks << @deck
+            render :show
+        end
+    end
+
+    # def delete_from_user_decks
+    #     @deck = Deck.find_by(id: params[:id])
+        
+        
+    # end
+
     private
     def deck_params
         params.require(:deck).permit(:title, :creator_id)

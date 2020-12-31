@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :bigint           not null, primary key
+#  password_digest :string           not null
+#  session_token   :string           not null
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  email           :string           not null
+#  first_name      :string
+#  last_name       :string
+#
 class User < ApplicationRecord
     attr_reader :password
 
@@ -8,10 +21,14 @@ class User < ApplicationRecord
 
     after_initialize :ensure_session_token
 
-    # has_many :decks,
-    # primary_key: :id,
-    # foreign_key: :creator_id,
-    # class_name: :Deck
+    has_many :users_decks,
+    foreign_key: :user_id,
+    class_name: :UsersDeck,
+    dependent: :destroy
+
+    has_many :decks,
+    through: :users_decks,
+    source: :deck
 
     def self.find_by_credentials(email, password)
         user = User.find_by(email: email)
