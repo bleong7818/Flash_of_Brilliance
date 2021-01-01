@@ -34,3 +34,17 @@ export const deleteDeck = (deckId) => {
         method: "DELETE"
     });
 };
+
+export const addDecktoUser = (deckId) => {
+    return $.ajax({
+        url: `api/decks/${deckId}/add`,
+        method: "POST"
+    });
+};
+
+export const deleteDeckFromUser = (deckId) => {
+    return $.ajax({
+        url: `api/decks/${deckId}/delete`,
+        method: "DELETE"
+    });
+};

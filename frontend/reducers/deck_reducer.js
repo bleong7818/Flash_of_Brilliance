@@ -2,10 +2,12 @@ import {
     RECEIVE_DECKS,
     RECEIVE_DECK,
     REMOVE_DECK,
-    RECEIVE_DECK_ERRORS
+    RECEIVE_DECK_ERRORS,
+    ADD_DECK_TO_USER,
+    DELETE_DECK_FROM_USER
 } from '../actions/deck_actions';
 
-const DecksReducer = (oldState = { all: {}, current: {} }, action) => {
+const DecksReducer = (oldState = { all: {}, current: {}, user:{}}, action) => {
     Object.freeze(oldState);
     let newState = Object.assign({}, oldState);
 
@@ -23,6 +25,12 @@ const DecksReducer = (oldState = { all: {}, current: {} }, action) => {
                 }
             }
             return newState;
+        case ADD_DECK_TO_USER:
+            newState.user[deck.id] = action.deck;
+            return newState;
+        case DELETE_DECK_FROM_USER:
+            delete newState.user[deckId]; 
+            return newState;    
         default:
             return oldState;
     }

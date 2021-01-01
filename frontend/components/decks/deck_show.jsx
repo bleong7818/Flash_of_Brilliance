@@ -52,13 +52,13 @@ class DeckShow extends React.Component {
         // debugger;
 
         // let studyCards = this.props.cards.filter(card => parseInt(card.deck_id, 10) === this.props.deck.id);
-        const studyButton = this.props.deckCards.length !== 0 ? ( <button className="study-deck-button" onClick={this.studyRedirect} >Study</button>
+        const studyButton = this.props.deckCards.length !== 0 ? ( <button className="study-deck-button" onClick={this.studyRedirect} >Study This Deck</button>
         ) : null
-        // <button className="study-deck-button" onClick={this.studyRedirect} >Study</button>
-        // parseInt(this.props.deckId, 10))
-        // debugger;
+
+        // const 
+
         const createButton = this.props.currentUser.id === this.props.deck.creator_id ? (
-            <button className="create-card-modal-button" onClick={this.createCardModal}>Create a card</button>
+            <button className="create-card-modal-button" onClick={this.createCardModal}>Create a Card</button>
         ) : null
         const create = this.props.currentUser.id === this.props.deck.creator_id ? <CreateCardContainer /> : null
         return (

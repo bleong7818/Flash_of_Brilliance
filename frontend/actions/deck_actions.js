@@ -3,6 +3,8 @@ import * as APIUtil from '../util/deck.api.util';
 export const RECEIVE_DECKS = 'RECEIVE_DECKS';
 export const RECEIVE_DECK = 'RECEIVE_DECK';
 export const REMOVE_DECK = 'DELETE_DECK';
+export const ADD_DECK_TO_USER = 'ADD_DECK_TO_USER';
+export const DELETE_DECK_FROM_USER = 'DELETE_DECK_FROM_USER';
 export const RECEIVE_DECK_ERRORS = 'RECEIVE_DECK_ERRORS';
 export const REMOVE_DECK_ERRORS = 'REMOVE_DECK_ERRORS';
 
@@ -23,6 +25,20 @@ const receiveDeck = (deck) => {
 const removeDeck = (deckId) => {
     return {
         type: REMOVE_DECK,
+        deckId
+    };
+};
+
+const addUserDeck = (deck) => {
+    return {
+        type: ADD_DECK_TO_USER,
+        deck
+    };
+};
+
+const deleteUserDeck = (deckId) => {
+    return {
+        type: DELETE_DECK_FROM_USER,
         deckId
     };
 };
@@ -81,5 +97,23 @@ export const deleteDeck = (deckId) => {
             .then((res) => {
                 return dispatch(removeDeck(deckId));
             }); 
+    };
+};
+
+export const addDecktoUser = (deckId) => {
+    return dispatch => {
+        return APIUtil.addDecktoUser(deckId)
+            .then((deck) => {
+                return dispatch(addUserDeck(deck));
+            });
+    };
+};
+
+export const deleteDeckFromUser = (deckId) => {
+    return dispatch => {
+        return APIUtil.deleteDeckFromUser(deckId)
+            .then(() => {
+                return dispatch(deleteUserDeck(deckId));
+            });
     };
 };

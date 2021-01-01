@@ -52,7 +52,7 @@ class Api::DecksController < ApplicationController
 
     def add_to_user_decks 
         @deck = Deck.find_by(id: params[:id])
-
+        debugger
         if current_user.decks.find_by(id: params[:id])
             render json: ["Deck is already assigned"]
         else
@@ -61,11 +61,16 @@ class Api::DecksController < ApplicationController
         end
     end
 
-    # def delete_from_user_decks
-    #     @deck = Deck.find_by(id: params[:id])
-        
-        
-    # end
+    def delete_from_user_decks
+        @deck = Deck.find_by(id: params[:id])
+
+        if current_user.decks.find_by(id: params[:id])  
+            current_user.decks.delete(@deck)
+            render :show
+        else
+            render json: ["Deck not found"], status: 404
+        end
+    end
 
     private
     def deck_params
