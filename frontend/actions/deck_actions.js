@@ -16,6 +16,7 @@ const receiveDecks = (decks) => {
 };
 
 const receiveDeck = (deck) => {
+    // debugger;
     return {
         type: RECEIVE_DECK,
         deck
@@ -30,6 +31,7 @@ const removeDeck = (deckId) => {
 };
 
 const addUserDeck = (deck) => {
+    debugger;
     return {
         type: ADD_DECK_TO_USER,
         deck
@@ -75,6 +77,7 @@ export const requestDeck = (deckId) => {
 };
 
 export const createDeck = (deck) => dispatch => {
+    debugger;
     return APIUtil.createDeck(deck)
         .then(
             newDeck => dispatch(receiveDeck(newDeck)),
@@ -100,9 +103,10 @@ export const deleteDeck = (deckId) => {
     };
 };
 
-export const addDecktoUser = (deckId) => {
+export const addDecktoUser = (deck) => {
+    debugger;
     return dispatch => {
-        return APIUtil.addDecktoUser(deckId)
+        return APIUtil.addDecktoUser(deck)
             .then((deck) => {
                 return dispatch(addUserDeck(deck));
             });

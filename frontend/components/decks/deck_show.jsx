@@ -10,6 +10,7 @@ class DeckShow extends React.Component {
         // this.filter = this.filter.bind(this);
         // this.props.deckId = this.props.deckId.bind(this);
         this.studyRedirect = this.studyRedirect.bind(this);
+        this.addDeck = this.addDeck.bind(this);
     }
 
     componentDidMount() {
@@ -23,6 +24,10 @@ class DeckShow extends React.Component {
         e.preventDefault();
         // debugger;
         this.props.history.push(`/decks/${this.props.deckId}/study`);
+    }
+
+    addDeck() {
+        this.props.addDecktoUser(this.props.deck);
     }
 
     createCardModal() {
@@ -55,7 +60,11 @@ class DeckShow extends React.Component {
         const studyButton = this.props.deckCards.length !== 0 ? ( <button className="study-deck-button" onClick={this.studyRedirect} >Study This Deck</button>
         ) : null
 
-        // const 
+        const addDeckButton = this.props.userDecks.includes(this.props.deck) ? (
+            <div>delete deck</div>
+        ) : (
+            <div onClick={this.addDeck}>add deck</div>
+        )
 
         const createButton = this.props.currentUser.id === this.props.deck.creator_id ? (
             <button className="create-card-modal-button" onClick={this.createCardModal}>Create a Card</button>
@@ -71,6 +80,7 @@ class DeckShow extends React.Component {
                     <div className="deck-options-container">
                         <div className="deck-options">
                             {createButton}
+                            {addDeckButton}
                             {studyButton}
                             {/* <button className="study-deck-button" onClick={this.studyRedirect} >Study</button> */}
                         </div>

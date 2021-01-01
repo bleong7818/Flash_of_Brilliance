@@ -1,6 +1,7 @@
 class Api::DecksController < ApplicationController
 
     before_action :require_logged_in, only: [:index, :create, :destroy, :update]
+    helper_method :current_user
 
     def index
         @decks = Deck.all
@@ -9,6 +10,7 @@ class Api::DecksController < ApplicationController
     end
 
     def create 
+        debugger
         @deck = Deck.new(deck_params)
         
         if @deck.save
@@ -51,6 +53,7 @@ class Api::DecksController < ApplicationController
     end
 
     def add_to_user_decks 
+        debugger
         @deck = Deck.find_by(id: params[:id])
         debugger
         if current_user.decks.find_by(id: params[:id])

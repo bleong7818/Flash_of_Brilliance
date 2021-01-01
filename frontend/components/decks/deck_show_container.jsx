@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import DeckShow from './deck_show';
 import { requestUsers } from '../../actions/session_actions';
-import { updateDeck, deleteDeck, requestDeck } from '../../actions/deck_actions';
+import { updateDeck, deleteDeck, requestDeck, addDecktoUser } from '../../actions/deck_actions';
 import { requestCards } from '../../actions/card_actions';
 import { withRouter } from 'react-router-dom';
 
@@ -14,6 +14,7 @@ const MSTP = (state, ownProps) => {
         deck: state.entities.decks.current,
         deckCards: Object.values(state.entities.cards).filter(card => card.deck_id === state.entities.decks.current.id),
         decks: Object.values(state.entities.decks.all),
+        userDecks: Object.values(state.entities.decks.user),
         deckId: ownProps.match.params.deckId,
         // deck2: deck2,
         users: Object.values(state.entities.users),
@@ -27,6 +28,7 @@ const MDTP = dispatch => {
         updateDeck: (deck) => dispatch(updateDeck(deck)),
         deleteDeck: (deckId) => dispatch(deleteDeck(deckId)),
         requestDeck: (deckId) => dispatch(requestDeck(deckId)),
+        addDecktoUser: (deck) => dispatch(addDecktoUser(deck)),
         requestUsers: () => dispatch(requestUsers()),
         requestCards: () => dispatch(requestCards()),
         // requestUser: (creatorId) => dispatch(requestUser(creatorId))

@@ -13,6 +13,7 @@ export const fetchDeck = (deckId) => {
 };
 
 export const createDeck = (deck) => {
+    debugger;
     return $.ajax ({
         url: `/api/decks`,
         method: 'POST',
@@ -35,10 +36,12 @@ export const deleteDeck = (deckId) => {
     });
 };
 
-export const addDecktoUser = (deckId) => {
+export const addDecktoUser = (deck) => {
+    debugger;
     return $.ajax({
-        url: `api/decks/${deckId}/add`,
-        method: "POST"
+        url: `/api/decks/${deck.id}/add`,
+        method: "POST",
+        data: {deck}
     });
 };
 

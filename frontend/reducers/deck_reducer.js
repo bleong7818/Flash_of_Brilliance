@@ -7,7 +7,7 @@ import {
     DELETE_DECK_FROM_USER
 } from '../actions/deck_actions';
 
-const DecksReducer = (oldState = { all: {}, current: {}, user:{}}, action) => {
+const DecksReducer = (oldState = { all: {}, current: {}, user: {}}, action) => {
     Object.freeze(oldState);
     let newState = Object.assign({}, oldState);
 
@@ -26,6 +26,7 @@ const DecksReducer = (oldState = { all: {}, current: {}, user:{}}, action) => {
             }
             return newState;
         case ADD_DECK_TO_USER:
+            debugger;
             newState.user[deck.id] = action.deck;
             return newState;
         case DELETE_DECK_FROM_USER:
