@@ -27,7 +27,8 @@ const DecksReducer = (oldState = { all: {}, current: {}, user: {}}, action) => {
             return newState;
         case ADD_DECK_TO_USER:
             debugger;
-            newState.user[deck.id] = action.deck;
+            newState.user[action.deck.deck.id] = action.deck.deck;
+            // debugger;
             return newState;
         case DELETE_DECK_FROM_USER:
             delete newState.user[deckId]; 

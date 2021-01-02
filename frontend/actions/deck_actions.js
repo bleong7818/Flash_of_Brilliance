@@ -31,7 +31,6 @@ const removeDeck = (deckId) => {
 };
 
 const addUserDeck = (deck) => {
-    debugger;
     return {
         type: ADD_DECK_TO_USER,
         deck
@@ -77,7 +76,6 @@ export const requestDeck = (deckId) => {
 };
 
 export const createDeck = (deck) => dispatch => {
-    debugger;
     return APIUtil.createDeck(deck)
         .then(
             newDeck => dispatch(receiveDeck(newDeck)),
@@ -104,7 +102,7 @@ export const deleteDeck = (deckId) => {
 };
 
 export const addDecktoUser = (deck) => {
-    debugger;
+
     return dispatch => {
         return APIUtil.addDecktoUser(deck)
             .then((deck) => {

@@ -110,7 +110,10 @@ class NavBar extends React.Component {
     render () {
         const display = this.props.session_id ? (
         <div className="logged-in-nav">
-            <div className="main-page-link" onClick={this.mainPage}>Flash of Brilliance</div>
+            <div className="leftside-nav-bar">
+                <div className="main-page-link" onClick={this.mainPage}>Flash of Brilliance</div>
+                <div className="linkedin-image" onClick={this.linkdedIn}></div>
+            </div>
             <div className="logged-in-nav-buttons">
                 <button className="modal-create-button" onClick={this.showCreateModal}>Create a Deck</button>
                 <button className="deck-index-button" onClick={this.deckIndex}>View All Decks</button>
