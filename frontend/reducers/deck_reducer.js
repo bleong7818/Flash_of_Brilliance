@@ -1,10 +1,11 @@
 import {
     RECEIVE_DECKS,
+    RECEIVE_USER_DECKS,
     RECEIVE_DECK,
     REMOVE_DECK,
     RECEIVE_DECK_ERRORS,
     ADD_DECK_TO_USER,
-    DELETE_DECK_FROM_USER
+    DELETE_DECK_FROM_USER,
 } from '../actions/deck_actions';
 
 const DecksReducer = (oldState = { all: {}, current: {}, user: {}}, action) => {
@@ -14,6 +15,10 @@ const DecksReducer = (oldState = { all: {}, current: {}, user: {}}, action) => {
     switch (action.type) {
         case RECEIVE_DECKS:
             newState.all = action.decks;
+            return newState;
+        case RECEIVE_USER_DECKS:
+            debugger;
+            newState.user = action.userDecks;
             return newState;
         case RECEIVE_DECK:
             newState.current = action.deck.deck;

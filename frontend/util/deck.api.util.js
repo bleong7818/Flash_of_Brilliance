@@ -5,6 +5,13 @@ export const fetchDecks = () => {
     });
 };
 
+export const fetchUserDecks = () => {
+    return $.ajax ({
+        url: "/api/decks/user_decks",
+        method: "GET"
+    });
+};
+
 export const fetchDeck = (deckId) => {
     return $.ajax ({
         url: `/api/decks/${deckId}`,
@@ -12,12 +19,6 @@ export const fetchDeck = (deckId) => {
     });
 };
 
-export const fetchUserDecks = () => {
-    return $.ajax ({
-        url: "/api/decks/user_decks",
-        method: "GET"
-    });
-};
 
 export const createDeck = (deck) => {
     return $.ajax ({

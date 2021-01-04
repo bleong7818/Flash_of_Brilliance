@@ -5,6 +5,7 @@ export const RECEIVE_DECK = 'RECEIVE_DECK';
 export const REMOVE_DECK = 'DELETE_DECK';
 export const ADD_DECK_TO_USER = 'ADD_DECK_TO_USER';
 export const DELETE_DECK_FROM_USER = 'DELETE_DECK_FROM_USER';
+export const RECEIVE_USER_DECKS = 'RECEIVE_USER_DECKS';
 export const RECEIVE_DECK_ERRORS = 'RECEIVE_DECK_ERRORS';
 export const REMOVE_DECK_ERRORS = 'REMOVE_DECK_ERRORS';
 
@@ -12,6 +13,13 @@ const receiveDecks = (decks) => {
     return {
         type: RECEIVE_DECKS,
         decks
+    };
+};
+
+const receiveUserDecks = (userDecks) => {
+    return {
+        type: RECEIVE_USER_DECKS,
+        userDecks
     };
 };
 
@@ -62,6 +70,15 @@ export const requestDecks = () => {
         return APIUtil.fetchDecks()
             .then((decks) => {
                 return dispatch(receiveDecks(decks));
+            });
+    };
+};
+
+export const requestUserDecks = () => {
+    return dispatch => {
+        return APIUtil.fetchUserDecks()
+            .then((userDecks) => {
+                return dispatch(receiveUserDecks(userDecks));
             });
     };
 };

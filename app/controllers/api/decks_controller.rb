@@ -10,7 +10,6 @@ class Api::DecksController < ApplicationController
     end
 
     def create 
-        debugger
         @deck = Deck.new(deck_params)
         
         if @deck.save
@@ -27,7 +26,7 @@ class Api::DecksController < ApplicationController
         if @deck 
             render :show
         else
-            render json: @deck.errors.full_messages, status: 404
+            render json: ["Deck not found"], status: 404
         end
     end
 
@@ -53,7 +52,7 @@ class Api::DecksController < ApplicationController
     end
 
     def user_decks 
-        debugger
+        # debugger
         @decks = current_user.decks
         debugger
 

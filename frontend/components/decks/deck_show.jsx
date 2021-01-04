@@ -18,6 +18,7 @@ class DeckShow extends React.Component {
         this.props.requestUsers();
         this.props.requestDeck(this.props.deckId);
         this.props.requestCards();
+        this.props.requestUserDecks();
     }
 
     studyRedirect(e) {

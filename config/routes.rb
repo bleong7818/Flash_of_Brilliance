@@ -44,9 +44,9 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     resources :decks, only: [:create, :index, :show, :destroy, :update] do 
       member do 
-        get 'user_decks' to "decks#user_decks" #decks/user_decks
-        post 'add', to: "decks#add_to_user_decks" #decks/:deck_id/add
-        delete 'delete', to: "decks#delete_from_user_decks" #decks/:deck_id/delete
+        get 'user_decks', to: "decks#user_decks" #api/decks/user_decks
+        post 'add', to: "decks#add_to_user_decks" #api/decks/:deck_id/add
+        delete 'delete', to: "decks#delete_from_user_decks" #api/decks/:deck_id/delete
       end
     end
     resources :cards, only: [:create, :index, :show, :destroy, :update]
