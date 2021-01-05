@@ -27,17 +27,13 @@ class Api::UsersController < ApplicationController
         end
     end
 
-    def add_to_user_decks 
-        debugger
-        @deck = Deck.find_by(id: params[:id])
-        debugger
-        # if current_user.decks.find_by(id: params[:id])
-        #     render json: ["Deck is already assigned"]
-        # else
-        #     current_user.decks << @deck
-        #     render :show
-        # end
-    end
+    # def user_decks 
+    #     debugger
+    #     @decks = current_user.decks
+    #     debugger
+
+    #     render :index
+    # end
 
     private
     def user_params

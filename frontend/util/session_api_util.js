@@ -28,6 +28,13 @@ export const fetchUser = (userId) => {
     });
 };
 
+// export const fetchUserDecks = (userId) => {
+//     return $.ajax ({
+//         url: `/api/users/${userId}`,
+//         method: "GET"
+//     });
+// };
+
 export const fetchUsers = () => {
     return $.ajax({
         url: `/api/users`,

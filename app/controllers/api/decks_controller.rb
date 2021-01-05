@@ -1,7 +1,7 @@
 class Api::DecksController < ApplicationController
 
     before_action :require_logged_in, only: [:index, :create, :destroy, :update]
-    helper_method :current_user
+    
 
     def index
         @decks = Deck.all
@@ -21,8 +21,8 @@ class Api::DecksController < ApplicationController
     end
 
     def show
+        # debugger
         @deck = Deck.find_by(id: params[:id])
-
         if @deck 
             render :show
         else

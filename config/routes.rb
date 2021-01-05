@@ -42,9 +42,13 @@ Rails.application.routes.draw do
   namespace :api, defaults: {format: :json} do
     resources :users, only: [:create, :show, :index] 
     resource :session, only: [:create, :destroy]
+    get "/user_decks", to: "decks#user_decks"
     resources :decks, only: [:create, :index, :show, :destroy, :update] do 
+      # resource :user_decks
+      # get 'user_decks' #api/decks/user_decks
       member do 
-        get 'user_decks', to: "decks#user_decks" #api/decks/user_decks
+        # get 'profile', action: :show, controller: 'users'
+        # get 'user_decks', action: "decks#user_decks" #api/decks/user_decks
         post 'add', to: "decks#add_to_user_decks" #api/decks/:deck_id/add
         delete 'delete', to: "decks#delete_from_user_decks" #api/decks/:deck_id/delete
       end

@@ -20,6 +20,8 @@ class NavBar extends React.Component {
         this.handleLogout = this.handleLogout.bind(this);
         this.createRedirect = this.createRedirect.bind(this);
         this.showCreateModal = this.showCreateModal.bind(this);
+        this.Github = this.Github.bind(this);
+        this.LinkedIn = this.LinkedIn.bind(this);
     }
 
     componentDidMount() {
@@ -80,8 +82,20 @@ class NavBar extends React.Component {
     }
 
     mainPage(e) {
+        debugger;
         e.preventDefault();
         this.props.history.push("/");
+    }
+
+    Github(e) {
+        debugger;
+        e.preventDefault();
+        this.props.history.push("/https://github.com/bleong7818");
+    }
+
+    LinkedIn(e) {
+        e.preventDefault();
+        this.props.history.push("/https://www.linkedin.com/in/brandon-leong-8bb965138/");
     }
 
     deckIndex(e) {
@@ -112,7 +126,12 @@ class NavBar extends React.Component {
         <div className="logged-in-nav">
             <div className="leftside-nav-bar">
                 <div className="main-page-link" onClick={this.mainPage}>Flash of Brilliance</div>
-                <div className="linkedin-image" onClick={this.linkdedIn}></div>
+                <i className="fab fa-github" onClick={this.Github}></i>
+                    <a href="">
+                        <img className="linkedin-logo" src={window.linkedin} alt=""/>
+                    </a>
+                {/* <i className="fab fa-linkedin" onClick={this.LinkedIn}></i> */}
+                {/* <div className="linkedin-image" onClick={this.linkdedIn}></div> */}
             </div>
             <div className="logged-in-nav-buttons">
                 <button className="modal-create-button" onClick={this.showCreateModal}>Create a Deck</button>

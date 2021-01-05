@@ -7,7 +7,7 @@ export const fetchDecks = () => {
 
 export const fetchUserDecks = () => {
     return $.ajax ({
-        url: "/api/decks/user_decks",
+        url: "/api/user_decks",
         method: "GET"
     });
 };
