@@ -1,11 +1,11 @@
 .Dashboard-main {
-    height: 100vh;
+    height: 100%;
     background-image: url("https://i.pinimg.com/originals/aa/43/50/aa4350ce5aed12fc4b0518f0dead4e1e.png");
     // background-color: #324054; 
 }
 
 .dashboard-user-section {
-    padding-top: 60px;
+    padding-top: 220px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -52,36 +52,6 @@
     font-size: 14px;
 }
 
-
-.dashboard-dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dashboard-logout {
-    display: none;
-    position: absolute;
-    left: 5px;
-    right: 5px;
-    background-color: lightgray;
-    min-width: 100px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 10px;
-    border-radius: 5px;
-    z-index: 1;
-}
-
-.dashboard-dropdown:hover .dashboard-logout {
-    display: block;
-    cursor: pointer;
-}
-
-
-.dashboard-logout:hover {
-    background-color: skyblue;
-    cursor: pointer;
-}
-
 .deck-list {
     display: flex;
     justify-content: center;
@@ -102,16 +72,47 @@
     font-size: 16px
 }
 
-.add-deck-button {
-    font-size: 16px;
-    // padding-bottom: 10px;
+.deck-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.add-deck-button:hover {
-    color: rgb(173, 212, 230);
-    cursor: pointer;
+// .study-section {
+//     display: flex;
+//     justify-content: center;
+//     align-items: column;
+// }
+
+.study-row {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    // padding: 18px;
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    border-bottom: solid 1px gray;
 }
 
-.to-be-deleted {
-    padding-top: 500px;
+// .dashboard-second-row {
+//     padding-top: 30px;
+//     padding-bottom: 10px;
+//     // padding: 18px;
+//     display: flex;
+//     justify-content: space-around;
+//     width: 80%;
+//     border-bottom: solid 1px gray;
+// }
+
+.no-of-study-decks {
+    display: flex;
+    justify-content: center;
+    // width: 80%;
+    // border-bottom: solid 1px gray;
 }
+
+.user-deck-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+};

@@ -54,7 +54,7 @@ class Api::DecksController < ApplicationController
     def user_decks 
         # debugger
         @decks = current_user.decks
-        debugger
+        # debugger
 
         render :index
     end

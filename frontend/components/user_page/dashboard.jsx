@@ -12,6 +12,7 @@ class Dashboard extends React.Component {
     componentDidMount() {
         this.props.requestUser(this.props.session_id);
         this.props.requestDecks();
+        this.props.requestUserDecks();
     }
 
     handleSubmit(e) {
@@ -31,13 +32,19 @@ class Dashboard extends React.Component {
         if (!this.props.user) return null;
         // const noDupes = this.props.decks.filter((value, index) => this.props.decks.indexOf(value) === index);
         const filteredDecks = this.props.decks.filter(deck => deck.creator_id === this.props.user.id);
-        const userDecks = filteredDecks.map(deck => {
+        const createdDecks = filteredDecks.map(deck => {
             return (
                 <DeckboxContainer key={deck.id} deck={deck}></DeckboxContainer>
             )
         });
+        // debugger;
+        const savedDecks = this.props.userDecks.map(deck => {
+            return (
+                <DeckboxContainer key={deck.id} deck={deck}></DeckboxContainer>
+            )
+        });
+        // debugger;
         // const numberOfDecks = userDecks.length === 0 ? null : <p className="usermade-decks">{userDecks.length} decks created</p>
-
         return (
             <main className="Dashboard-main">
                 <div className="dashboard-user-section">
@@ -50,16 +57,20 @@ class Dashboard extends React.Component {
                         <div className="greeting-pt2">This is your profile page! Here you can look at decks that you've made and decks that you are studying.</div>
                     </header>
                     <div className="dashboard-second-row">
-                        <h4 className="no-of-decks">Your Created Decks ({userDecks.length})</h4>
-                        {/* <h1 className="add-deck-button" onClick={this.createDeckRedirect}>Create a Deck</h1> */}
+                        <h4 className="no-of-decks">Your Created Decks ({createdDecks.length})</h4>
                     </div>
                     <div className="created-section">
                         <ul className="deck-list">
-                            {userDecks}
+                            {createdDecks}
                         </ul>
                     </div>
+                    <div className="study-row">
+                        <h4 className="no-of-study-decks">Study Decks ({savedDecks.length})</h4>
+                    </div>
                     <div className="study-section">
-                        Studying decks
+                        <ul className="user-deck-list">
+                            {savedDecks}
+                        </ul>
                     </div>
                     {/* <div className="to-be-deleted">placeholder</div> */}
                 </div>
