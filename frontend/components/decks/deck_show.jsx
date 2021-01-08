@@ -10,7 +10,8 @@ class DeckShow extends React.Component {
         // this.filter = this.filter.bind(this);
         // this.props.deckId = this.props.deckId.bind(this);
         this.studyRedirect = this.studyRedirect.bind(this);
-        this.addDeck = this.addDeck.bind(this);
+        this.addUserDeck = this.addUserDeck.bind(this);
+        this.deleteUserDeck = this.deleteUserDeck.bind(this);
     }
 
     componentDidMount() {
@@ -27,8 +28,12 @@ class DeckShow extends React.Component {
         this.props.history.push(`/decks/${this.props.deckId}/study`);
     }
 
-    addDeck() {
+    addUserDeck() {
         this.props.addDecktoUser(this.props.deck);
+    }
+
+    deleteUserDeck() {
+        this.props.deleteDeckFromUser(this.props.deck.id);
     }
 
     createCardModal() {
@@ -60,11 +65,21 @@ class DeckShow extends React.Component {
         // let studyCards = this.props.cards.filter(card => parseInt(card.deck_id, 10) === this.props.deck.id);
         const studyButton = this.props.deckCards.length !== 0 ? ( <button className="study-deck-button" onClick={this.studyRedirect} >Study This Deck</button>
         ) : null
+        const deckId = this.props.deck.id
+        let ifUserDeck = false
+        this.props.userDecks.forEach((deck) => {
+            if (deck.id === deckId) {
+                ifUserDeck = true
+            }
+        })
+        // console.log(deckButton)
+        // debugger;
 
-        const addDeckButton = this.props.userDecks.includes(this.props.deck) ? (
-            <div>delete deck</div>
+        // debugger;
+        const addDeckButton = ifUserDeck ? (
+            <div className="delete-from-userdecks-button" onClick={this.deleteUserDeck}>Unsave Deck</div>
         ) : (
-            <div onClick={this.addDeck}>add deck</div>
+            <div className="add-userdeck-button" onClick={this.addUserDeck}>Save Deck</div>
         )
 
         const createButton = this.props.currentUser.id === this.props.deck.creator_id ? (

@@ -46,6 +46,7 @@ const addUserDeck = (deck) => {
 };
 
 const deleteUserDeck = (deckId) => {
+    debugger;
     return {
         type: DELETE_DECK_FROM_USER,
         deckId
@@ -119,7 +120,6 @@ export const deleteDeck = (deckId) => {
 };
 
 export const addDecktoUser = (deck) => {
-
     return dispatch => {
         return APIUtil.addDecktoUser(deck)
             .then((deck) => {

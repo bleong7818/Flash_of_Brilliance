@@ -52,9 +52,8 @@ class Dashboard extends React.Component {
                         {/* <img className="dashboard-logo" src="https://www.brainscape.com/assets/bsc-share-icon.png" alt=""/> */}
                         <div className="greetings-and-info">
                             <p className="greeting"> Welcome, {this.props.user.first_name} {this.props.user.last_name}</p>
-                            {/* {numberOfDecks} */}
+                            <div className="greeting-pt2">This is your profile page! Here you can look at decks that you've made and decks that you are studying.</div>
                         </div>
-                        <div className="greeting-pt2">This is your profile page! Here you can look at decks that you've made and decks that you are studying.</div>
                     </header>
                     <div className="dashboard-second-row">
                         <h4 className="no-of-decks">Your Created Decks ({createdDecks.length})</h4>

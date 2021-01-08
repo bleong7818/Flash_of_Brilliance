@@ -17,7 +17,7 @@ const DecksReducer = (oldState = { all: {}, current: {}, user: {}}, action) => {
             newState.all = action.decks;
             return newState;
         case RECEIVE_USER_DECKS:
-            debugger;
+            // debugger;
             newState.user = action.userDecks;
             return newState;
         case RECEIVE_DECK:

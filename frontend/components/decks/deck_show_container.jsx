@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import DeckShow from './deck_show';
 import { requestUsers } from '../../actions/session_actions';
-import { updateDeck, deleteDeck, requestDeck, addDecktoUser, requestUserDecks } from '../../actions/deck_actions';
+import { updateDeck, deleteDeck, requestDeck, addDecktoUser, deleteDeckFromUser, requestUserDecks } from '../../actions/deck_actions';
 import { requestCards } from '../../actions/card_actions';
 import { withRouter } from 'react-router-dom';
 
@@ -29,6 +29,7 @@ const MDTP = dispatch => {
         deleteDeck: (deckId) => dispatch(deleteDeck(deckId)),
         requestDeck: (deckId) => dispatch(requestDeck(deckId)),
         addDecktoUser: (deck) => dispatch(addDecktoUser(deck)),
+        deleteDeckFromUser: (deckId) => dispatch(deleteDeckFromUser(deckId)),
         requestUserDecks: () => dispatch(requestUserDecks()),
         requestUsers: () => dispatch(requestUsers()),
         requestCards: () => dispatch(requestCards()),
