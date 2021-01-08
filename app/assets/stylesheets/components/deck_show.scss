@@ -72,6 +72,39 @@
   outline: none;
 }
 
+.delete-from-userdecks-button {
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 5px;
+    background-color: rgb(255, 0, 98);
+    height: 50px;
+    width: 100px;
+}
+
+.delete-from-userdecks-button:hover {
+    background-color: rgb(185, 0, 124);
+    cursor: pointer;
+}
+
+.delete-from-userdecks-button:hover, .delete-from-userdecks-button:focus {
+    outline: none;
+}
+
+.add-userdeck-button {
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 5px;
+    background-color: rgb(0, 255, 213);
+    height: 50px;
+    width: 100px;
+}
+
+.add-userdeck-button:hover {
+    background-color: rgb(0, 170, 156);
+}
+
+.add-userdeck-button:hover, .add-userdeck-button:focus {
+    outline: none;
+}
+
 .study-deck-button {
     font-family: 'Open Sans', sans-serif;
     border-radius: 5px;

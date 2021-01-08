@@ -77,9 +77,9 @@ class DeckShow extends React.Component {
 
         // debugger;
         const addDeckButton = ifUserDeck ? (
-            <div className="delete-from-userdecks-button" onClick={this.deleteUserDeck}>Unsave Deck</div>
+            <button className="delete-from-userdecks-button" onClick={this.deleteUserDeck}>Unsave Deck</button>
         ) : (
-            <div className="add-userdeck-button" onClick={this.addUserDeck}>Save Deck</div>
+            <button className="add-userdeck-button" onClick={this.addUserDeck}>Save Deck</button>
         )
 
         const createButton = this.props.currentUser.id === this.props.deck.creator_id ? (

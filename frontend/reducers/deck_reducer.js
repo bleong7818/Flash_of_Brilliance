@@ -42,7 +42,6 @@ const DecksReducer = (oldState = { all: {}, current: {}, user: {}}, action) => {
                     delete newState.user[i];
                 }
             }
-            // delete newState.user[deckId]; 
             return newState;    
         default:
             return oldState;
