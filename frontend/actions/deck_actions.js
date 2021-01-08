@@ -46,7 +46,7 @@ const addUserDeck = (deck) => {
 };
 
 const deleteUserDeck = (deckId) => {
-    debugger;
+    // debugger;
     return {
         type: DELETE_DECK_FROM_USER,
         deckId
