@@ -34,14 +34,16 @@ const DecksReducer = (oldState = { all: {}, current: {}, user: {}}, action) => {
             // debugger;
             // newState.user[action.deck.deck.id] = action.deck.deck;
             newState.user.push(action.deck.deck);
-            debugger;
+            // debugger;
             return newState;
         case DELETE_DECK_FROM_USER:
-            debugger;
+            // debugger;
             for(let i = 0; i < newState.user.length; i++) {
                 // debugger;
                 if (newState.user[i].id === action.deckId) {
-                    delete newState.user[i];
+                    debugger;
+                    newState.user.splice(i, 1);
+                    // delete newState.user[i];
                 }
             }
             return newState;    
