@@ -17,8 +17,8 @@ const DecksReducer = (oldState = { all: {}, current: {}, user: {}}, action) => {
             newState.all = action.decks;
             return newState;
         case RECEIVE_USER_DECKS:
-            // debugger;
             newState.user = action.userDecks;
+            // debugger;
             return newState;
         case RECEIVE_DECK:
             newState.current = action.deck.deck;
@@ -32,13 +32,14 @@ const DecksReducer = (oldState = { all: {}, current: {}, user: {}}, action) => {
             return newState;
         case ADD_DECK_TO_USER:
             // debugger;
-            newState.user[action.deck.deck.id] = action.deck.deck;
-            // debugger;
+            // newState.user[action.deck.deck.id] = action.deck.deck;
+            newState.user.push(action.deck.deck);
+            debugger;
             return newState;
         case DELETE_DECK_FROM_USER:
-            // debugger;
+            debugger;
             for(let i = 0; i < newState.user.length; i++) {
-                debugger;
+                // debugger;
                 if (newState.user[i].id === action.deckId) {
                     delete newState.user[i];
                 }
