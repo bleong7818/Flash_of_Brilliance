@@ -30,15 +30,7 @@ class CreateDeck extends React.Component {
             modalBg.classList.remove('bg-active');
         }
         deck.creator_id = this.props.currentUser.id;
-        // this.props.createDeck(deck).then(res => {
-        //     console.log(res);
-        //     debugger;
-        //     // this.props.history.push(`/decks/${res.id}`);
-        //     this.props.history.push(`/dashboard`);
-        // });
-        // debugger;
         this.props.createDeck(deck).then(res => {
-            // this.props.history.push(`/dashboard`);
             this.props.history.push(`/decks/${res.deck.deck.id}`);
         });
         
@@ -65,13 +57,6 @@ class CreateDeck extends React.Component {
             </div>
         )
     }
-
-    // <div className="modal-bg">
-    //     <div className="create-deck-modal">
-    //         <CreateDeckContainer />
-    //         {/* <div className="create-close-button">×</div> */}
-    //     </div>
-    // </div>
 
     render() {
         return (

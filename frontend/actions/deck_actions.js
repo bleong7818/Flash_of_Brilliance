@@ -53,7 +53,7 @@ const deleteUserDeck = (deckId) => {
     };
 };
 
-const receiveDeckErrors = (deckErrors)  => {
+export const receiveDeckErrors = (deckErrors)  => {
     return {
         type: RECEIVE_DECK_ERRORS,
         deckErrors
