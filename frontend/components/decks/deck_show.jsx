@@ -8,8 +8,12 @@ class DeckShow extends React.Component {
     constructor(props) {
         super(props);
 
+        this.state = {
+            showEditDeck: false
+        };
         // this.filter = this.filter.bind(this);
         // this.props.deckId = this.props.deckId.bind(this);
+        this.editDeckModal = this.editDeckModal.bind(this);
         this.studyRedirect = this.studyRedirect.bind(this);
         this.addUserDeck = this.addUserDeck.bind(this);
         this.deleteUserDeck = this.deleteUserDeck.bind(this);
@@ -41,13 +45,13 @@ class DeckShow extends React.Component {
         // debugger;
         let modalCardBg = document.querySelector('.card-modal-bg');
         modalCardBg.classList.add('bg-active');
-        debugger;
+        // debugger;
     }
 
     editDeckModal() {
-        let editDeckModal = document.querySelector('.edit-deck-modal-bg');
-        editDeckModal.classList.add('bg-active');
-        debugger;
+        this.setState({
+            showEditDeck: !this.state.showEditDeck
+        });
     }
 
     showCreateModal() {
@@ -99,8 +103,9 @@ class DeckShow extends React.Component {
         const editButton = this.props.currentUser.id === this.props.deck.creator_id ? (
             <button className="edit-deck-modal-button" onClick={this.editDeckModal}>Edit Deck Title</button>
         ) : null
-        const edit = this.props.currentUser.id === this.props.deck.creator_id ? <EditDeckContainer /> : null
+        const edit = this.props.currentUser.id === this.props.deck.creator_id ? <EditDeckContainer close={this.editDeckModal} /> : null
         // onClick = { this.editDeckModal }
+
         return (
             <div className="deck-show">
                 <div className="first-row">
@@ -119,7 +124,7 @@ class DeckShow extends React.Component {
                     </div>
                     <div>
                         {create}
-                        {edit}
+                        {this.state.showEditDeck ? edit : null}
                     </div>
                     <div className="deck-cards">
                         <ul className="deck-card-list">

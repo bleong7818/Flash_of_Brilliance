@@ -9,6 +9,7 @@
     justify-content: center;
     align-items: center;
     visibility: hidden;
+    // display: none;
     opacity: 0;
     transition: visibility 0s, opacity 0.5s;
     z-index: 2;
@@ -23,10 +24,10 @@
     position: relative;
 }
 
-.bg-card-active {
-    visibility: active;
-    opacity: 1;
-}
+// .bg-card-active {
+//     visibility: active;
+//     opacity: 1;
+// }
 
 // .bg-active {
 //     visibility: visible;
