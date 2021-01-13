@@ -7,11 +7,12 @@ class EditDeck extends React.Component {
         this.nullState = {
             title: ""
         };
+        this.state = this.nullState;
 
     }
 
     componentDidMount() {
-        this.requestDecks();
+        // this.requestDecks();
         // this.requestDeck();
     }
 
@@ -30,10 +31,11 @@ class EditDeck extends React.Component {
     }
 
     render() {
+        // debugger;
         return (
-            <div className="edit-deck-bg">
-                <div className="edit-deck-modal">
-                    <div className="edit-deck-container">
+            <div className="edit-deck-modal-bg">
+                <div className="edit-deck-modal">testing
+                    {/* <div className="edit-deck-container">
                         <form className="edit-deck-form" onSubmit={this.handleSubmit}>
                             <h2>Edit Deck Title</h2>
                             <div className="edit-deck-input-box">
@@ -45,11 +47,12 @@ class EditDeck extends React.Component {
                             </div>
                             <h3 className="edit-deck-errors">{this.renderEditErrors()}</h3>
                         </form>
-                        {/* <div className="edit-deck-close" onClick={this.handleClose}>×</div> */}
-                    </div>
+                        <div className="edit-deck-close" onClick={this.handleClose}>×</div>
+                    </div> */}
                 </div>
             </div>
         )
     }
-
 }
+
+export default EditDeck;

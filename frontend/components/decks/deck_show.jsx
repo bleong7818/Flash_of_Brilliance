@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import CardboxContainer from '../cards/cardbox_container';
 import CreateCardContainer from '../cards/create_card_container';
+import EditDeckContainer from './edit_deck_container';
 
 class DeckShow extends React.Component {
     constructor(props) {
@@ -37,8 +38,16 @@ class DeckShow extends React.Component {
     }
 
     createCardModal() {
+        // debugger;
         let modalCardBg = document.querySelector('.card-modal-bg');
         modalCardBg.classList.add('bg-active');
+        debugger;
+    }
+
+    editDeckModal() {
+        let editDeckModal = document.querySelector('.edit-deck-modal-bg');
+        editDeckModal.classList.add('bg-active');
+        debugger;
     }
 
     showCreateModal() {
@@ -87,9 +96,11 @@ class DeckShow extends React.Component {
         ) : null
         const create = this.props.currentUser.id === this.props.deck.creator_id ? <CreateCardContainer /> : null
 
-        // const editButton = this.props.currentUser.id === this.props.deck.creator_id ? (
-        //     <button className="edit-deck-modal-button" onClick={this.editDeckModal}>Edit Deck Title</button>
-        // ) : null
+        const editButton = this.props.currentUser.id === this.props.deck.creator_id ? (
+            <button className="edit-deck-modal-button" onClick={this.editDeckModal}>Edit Deck Title</button>
+        ) : null
+        const edit = this.props.currentUser.id === this.props.deck.creator_id ? <EditDeckContainer /> : null
+        // onClick = { this.editDeckModal }
         return (
             <div className="deck-show">
                 <div className="first-row">
@@ -99,6 +110,7 @@ class DeckShow extends React.Component {
                     </div>
                     <div className="deck-options-container">
                         <div className="deck-options">
+                            {editButton}
                             {createButton}
                             {addDeckButton}
                             {studyButton}
@@ -107,6 +119,7 @@ class DeckShow extends React.Component {
                     </div>
                     <div>
                         {create}
+                        {edit}
                     </div>
                     <div className="deck-cards">
                         <ul className="deck-card-list">
