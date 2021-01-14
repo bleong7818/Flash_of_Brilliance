@@ -48,6 +48,7 @@ class EditDeck extends React.Component {
     }
 
     handleClose() {
+        this.props.removeDeckErrors();
         this.props.close();
     }
 
