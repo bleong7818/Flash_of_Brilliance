@@ -30,11 +30,15 @@ class EditDeck extends React.Component {
         //         this.props.close()
         //     );
         // }
-        this.props.updateDeck(newDeck).then(res => {
-            console.log(res);
-            debugger
+        // debugger;
+        let deckTitles = this.props.decks.map(deck => {
+            return deck.title;
         });
-        
+        this.props.updateDeck(newDeck);
+        if (newDeck.title.length !== 0 && !deckTitles.includes(newDeck.title)) {
+            this.props.close();
+        }
+
     }
 
     update(field) {
@@ -48,6 +52,7 @@ class EditDeck extends React.Component {
     }
 
     renderEditErrors() {
+        // debugger;
         return (
             <div>
                 {this.props.errors}
