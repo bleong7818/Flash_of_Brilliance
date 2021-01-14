@@ -43,18 +43,18 @@ class Api::DecksController < ApplicationController
 
     def update
         @deck = Deck.find_by(id: params[:id])
-
-        if @deck && @deck.update
+        debugger
+        if @deck && @deck.update(deck_params)
             render :show
+            debugger
         else
-            render json: ["Deck not found"], status: 404
+            debugger
+            render json: @deck.errors.full_messages, status: 422
         end
     end
 
     def user_decks 
-        # debugger
         @decks = current_user.decks
-        # debugger
 
         render :index
     end

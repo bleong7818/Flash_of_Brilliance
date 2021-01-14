@@ -5,9 +5,12 @@ class EditDeck extends React.Component {
         super(props);
 
         this.nullState = {
-            title: ""
+            title: "",
+            // showEditDeck: false
         };
         this.state = this.nullState;
+        this.handleClose = this.handleClose.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
 
     }
 
@@ -16,10 +19,27 @@ class EditDeck extends React.Component {
         // this.requestDeck();
     }
 
+    handleSubmit(e) {
+        e.preventDefault();
+        let newDeck = Object.assign({}, this.state);
+        newDeck.creator_id = this.props.currentUser.id;
+        newDeck.id = this.props.deck.id;
+        debugger;
+        if (this.state.title.length !== 0) {
+            this.props.updateDeck(newDeck).then(
+                this.props.close()
+            );
+        }
+    }
+
     update(field) {
         return e => this.setState({
             [field]: e.currentTarget.value
         });
+    }
+
+    handleClose() {
+        this.props.close();
     }
 
     renderEditErrors() {
@@ -34,8 +54,8 @@ class EditDeck extends React.Component {
         // debugger;
         return (
             <div className="edit-deck-modal-bg">
-                <div className="edit-deck-modal">testing
-                    {/* <div className="edit-deck-container">
+                <div className="edit-deck-modal">
+                    <div className="edit-deck-container">
                         <form className="edit-deck-form" onSubmit={this.handleSubmit}>
                             <h2>Edit Deck Title</h2>
                             <div className="edit-deck-input-box">
@@ -48,7 +68,7 @@ class EditDeck extends React.Component {
                             <h3 className="edit-deck-errors">{this.renderEditErrors()}</h3>
                         </form>
                         <div className="edit-deck-close" onClick={this.handleClose}>×</div>
-                    </div> */}
+                    </div>
                 </div>
             </div>
         )

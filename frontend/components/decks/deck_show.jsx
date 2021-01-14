@@ -42,7 +42,6 @@ class DeckShow extends React.Component {
     }
 
     createCardModal() {
-        // debugger;
         let modalCardBg = document.querySelector('.card-modal-bg');
         modalCardBg.classList.add('bg-active');
         // debugger;
@@ -65,7 +64,6 @@ class DeckShow extends React.Component {
         if (this.props.deck.id !== parseInt(this.props.deckId, 10)) return null;
         const creator = this.props.users.filter(user => user.id === this.props.deck.creator_id);
         if (creator.length === 0) return null;
-        // debugger;
         let deck2Cards = this.props.cards.map(card => {
             if (card.deck_id === this.props.deck.id) {
                 return (
@@ -73,7 +71,6 @@ class DeckShow extends React.Component {
                 )
             }
         });
-        // debugger;
 
         // let studyCards = this.props.cards.filter(card => parseInt(card.deck_id, 10) === this.props.deck.id);
         const studyButton = this.props.deckCards.length !== 0 ? ( <button className="study-deck-button" onClick={this.studyRedirect} >Study This Deck</button>
@@ -85,10 +82,7 @@ class DeckShow extends React.Component {
                 ifUserDeck = true
             }
         })
-        // console.log(deckButton)
-        // debugger;
 
-        // debugger;
         const addDeckButton = ifUserDeck ? (
             <button className="delete-from-userdecks-button" onClick={this.deleteUserDeck}>Unsave Deck</button>
         ) : (
