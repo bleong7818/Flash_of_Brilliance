@@ -24,12 +24,17 @@ class EditDeck extends React.Component {
         let newDeck = Object.assign({}, this.state);
         newDeck.creator_id = this.props.currentUser.id;
         newDeck.id = this.props.deck.id;
-        debugger;
-        if (this.state.title.length !== 0) {
-            this.props.updateDeck(newDeck).then(
-                this.props.close()
-            );
-        }
+        // debugger;
+        // if (this.state.title.length !== 0) {
+        //     this.props.updateDeck(newDeck).then(
+        //         this.props.close()
+        //     );
+        // }
+        this.props.updateDeck(newDeck).then(res => {
+            console.log(res);
+            debugger
+        });
+        
     }
 
     update(field) {
