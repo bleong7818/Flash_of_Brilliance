@@ -15,7 +15,7 @@
 }
 
 .edit-deck-modal {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     border-radius: 10px;
     background-color: white;
     width: 45%;
@@ -31,4 +31,28 @@
     position: absolute;
     right: 5px;
     top: 5px;
+}
+
+.edit-deck-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.edit-deck-form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.edit-deck-message {
+    padding: 20px;
+}
+
+.edit-deck-input {
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }

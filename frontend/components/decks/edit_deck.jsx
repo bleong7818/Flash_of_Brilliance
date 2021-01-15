@@ -68,7 +68,7 @@ class EditDeck extends React.Component {
                 <div className="edit-deck-modal">
                     <div className="edit-deck-container">
                         <form className="edit-deck-form" onSubmit={this.handleSubmit}>
-                            <h2>Edit Deck Title</h2>
+                            <h1 className="edit-deck-message">Edit Deck Title</h1>
                             <div className="edit-deck-input-box">
                                 <input className="edit-deck-input" type="text" onChange={this.update('title')}
                                  placeholder={this.props.deck.title} value={this.state.title}/>
