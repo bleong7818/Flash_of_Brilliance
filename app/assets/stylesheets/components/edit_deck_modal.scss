@@ -45,14 +45,28 @@
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+    width: 100%;
+    height: 100%;
 }
 
 .edit-deck-message {
     padding: 20px;
 }
 
+.edit-deck-input-box {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+}
+
 .edit-deck-input {
     display: flex;
     justify-content: center;
     text-align: center;
+    width: 80%;
+    height: 100%;
+    // text-align: center;
+    font-size: 16px;
 }
