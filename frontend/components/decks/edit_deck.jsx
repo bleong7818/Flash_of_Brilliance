@@ -55,7 +55,7 @@ class EditDeck extends React.Component {
     renderEditErrors() {
         // debugger;
         return (
-            <div>
+            <div className="edit-deck-errors">
                 {this.props.errors}
             </div>
         )
@@ -68,13 +68,13 @@ class EditDeck extends React.Component {
                 <div className="edit-deck-modal">
                     <div className="edit-deck-container">
                         <form className="edit-deck-form" onSubmit={this.handleSubmit}>
-                            <h1 className="edit-deck-message">Edit Deck Title</h1>
+                        <h1 className="edit-deck-message">Edit Deck Title</h1>
                             <div className="edit-deck-input-box">
                                 <input className="edit-deck-input" type="text" onChange={this.update('title')}
                                  placeholder={this.props.deck.title} value={this.state.title}/>
                             </div>
                             <div className="edit-deck-button-container">
-                                <button className="edit-deck-button" type="submit">Submit</button>
+                                <button className="edit-deck-button" type="submit">Submit New Title</button>
                             </div>
                             <h3 className="edit-deck-errors">{this.renderEditErrors()}</h3>
                         </form>
