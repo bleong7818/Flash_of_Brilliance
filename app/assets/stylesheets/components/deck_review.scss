@@ -137,3 +137,29 @@
     cursor: pointer;
     background-color: rgb(129, 37, 250);
 }
+
+.deck-review-redirect {
+    display: flex;
+    justify-content: center;
+}
+
+.deck-review-all-cards {
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 5px;
+    height: 50px;
+    width: 100px;
+    background-color: rgb(255, 94, 0);
+}
+
+.deck-review-all-cards:hover {
+    cursor: pointer;
+    background-color: rgb(255, 74, 2);
+}
+
+.deck-review-all-cards:hover, .deck-review-all-cards:focus {
+    outline: none;
+}
+
+.create-card-modal-button:hover, .create-card-modal-button:focus {
+  outline: none;
+}

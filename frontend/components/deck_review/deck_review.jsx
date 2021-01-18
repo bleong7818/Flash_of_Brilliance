@@ -17,6 +17,7 @@ class DeckReview extends React.Component {
         this.previousCard = this.previousCard.bind(this);
         this.revealAnswer = this.revealAnswer.bind(this);
         this.reset = this.reset.bind(this);
+        this.cardsRedirect = this.cardsRedirect.bind(this);
     }
 
     componentDidMount() {
@@ -44,11 +45,15 @@ class DeckReview extends React.Component {
         this.setState({ currentCardIdx: 0});
     }
 
+    cardsRedirect(e) {
+        e.preventDefault();
+        this.props.history.push(`/decks/${this.props.deck.id}`);
+    }
+
+
     render() {
         if (!this.props.deck) return null;
         if (this.props.deckCards.length === 0) return null;
-        // debugger;
-        // debugger;
 
         const frontSide = this.props.deckCards[this.state.currentCardIdx] ? (
             this.props.deckCards[this.state.currentCardIdx].front_side
@@ -88,7 +93,7 @@ class DeckReview extends React.Component {
             </div>
         ) 
         debugger;
-        const noCard = this.props.deckCards[this.state.currentCardIdx] === undefined ? (
+        const CardOrNoCard = this.props.deckCards[this.state.currentCardIdx] === undefined ? (
             <div>
                 <div className="deck-review-card">
                     <div className="current-card">
@@ -104,7 +109,10 @@ class DeckReview extends React.Component {
         return (
             <div className="deck-review-page">  
                 <div className="deck-review-title">{this.props.deck.title}</div>
-                {noCard}
+                <div className="deck-review-redirect">
+                    <button className="deck-review-all-cards" onClick={this.cardsRedirect}>See All Cards</button>
+                </div>
+                {CardOrNoCard}
             </div>
         )
     }
