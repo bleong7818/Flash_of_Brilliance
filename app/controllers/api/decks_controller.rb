@@ -43,12 +43,10 @@ class Api::DecksController < ApplicationController
 
     def update
         @deck = Deck.find_by(id: params[:id])
-        # debugger
+
         if @deck && @deck.update(deck_params)
             render :show
-            # debugger
         else
-            # debugger
             render json: @deck.errors.full_messages, status: 422
         end
     end

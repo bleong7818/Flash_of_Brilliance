@@ -66,14 +66,39 @@ export const createCard = (card) => dispatch => {
         );
 };
 
-export const updateCard = (cardId) => {
+// export const updateDeck = (deck) => {
+//     return dispatch => {
+//         return APIUtil.updateDeck(deck)
+//             .then(updatedDeck => {
+//                 return dispatch(receiveDeck(updatedDeck));
+//             });
+//     };
+// };
+
+// export const updateDeck = (deck) => dispatch => {
+//     return APIUtil.updateDeck(deck)
+//         .then(
+//             updatedDeck => dispatch(receiveDeck(updatedDeck)),
+//             errors => dispatch(receiveDeckErrors(errors.responseJSON))
+//         );
+// };
+
+export const updateCard = (card) => {
     return dispatch => {
-        return APIUtil.updateCard(cardId)
+        return APIUtil.updateCard(card)
             .then(updatedCard => {
-                return dispatch(receiveCard(cardId));
+                return dispatch(receiveCard(updatedCard));
             });
     };
 };
+
+// export const updateCard = (card) => dispatch => {
+//     return APIUtil.updateCard(card)
+//         .then(
+//             updatedCard => dispatch(receiveCard(updatedCard)),
+//             errors => dispatch(receiveCardErrors(errors.responseJSON))
+//         );
+// };
 
 export const deleteCard = (cardId) => {
     return dispatch => {

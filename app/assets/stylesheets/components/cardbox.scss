@@ -7,15 +7,15 @@
 
 .delete-div {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    // height: 100%;
     align-items: center;
-    
+    flex-direction: column;
 }
 
 .card-descriptions {
     display: flex;
     justify-content: center;
-    // justify-content: space-around;
     color: white;
 }
 
@@ -46,7 +46,6 @@
     box-shadow: 5px 5px 8px 5px rgba(0,0,0,0.55);
     z-index: 0;
 }
-
 
 
 .card-back_side {
@@ -81,5 +80,23 @@
 }
 
 .delete-card-button:hover, .delete-card-button:focus {
+    outline: none;
+}
+
+.edit-card-button {
+    height: 50px;
+    width: 100px;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #C43637;
+    border-radius: 5px;
+}
+
+.edit-card-button:hover {
+    cursor: pointer;
+    background-color: #8A3138;
+}
+
+.edit-card-button:hover, .edit-card-button:focus {
     outline: none;
 }

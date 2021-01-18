@@ -16,6 +16,7 @@ class Cardbox extends React.Component {
     render() {
         const deleteButton = this.props.deck.creator_id === this.props.currentUser.id ? (
         <div className="delete-div">
+            <button className="edit-card-button">Edit Card</button>
             <button className="delete-card-button" onClick={this.deleteRedirect}>Delete card</button>
         </div>
         ) : null
@@ -30,17 +31,6 @@ class Cardbox extends React.Component {
                     <h2 className="card-descriptions">Definition/Answer</h2>
                     <div className="card-back_side">{this.props.card.back_side}</div>
                 </div>  
-                {/* <div className="card-descriptions">
-                    <h2 className="front-description">Key Term/Question</h2>
-                    <h2 className="back-description">Definition/Answer</h2>
-                </div>
-                <div className="actual-cards">
-                    <div className="delete-div">
-                        <button onClick={this.props.deleteRedirect}>Delete card</button>
-                    </div>
-                    <div className="card-front_side">{this.props.card.front_side}</div>
-                    <div className="card-back_side">{this.props.card.back_side}</div>
-                </div> */}
             </div>
         )
     }
