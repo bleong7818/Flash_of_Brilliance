@@ -7,7 +7,7 @@ class EditCard extends React.Component {
 
     render() {
         return (
-            <div>edit card</div>
+            <div>{this.props.card.front_side}</div>
         )
     }
 }
