@@ -12,6 +12,7 @@ class EditCard extends React.Component {
 
         this.handleClose = this.handleClose.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        // this.renderCardErrors = this.renderCardErrors.bind();
     }
     
     update(field) {
@@ -37,24 +38,18 @@ class EditCard extends React.Component {
         this.props.close();
     }
 
-    // renderCardErrors() {
-    //     // <ul>
-    //     //     {(this.props.errors).map((error, i) => (
-    //     //         <li key={`error-${i}`}>
-    //     //             {error}
-    //     //         </li>
-    //     //     ))}
-    //     // </ul>
-    //     return (
-    //         <ul>
-    //             {(this.props.cardErrors).map((error, i) => (
-    //                 <li className="card-error" key={`error-${i}`}>
-    //                     {error}
-    //                 </li>
-    //             ))}
-    //         </ul>
-    //     )
-    // }
+    renderCardErrors() {
+        debugger;
+        return (
+            <ul>
+                {(this.props.cardErrors).map((error, i) => (
+                    <li className="edit-card-error" key={`error-${i}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        )
+    }
 
     render() {
         // debugger;
@@ -82,6 +77,7 @@ class EditCard extends React.Component {
                                 <div className="edit-card-button-container">
                                     <button className="edit-card-button" type="submit">Edit This Card</button>
                                 </div>
+                                <div className="edit-card-errors">{this.renderCardErrors()}</div>
                             </div>
                         </form>
                         <div className="edit-card-close" onClick={this.handleClose}>×</div>

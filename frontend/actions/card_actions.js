@@ -91,22 +91,22 @@ export const createCard = (card) => dispatch => {
 //         );
 // };
 
-export const updateCard = (card) => {
-    return dispatch => {
-        return APIUtil.updateCard(card)
-            .then(updatedCard => {
-                return dispatch(receiveUpdatedCard(updatedCard));
-            });
-    };
-};
-
-// export const updateCard = (card) => dispatch => {
-//     return APIUtil.updateCard(card)
-//         .then(
-//             updatedCard => dispatch(receiveCard(updatedCard)),
-//             errors => dispatch(receiveCardErrors(errors.responseJSON))
-//         );
+// export const updateCard = (card) => {
+//     return dispatch => {
+//         return APIUtil.updateCard(card)
+//             .then(updatedCard => {
+//                 return dispatch(receiveUpdatedCard(updatedCard));
+//             });
+//     };
 // };
+
+export const updateCard = (card) => dispatch => {
+    return APIUtil.updateCard(card)
+        .then(
+            updatedCard => dispatch(receiveUpdatedCard(updatedCard)),
+            errors => dispatch(receiveCardErrors(errors.responseJSON))
+        );
+};
 
 export const deleteCard = (cardId) => {
     return dispatch => {
