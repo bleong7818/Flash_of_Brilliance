@@ -2,6 +2,7 @@ import * as APIUtil from '../util/card.api.util';
 
 export const RECEIVE_CARDS = 'RECEIVE_CARDS';
 export const RECEIVE_CARD = 'RECEIVE_CARD';
+export const RECEIVE_UPDATED_CARD = 'RECEIVE_UPDATED_CARD';
 export const REMOVE_CARD = 'REMOVE_CARD';
 export const RECEIVE_CARD_ERRORS = 'RECEIVE_CARD_ERRORS';
 export const REMOVE_CARD_ERRORS = 'REMOVE_CARD_ERRORS';
@@ -17,6 +18,13 @@ const receiveCard = (card) => {
     return {
         type: RECEIVE_CARD,
         card
+    };
+};
+
+const receiveUpdatedCard = (updatedCard) => {
+    return {
+        type: RECEIVE_UPDATED_CARD,
+        updatedCard
     };
 };
 
@@ -87,7 +95,7 @@ export const updateCard = (card) => {
     return dispatch => {
         return APIUtil.updateCard(card)
             .then(updatedCard => {
-                return dispatch(receiveCard(updatedCard));
+                return dispatch(receiveUpdatedCard(updatedCard));
             });
     };
 };

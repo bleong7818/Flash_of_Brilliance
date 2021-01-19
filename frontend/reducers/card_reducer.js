@@ -1,7 +1,8 @@
 import {
     RECEIVE_CARDS,
     RECEIVE_CARD,
-    REMOVE_CARD
+    REMOVE_CARD,
+    RECEIVE_UPDATED_CARD
 } from '../actions/card_actions';
 
 const CardsReducer = (oldState = {}, action) => {
@@ -13,9 +14,17 @@ const CardsReducer = (oldState = {}, action) => {
             newState = action.cards;
             return newState;
         case RECEIVE_CARD:
-            debugger;
             newState[action.card.id] = action.card;
             return newState;
+        case RECEIVE_UPDATED_CARD:
+            let updatedCardArray = Object.values(newState);
+            for (let i = 0; i < updatedCardArray.length; i++) {
+                if (updatedCardArray[i].id === action.updatedCard.id) {
+                    updatedCardArray[i] = action.updatedCard;
+                }
+            }
+            let updatedNew = Object.assign(updatedCardArray);
+            return updatedNew;  
         case REMOVE_CARD:
             let cardArray = Object.values(newState);
             for(let i = 0; i < cardArray.length; i++) {
