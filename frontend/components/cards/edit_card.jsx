@@ -7,7 +7,13 @@ class EditCard extends React.Component {
 
     render() {
         return (
-            <div>{this.props.card.front_side}</div>
+            <div className="edit-card-modal-bg">
+                <div className="edit-card-modal">
+                    <div className="edit-deck-container">{this.props.card.front_side}
+                    <div className="edit-card-close" onClick={this.props.close}>×</div>
+                    </div>
+                </div>
+            </div>
         )
     }
 }

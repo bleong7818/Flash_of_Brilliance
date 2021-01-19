@@ -32,7 +32,7 @@ class Cardbox extends React.Component {
         <div className="delete-div">
             <button className="edit-card-modal-button" onClick={this.revealEdit}>Edit Card</button>
             <button className="delete-card-button" onClick={this.deleteRedirect}>Delete card</button>
-            {this.state.showEditCard ? <EditCardContainer card={this.props.card}></EditCardContainer> : null}
+            {this.state.showEditCard ? <EditCardContainer card={this.props.card} close={this.revealEdit}></EditCardContainer> : null}
         </div>
         ) : null
         return (
