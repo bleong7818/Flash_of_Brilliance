@@ -5,11 +5,13 @@ import EditCard from './edit_card';
 
 const MSTP = (state, ownProps) => {
     return {
-        currentUser: state.entities.session
+        currentUser: state.entities.session,
+        deck: state.entities.decks.current
     };
 };
 
 const MDTP = dispatch => {
+    // debugger;
     return {
         updateCard: (updatedCard) => dispatch(updateCard(updatedCard)),
         requestCards: () => dispatch(requestCards())

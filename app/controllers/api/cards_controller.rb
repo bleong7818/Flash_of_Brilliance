@@ -38,11 +38,11 @@ class Api::CardsController < ApplicationController
 
     def update
         @card = Card.find_by(id: params[:id])
-
-        if @card && @card.update
+        # debugger
+        if @card && @card.update(card_params)
             render :show
         else
-            render json: ["Card not found"], status: 404
+            render json: @card.errors.full_messages, status: 422
         end
 
     end

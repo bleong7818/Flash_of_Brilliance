@@ -13,6 +13,7 @@ const CardsReducer = (oldState = {}, action) => {
             newState = action.cards;
             return newState;
         case RECEIVE_CARD:
+            debugger;
             newState[action.card.id] = action.card;
             return newState;
         case REMOVE_CARD:

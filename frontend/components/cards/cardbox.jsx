@@ -1,5 +1,5 @@
 import React from 'react';
-import EditCardContainer from './edit_card';
+import EditCardContainer from './edit_card_container';
 
 class Cardbox extends React.Component {
     constructor(props) {

@@ -22,7 +22,7 @@ export const createCard = (card) => {
 
 export const updateCard = (card) => {
     return $.ajax ({
-        url: "/api/cards",
+        url: `/api/cards/${card.id}`,
         method: 'PATCH',
         data: { card }
     });
