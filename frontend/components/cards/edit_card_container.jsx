@@ -7,7 +7,7 @@ const MSTP = (state, ownProps) => {
     return {
         currentUser: state.entities.session,
         deck: state.entities.decks.current,
-        cards: state.entities.cards,
+        cards: Object.values(state.entities.cards),
         cardErrors: Object.values(state.errors.cards)
     };
 };

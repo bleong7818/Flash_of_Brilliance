@@ -26,8 +26,6 @@ class Cardbox extends React.Component {
     }
 
     render() {
-        
-
         const CardActions = this.props.deck.creator_id === this.props.currentUser.id ? (
         <div className="delete-div">
             <button className="edit-card-modal-button" onClick={this.revealEdit}>Edit Card</button>

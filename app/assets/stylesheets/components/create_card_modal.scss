@@ -114,11 +114,8 @@
 }
 
 .create-card-button {
-    display: flex;
-    justify-content: center;
-    background-color: rgb(180, 180, 180);
-    // height: 25px;
-    // width: 50px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: lightgray;
     border-radius: 5px;
 }
 
@@ -140,5 +137,7 @@
 }
 
 .card-error {
+    display: flex;
+    justify-content: center;
     padding: 5px;
 }

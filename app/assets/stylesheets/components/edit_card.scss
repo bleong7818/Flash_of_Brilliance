@@ -13,20 +13,120 @@
 }
 
 .edit-card-modal {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     border-radius: 10px;
     background-color: white;
-    width: 35%;
-    height: 45%;
+    width: 40%;
+    height: 50%;
     position: relative;
 }
 
 .edit-card-container {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.edit-card-form {
+    width: 100%;
+    padding: 10px;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .edit-card-close {
     position: absolute;
     top: 3px;
     right: 5px;
+}
+
+.edit-card-fields {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.first-edit-field {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.edit-front-description {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+.edit-card-first-input {
+    justify-content: center;
+    display: flex;
+}
+
+.edit-card-front {
+    width: 80%;
+    height: 50px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.second-edit-field {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.edit-back-description {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+.edit-card-second-input {
+    justify-content: center;
+    display: flex;
+}
+
+.edit-card-back {
+    width: 80%;
+    height: 50px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.edit-card-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.edit-card-button {
+    font-family: 'Open Sans', sans-serif;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+.edit-card-button:hover {
+    cursor: pointer;
+}
+
+.edit-card-errors {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    color: #bb0000;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+}
+
+.edit-card-error {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
 }

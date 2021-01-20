@@ -24,13 +24,7 @@ class EditDeck extends React.Component {
         let newDeck = Object.assign({}, this.state);
         newDeck.creator_id = this.props.currentUser.id;
         newDeck.id = this.props.deck.id;
-        // debugger;
-        // if (this.state.title.length !== 0) {
-        //     this.props.updateDeck(newDeck).then(
-        //         this.props.close()
-        //     );
-        // }
-        // debugger;
+        
         let deckTitles = this.props.decks.map(deck => {
             return deck.title;
         });
@@ -38,7 +32,7 @@ class EditDeck extends React.Component {
         if (newDeck.title.length !== 0 && !deckTitles.includes(newDeck.title)) {
             this.props.close();
         }
-
+        this.setState(this.nullState);
     }
 
     update(field) {

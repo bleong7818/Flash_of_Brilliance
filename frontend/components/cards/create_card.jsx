@@ -26,12 +26,14 @@ class CreateCard extends React.Component {
         let cardBg = document.querySelector('.card-modal-bg');
         if (card.front_side.length !==0 && card.back_side.length !==0) {
             if (!frontSides.includes(card.front_side) && !backSides.includes(card.back_side)) {
+            this.props.removeCardErrors();
             cardBg.classList.remove('bg-active');
             }
         }
         this.props.createCard(card).then(() => {
             this.props.history.push(`/decks/${this.props.deck.id}`);
         });
+        
         this.setState(this.nullState);
     }
 

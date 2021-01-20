@@ -24,22 +24,32 @@ class EditCard extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const updatedCard = Object.assign({}, this.state);
-        // debugger
         updatedCard.deck_id = this.props.deck.id;
-        // debugger
         updatedCard.id = this.props.card.id;
-        // debugger
+
+        const frontSides = this.props.cards.map((card) => {
+            return card.front_side;
+        });
+        const backSides = this.props.cards.map((card) => {
+            return card.back_side;
+        });
         this.props.updateCard(updatedCard);
-        // debugger
-        this.props.close();
+        if (updatedCard.front_side.length !== 0 && updatedCard.back_side.length !== 0) {
+            if (!frontSides.includes(updatedCard.front_side) && !backSides.includes(updatedCard.back_side)) {
+                this.props.removeCardErrors();
+                this.props.close();
+            }
+        }
+        this.setState(this.nullState);
     }
     
     handleClose() {
+        this.props.removeCardErrors();
         this.props.close();
     }
 
     renderCardErrors() {
-        debugger;
+        // debugger;
         return (
             <ul>
                 {(this.props.cardErrors).map((error, i) => (
@@ -52,7 +62,6 @@ class EditCard extends React.Component {
     }
 
     render() {
-        // debugger;
         return (
             <div className="edit-card-modal-bg">
                 <div className="edit-card-modal">
