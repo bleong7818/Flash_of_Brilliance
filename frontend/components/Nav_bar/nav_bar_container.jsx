@@ -10,8 +10,8 @@ const MSTP = (state, ownProps) => {
         currentUser: state.session,
         errors: state.errors.session,
         demoUser: {
-            email: "Sieg@Liberl.orb",
-            password: "Grancel"
+            email: "DemoUser@FlashofBrilliance.com",
+            password: "password"
         }
     };
 };
