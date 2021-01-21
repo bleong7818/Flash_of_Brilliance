@@ -30,7 +30,7 @@ class DeckReview extends React.Component {
     }
 
     nextCard() {
-        // debugger;
+        
         this.setState({
             currentCardIdx: this.state.currentCardIdx + 1,
             front: true
@@ -57,11 +57,11 @@ class DeckReview extends React.Component {
 
         const frontSide = this.props.deckCards[this.state.currentCardIdx] ? (
             this.props.deckCards[this.state.currentCardIdx].front_side
-        ) : null
+        ) : null;
 
         const backSide = this.props.deckCards[this.state.currentCardIdx] ? (
             this.props.deckCards[this.state.currentCardIdx].back_side
-        ) : null
+        ) : null;
 
         const prevCard = this.state.currentCardIdx !== 0 ? (
             <div className="prev-card-button" onClick={this.previousCard}>Go Back To the Previous Card</div>
@@ -87,12 +87,11 @@ class DeckReview extends React.Component {
                     </div>
                 </div>
                 <div className="card-review-button">
-                    {/* {prevCard} */}
                     <div onClick={this.nextCard} className="next-card">Next Card</div>
                 </div>
             </div>
         ) 
-        debugger;
+        ;
         const CardOrNoCard = this.props.deckCards[this.state.currentCardIdx] === undefined ? (
             <div>
                 <div className="deck-review-card">
@@ -105,7 +104,7 @@ class DeckReview extends React.Component {
                 </div>
             </div>
         ) : frontOrBack 
-        // debugger;
+        
         return (
             <div className="deck-review-page">  
                 <div className="deck-review-title">{this.props.deck.title}</div>

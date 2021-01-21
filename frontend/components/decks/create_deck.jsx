@@ -23,8 +23,6 @@ class CreateDeck extends React.Component {
         let deckTitles = this.props.decks.map(deck => {
             return deck.title;
         });
-        // console.log(deckTitles);
-        // let deckSubmit = document.querySelector('.deck-button');
         let modalBg = document.querySelector('.modal-bg');
         if (deck.title.length !== 0 && !deckTitles.includes(deck.title)) {
             modalBg.classList.remove('bg-active');

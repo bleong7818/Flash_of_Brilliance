@@ -52,7 +52,7 @@ export const addDecktoUser = (deck) => {
 };
 
 export const deleteDeckFromUser = (deckId) => {
-    // debugger;
+    
     return $.ajax({
         url: `api/decks/${deckId}/delete`,
         method: "DELETE"

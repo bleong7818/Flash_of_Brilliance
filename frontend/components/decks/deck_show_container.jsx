@@ -8,7 +8,7 @@ import { withRouter } from 'react-router-dom';
 const MSTP = (state, ownProps) => {
     // const deckId2 = ownProps.match.params.deckId;
     // let deck2 = Object.values(state.entities.decks).filter((deck) => deck.id === deckId2);
-    // debugger;
+    
     return {
         // deck: state.entities.decks[ownProps.match.params.deckId],
         deck: state.entities.decks.current,

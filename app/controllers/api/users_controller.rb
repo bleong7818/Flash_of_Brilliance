@@ -28,9 +28,9 @@ class Api::UsersController < ApplicationController
     end
 
     # def user_decks 
-    #     debugger
+    #     
     #     @decks = current_user.decks
-    #     debugger
+    #     
 
     #     render :index
     # end

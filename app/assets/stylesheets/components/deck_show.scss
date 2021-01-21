@@ -1,16 +1,13 @@
 .deck-show {
-    // display: flex;
-    // justify-content: center;
     height: 100%;
     background-image: url("https://i.pinimg.com/originals/aa/43/50/aa4350ce5aed12fc4b0518f0dead4e1e.png");
 }
 
 .first-row {
-    padding-top: 50px;
+    padding-top: 60px;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    // height: 100vh;
 }
 
 .pack-header-main {
@@ -28,6 +25,7 @@
     font-size: 50px;
     font-weight: 450;
     color: #28a5dc;
+    text-shadow: 2px 2px 2px black;
 }
 
 .deck-show-creator {
@@ -35,6 +33,7 @@
     justify-content: center;
     color: white;
     font-size: 28px;
+    text-shadow: 2px 2px 2px black;
     font-family: 'Montserrat', sans-serif;
 }
 

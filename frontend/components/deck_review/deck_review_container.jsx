@@ -5,7 +5,7 @@ import { requestDeck } from '../../actions/deck_actions';
 import DeckReview from './deck_review';
 
 const MSTP = (state, ownProps) => {
-    // debugger;
+    
     return {
         deck: state.entities.decks.current,
         deckCards: Object.values(state.entities.cards).filter(card => card.deck_id === state.entities.decks.current.id),

@@ -20,7 +20,7 @@ class DeckShow extends React.Component {
     }
 
     componentDidMount() {
-        // debugger;
+        
         this.props.requestUsers();
         this.props.requestDeck(this.props.deckId);
         this.props.requestCards();
@@ -29,7 +29,7 @@ class DeckShow extends React.Component {
 
     studyRedirect(e) {
         e.preventDefault();
-        // debugger;
+        
         this.props.history.push(`/decks/${this.props.deckId}/study`);
     }
 
@@ -44,7 +44,7 @@ class DeckShow extends React.Component {
     createCardModal() {
         let modalCardBg = document.querySelector('.card-modal-bg');
         modalCardBg.classList.add('bg-active');
-        // debugger;
+        
     }
 
     editDeckModal() {

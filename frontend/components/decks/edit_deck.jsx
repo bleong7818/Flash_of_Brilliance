@@ -47,7 +47,7 @@ class EditDeck extends React.Component {
     }
 
     renderEditErrors() {
-        // debugger;
+        
         return (
             <div className="edit-deck-errors">
                 {this.props.errors}
@@ -56,7 +56,7 @@ class EditDeck extends React.Component {
     }
 
     render() {
-        // debugger;
+        
         return (
             <div className="edit-deck-modal-bg">
                 <div className="edit-deck-modal">

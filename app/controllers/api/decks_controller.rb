@@ -21,7 +21,7 @@ class Api::DecksController < ApplicationController
     end
 
     def show
-        # debugger
+        
         @deck = Deck.find_by(id: params[:id])
         if @deck 
             render :show
@@ -59,7 +59,7 @@ class Api::DecksController < ApplicationController
 
     def add_to_user_decks 
         @deck = Deck.find_by(id: params[:id])
-        # debugger
+        
         if current_user.decks.find_by(id: params[:id])
             render json: ["Deck is already assigned"]
         else

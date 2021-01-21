@@ -13,7 +13,7 @@ const MSTP = (state, ownProps) => {
 };
 
 const MDTP = dispatch => {
-    // debugger;
+    
     return {
         updateCard: (updatedCard) => dispatch(updateCard(updatedCard)),
         requestCards: () => dispatch(requestCards()),

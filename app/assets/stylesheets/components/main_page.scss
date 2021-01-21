@@ -25,15 +25,17 @@
     display: flex;
     padding: 20px;
     color: whitesmoke;
-    font-size: 50px;
+    text-shadow: 2px 2px 5px black;
+    font-size: 64px;
     justify-content: center;
 }
 
 .secondary-message {
     display: flex;
     font-size: 40px;
+    text-shadow: 2px 2px 5px black;
     justify-content: center;
-    color: #D3D3D3;
-    text-overflow: clip;
+    color: #c2c2c2;
+    // text-overflow: clip;
     // width: 80%;
 }

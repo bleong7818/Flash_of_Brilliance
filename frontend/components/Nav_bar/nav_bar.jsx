@@ -24,29 +24,6 @@ class NavBar extends React.Component {
 
     componentDidMount() {
         this.props.requestUser(this.props.session_id);
-        let modalBtn = document.querySelector('.modal-create-button');
-        let modalBg = document.querySelector('.modal-bg');
-        let modalClose = document.querySelector('.create-close-button');
-        // let deckSubmit = document.querySelector('.deck-button');
-
-        // if (modalBtn) {
-        //     // debugger;
-        //     modalBtn.addEventListener('click', function(){
-        //     modalBg.classList.add('bg-active');
-        //     });
-        // }
-
-        // if (modalClose) {
-        //     modalClose.addEventListener('click', function (){
-        //     modalBg.classList.remove('bg-active');
-        //     });
-        // }
-
-        // if (deckSubmit) {
-        //     deckSubmit.addEventListener('click', function () {
-        //         modalBg.classList.remove('bg-active');
-        //     });
-        // }
     }
 
     showModal(type) {
@@ -102,7 +79,6 @@ class NavBar extends React.Component {
     }
 
     showCreateModal() {
-        // let modalBtn = document.querySelector('.modal-create-button');
         let modalBg = document.querySelector('.modal-bg');
         modalBg.classList.add('bg-active');
     }
@@ -112,15 +88,12 @@ class NavBar extends React.Component {
         <div className="logged-in-nav">
             <div className="leftside-nav-bar">
                 <div className="main-page-link" onClick={this.mainPage}>Flash of Brilliance</div>
-                {/* <i className="fab fa-github" onClick={this.Github}></i> */}
                 <a href="https://github.com/bleong7818">
                     <img className="github-logo" src={window.github} alt=""/>
                 </a>
                 <a href="https://www.linkedin.com/in/brandon-leong-8bb965138/">
                     <img className="linkedin-logo" src={window.linkedin} alt=""/>
                  </a>
-                {/* <i className="fab fa-linkedin" onClick={this.LinkedIn}></i> */}
-                {/* <div className="linkedin-image" onClick={this.linkdedIn}></div> */}
             </div>
             <div className="logged-in-nav-buttons">
                 <button className="modal-create-button" onClick={this.showCreateModal}>Create a Deck</button>
@@ -134,7 +107,15 @@ class NavBar extends React.Component {
         </div>
         ) : (
             <div className="modal-nav">
-                <div className="logo">Flash of Brilliance</div>
+                    <div className="leftside-nav-bar">
+                        <div className="main-page-link" onClick={this.mainPage}>Flash of Brilliance</div>
+                        <a href="https://github.com/bleong7818">
+                            <img className="github-logo" src={window.github} alt="" />
+                        </a>
+                        <a href="https://www.linkedin.com/in/brandon-leong-8bb965138/">
+                            <img className="linkedin-logo" src={window.linkedin} alt="" />
+                        </a>
+                    </div>
                 <div className="nav-bar-buttons">
                     <button className="demo-button" type="submit" onClick={this.demoSubmit}>Demo log in</button>
                     <div className="login-modal-div">

@@ -1,14 +1,8 @@
 
 
-// .vsc-initialized {
-//     height: 100%;
-// }
-
 .Dashboard-main {
     height: 100%;
-    // background: url("https://i.pinimg.com/originals/aa/43/50/aa4350ce5aed12fc4b0518f0dead4e1e.png") cover;
     background-image: url("https://i.pinimg.com/originals/aa/43/50/aa4350ce5aed12fc4b0518f0dead4e1e.png");
-    // background-color: #324054; 
 }
 
 .dashboard-user-section {
@@ -19,15 +13,12 @@
     color: hsl(220, 8%, 93%);
     height: 100%;
     justify-content: space-around;
-    // background-color: #3D73A9;
-    // background-image: url("https://i.pinimg.com/originals/aa/43/50/aa4350ce5aed12fc4b0518f0dead4e1e.png");
 }
 
 .dashboard-user-side {
     padding-top: 10px;
     display: flex;
     flex-direction: column;
-    // justify-content: space-around;
 }
 
 .dashboard-logo {
@@ -51,12 +42,7 @@
 
 .greeting {
     font-size: 30px;
-    // font-family: 'Montserrat', sans-serif;
     padding: 10px;
-}
-
-.greeting-pt2 {
-    // font-size: 18px
 }
 
 .deck-list {
@@ -68,7 +54,6 @@
 .dashboard-second-row {
     padding-top: 30px;
     padding-bottom: 10px;
-    // padding: 18px;
     display: flex;
     justify-content: space-around;
     width: 80%;
@@ -86,39 +71,21 @@
     flex-wrap: wrap;
 }
 
-// .study-section {
-//     display: flex;
-//     justify-content: center;
-//     align-items: column;
-// }
 
 .study-row {
     padding-top: 30px;
     padding-bottom: 10px;
-    // padding: 18px;
     display: flex;
     justify-content: space-around;
     width: 80%;
     border-bottom: solid 1px gray;
 }
 
-// .dashboard-second-row {
-//     padding-top: 30px;
-//     padding-bottom: 10px;
-//     // padding: 18px;
-//     display: flex;
-//     justify-content: space-around;
-//     width: 80%;
-//     border-bottom: solid 1px gray;
-// }
-
 .no-of-study-decks {
     display: flex;
     justify-content: center;
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;
-    // width: 80%;
-    // border-bottom: solid 1px gray;
 }
 
 .user-deck-list {

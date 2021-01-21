@@ -37,13 +37,13 @@ class Dashboard extends React.Component {
                 <DeckboxContainer key={deck.id} deck={deck}></DeckboxContainer>
             )
         });
-        // debugger;
+        
         const savedDecks = this.props.userDecks.map(deck => {
             return (
                 <DeckboxContainer key={deck.id} deck={deck}></DeckboxContainer>
             )
         });
-        // debugger;
+        
         // const numberOfDecks = userDecks.length === 0 ? null : <p className="usermade-decks">{userDecks.length} decks created</p>
         return (
             <main className="Dashboard-main">

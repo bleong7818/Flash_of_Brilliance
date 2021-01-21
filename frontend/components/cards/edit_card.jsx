@@ -12,7 +12,6 @@ class EditCard extends React.Component {
 
         this.handleClose = this.handleClose.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        // this.renderCardErrors = this.renderCardErrors.bind();
     }
     
     update(field) {
@@ -49,7 +48,7 @@ class EditCard extends React.Component {
     }
 
     renderCardErrors() {
-        // debugger;
+        
         return (
             <ul>
                 {(this.props.cardErrors).map((error, i) => (

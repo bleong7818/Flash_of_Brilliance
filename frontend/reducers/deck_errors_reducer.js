@@ -9,7 +9,7 @@ const deckErrorReducer = (oldState = [], action) => {
 
     switch (action.type) {
         case RECEIVE_DECK_ERRORS:
-            // debugger;
+            
             newState = action.deckErrors;
             return newState;
         case REMOVE_DECK_ERRORS:
