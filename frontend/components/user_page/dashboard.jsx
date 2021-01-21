@@ -64,7 +64,7 @@ class Dashboard extends React.Component {
                         </ul>
                     </div>
                     <div className="study-row">
-                        <h4 className="no-of-study-decks">Study Decks ({savedDecks.length})</h4>
+                        <h4 className="no-of-study-decks">Decks You Are Studying ({savedDecks.length})</h4>
                     </div>
                     <div className="study-section">
                         <ul className="user-deck-list">
