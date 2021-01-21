@@ -25,10 +25,6 @@
     // background-color: purple;
 }
 
-// .leftside-nav-bar > svg {
-//     width: 100px;
-//     height: 50px;
-// }
 
 .github-logo {
     width: 50px;
@@ -60,13 +56,6 @@
     }
 }
 
-// .login-modal-div {
-//     position: absolute;
-// }
-
-// .sign-up-button {
-//     position: absolute;
-// }
 
 .login-button {
     // padding-right: 20px;
@@ -75,7 +64,7 @@
     justify-content: center;
     align-items: center;
     width: 100px;
-    height: 50px;
+    height: 53px;
     font-weight: 500;
     font-family: 'Open Sans', sans-serif;
     background-color: #FDF8F7;
@@ -90,37 +79,25 @@
     color: white;
     font-weight: 600;
     width: 120px;
-    height: 50px;
+    height: 53px;
     border: none;
     font-family: 'Open Sans', sans-serif;
     background-color: #FF8A48;
 }
 
-// .sign-up-button:hover {
-//     padding-left: 16px;
-//     padding-bottom: 19px;
-//     font-size: 14px;
-// }
-
 .sign-up-button:hover {
-    
-    font-size: 14px;
+    // font-size: 14px;
     cursor: pointer;
-    background-color: #ff8243;
+    background-color: rgb(255, 136, 0);
 }
 
 .sign-up-button:hover, .sign-up-button:focus {
   outline: none;
 }
 
-// .sign-up-button:hover .login-button {
-//     padding-right: 100px;
-// }
-
 .login-button:hover {
-    font-size: 14px;
     cursor: pointer;
-    background-color: #faf6f6;
+    background-color: rgb(196, 196, 196);
 }
 
 .login-button:hover, .login-button:focus {
@@ -133,19 +110,18 @@
 }
 
 .demo-button {
-    // padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 120px;
-    height: 50px;
+    height: 53px;
     font-family: 'Open Sans', sans-serif;
-    background: lightblue;
-    border: none
+    background: rgb(139, 241, 255);
+    border: none;
 }
 
 .demo-button:hover {
-    font-size: 14px;
+    background-color: rgb(91, 213, 250);
     cursor: pointer;
 }
 

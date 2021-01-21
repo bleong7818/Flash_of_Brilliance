@@ -1,12 +1,14 @@
 .modal-nav {
     // position: absolute;
     // opacity: 0.5;
+    height: 53px;
     background-color: rgba(128, 128, 128, 0.452);
     width: 100%;
     position: absolute;
     display: flex;
     justify-content: space-between;
     font-family: 'Open Sans', sans-serif;
+    z-index: 3;
 }
 
  .modal {

@@ -2,18 +2,14 @@
     display: flex;
     position: absolute;
     width: 100%;
-    // position: relative;
+    height: 53px;
+    z-index: 3;
     background-color: #6363634b;
     justify-content: space-between;
-    // background-color: gainsboro;
-    // opacity: 0.5;
 }
 
 .logged-in-nav-buttons {
     right: 0px;
-    // width: 40%;
-    // display: flex;
-    // justify-content: space-between;
 }
 
 .main-page-link {
@@ -23,11 +19,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    transition: all 0.3s ease;
+    color: black;
 }
 
 .main-page-link:hover {
     cursor: pointer;
+    color: white;
+    transition: all 0.7s ease;
 }
 
 .create-deck-button {
