@@ -40,6 +40,7 @@
     background-color: #F2F2F2;
     border: none;
     border-radius: 5px;
+    padding: 2px 6px;
     // display: flex;
     // justify-content: center;
 }
@@ -55,6 +56,7 @@
     font-size: 16px;
     background-color: #F2F2F2;
     border: none;
+    padding: 2px 6px;
     border-radius: 5px;
 }
 
@@ -69,6 +71,7 @@
     font-size: 16px;
     background-color: #F2F2F2;
     border: none;
+    padding: 2px 6px;
     border-radius: 5px;
 }
 
@@ -81,6 +84,7 @@
     width: 90%;
     height: 40px;
     font-size: 16px;
+    padding: 2px 6px;
     background-color: #F2F2F2;
     border: none;
     border-radius: 5px;
@@ -89,6 +93,10 @@
 .sign-up-button {
   padding: 20px;
   background-color: none;
+}
+
+.sign-up-button:focus {
+    outline: none;
 }
 
 
