@@ -1,10 +1,7 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
-import { Link } from 'react-router-dom';
 import LoginModal from '../login_module/login_modal';
 import SignInModal from '../login_module/signup_modal';
 import CreateDeckContainer from '../decks/create_deck_container';
-import DashboardContainer from '../user_page/dashboard_container';
 
 class NavBar extends React.Component {
     constructor(props) {

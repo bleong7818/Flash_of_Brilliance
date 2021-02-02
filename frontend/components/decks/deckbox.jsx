@@ -14,8 +14,10 @@ class Deckbox extends React.Component {
         };
     }
 
-    deleteRedirect() {    
+    deleteRedirect() {
+        
         this.props.deleteDeck(this.props.deck.id);
+        
         // this.props.history.push(`/dashboard`);
     }
     render() {
@@ -23,8 +25,8 @@ class Deckbox extends React.Component {
             <div className="delete-deck-button" onClick={this.deleteRedirect}>Delete Deck</div>
         ) : null;
         return (
-            <li className="deck-li" onClick={this.deckRedirect(this.props.deck.id)}>
-                <h3 className="deck-title" >{this.props.deck.title}</h3>
+            <li className="deck-li" >
+                <h3 className="deck-title" onClick={this.deckRedirect(this.props.deck.id)}>{this.props.deck.title}</h3>
                 {deleteButton}
             </li>
         )
