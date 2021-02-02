@@ -1,8 +1,8 @@
 # README
 
-[Live website](https://flash-of-brilliance.herokuapp.com/#/).
+[Live website](https://flash-of-brilliance.herokuapp.com/#/)
 
-Flash of Brilliance is a flashcard website for people dedicated to learning and improvement. Users can log in, sign up, and log out from their user page. There is also a deck show page for existing decks. 
+Flash of Brilliance is a flashcard website for people dedicated to learning and improvement. Users can log in, sign up, and log out from their user page. Once signed in, a user can look at flashcard decks, create their own decks, study decks, and save decks to their own page for future use.
 
 On the technical side, Flash of Brilliance is a an application that uses Rails and React. Rails makes up the backend for the project while the front end follows the react-redux cycle, including ajax calls, actions, reducers, and components. 
 
@@ -93,12 +93,3 @@ Start up webpack using either npm start or npm webpack.
 Run the rails server and you should be good to go! The server should display a localhost site to go to.
 
         rails s
-
-Future Additions to the Project
-=============
-
-* Full CRUD methods for flashcard decks and flashcards will be accessible by logged in users.
-* Logged in users will also be able to study flashcard decks.
-* Non-logged in users will be able to navigate the site and see flashcard decks, but will be unable to study them.
-* A search feature will be added in order to find decks by subject.
-* There may be a public user page added that shows the decks that a user has made, but that is TBD.
