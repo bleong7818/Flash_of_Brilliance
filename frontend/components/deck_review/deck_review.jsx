@@ -18,6 +18,7 @@ class DeckReview extends React.Component {
         this.revealAnswer = this.revealAnswer.bind(this);
         this.reset = this.reset.bind(this);
         this.cardsRedirect = this.cardsRedirect.bind(this);
+        this.deckRedirect = this.deckRedirect.bind(this);
     }
 
     componentDidMount() {
@@ -30,7 +31,6 @@ class DeckReview extends React.Component {
     }
 
     nextCard() {
-        
         this.setState({
             currentCardIdx: this.state.currentCardIdx + 1,
             front: true
@@ -50,6 +50,10 @@ class DeckReview extends React.Component {
         this.props.history.push(`/decks/${this.props.deck.id}`);
     }
 
+    deckRedirect(e) {
+        e.preventDefault();
+        this.props.history.push(`/decks`);
+    }
 
     render() {
         if (!this.props.deck) return null;
@@ -101,6 +105,7 @@ class DeckReview extends React.Component {
                 </div>
                 <div className="card-review-button">
                     <div onClick={this.reset} className="review-reset">Study Again</div>
+                    <div onClick={this.deckRedirect} className="review-reset">Go Back to All Decks</div>
                 </div>
             </div>
         ) : frontOrBack 

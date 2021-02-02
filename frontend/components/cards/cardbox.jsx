@@ -14,7 +14,6 @@ class Cardbox extends React.Component {
     }
 
     deleteRedirect(e) {
-        // e.preventDefault();
         this.props.deleteCard(this.props.card.id);
         this.props.history.push(`/decks/${this.props.deck.id}`);
     }
