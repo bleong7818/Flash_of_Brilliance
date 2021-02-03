@@ -29,7 +29,6 @@ class DeckShow extends React.Component {
 
     studyRedirect(e) {
         e.preventDefault();
-        
         this.props.history.push(`/decks/${this.props.deckId}/study`);
     }
 

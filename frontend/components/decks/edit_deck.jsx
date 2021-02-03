@@ -6,7 +6,6 @@ class EditDeck extends React.Component {
 
         this.nullState = {
             title: "",
-            // showEditDeck: false
         };
         this.state = this.nullState;
         this.handleClose = this.handleClose.bind(this);
@@ -47,7 +46,6 @@ class EditDeck extends React.Component {
     }
 
     renderEditErrors() {
-        
         return (
             <div className="edit-deck-errors">
                 {this.props.errors}

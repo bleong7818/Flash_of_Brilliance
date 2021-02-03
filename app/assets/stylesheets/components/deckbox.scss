@@ -13,7 +13,7 @@
     background-color: rgb(233, 233, 233);
     -webkit-box-shadow: 5px 5px 8px 5px rgba(0,0,0,0.55); 
     box-shadow: 5px 5px 8px 5px rgba(0,0,0,0.55);
-    z-index: 0;
+    // z-index: 0;
 }
 
 .deck-title {
@@ -39,7 +39,7 @@
     bottom: 5px;
     left: 5px;
     border: none;
-    z-index: 5;
+    // z-index: 5;
 }
 
 .delete-deck-button:hover {
