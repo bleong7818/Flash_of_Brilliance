@@ -8,7 +8,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: visibility 0.2s, opacity 0.5s;
+    animation: fadeIn ease 0.3s;
+    // animation: fadeOut ease 0.3s;
+    // -webkit-animation: fadeIn ease 20s;
+    // -moz-animation: fadeIn ease 20s;
+    // -o-animation: fadeIn ease 20s;
+    // -ms-animation: fadeIn ease 20s;
     z-index: 2;
 }
 
@@ -18,12 +23,32 @@
     background-color: white;
     width: 35%;
     height: 45%;
+    transition: visibility 0s, opacity 0.5s;
     position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     // z-index: 10;
+}
+
+.delete-deck-message {
+    display: flex;
+    justify-content: center;
+    // padding: 10px;
+    font-size: 18px;
 }
 
 .delete-deck-close {
     position: absolute;
-    top: 5px;
+    font-size: 20px;
+    transition: 0.3s;
     right: 5px;
+    top: 3px;
+}
+
+.delete-deck-close:hover {
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 24px;
 }

@@ -8,6 +8,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: fadeIn ease 0.3s;
     transition: visibility 0s, opacity 0.5s;
     z-index: 2;
 }
@@ -40,8 +41,16 @@
 
 .edit-card-close {
     position: absolute;
-    top: 3px;
+    font-size: 20px;
+    transition: 0.3s;
     right: 5px;
+    top: 3px;
+}
+
+.edit-card-close:hover {
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 24px;
 }
 
 .edit-card-fields {

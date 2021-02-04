@@ -34,10 +34,26 @@
     // flex-direction: column;
 }
 
+// .edit-deck-close {
+//     position: absolute;
+//     right: 5px;
+//     top: 3px;
+//     font-size: 20px;
+//     transition: 0.3s;
+// }
+
+// .edit-deck-close:hover {
+//     cursor: pointer;
+//     transition: 0.3s;
+//     font-size: 24px;
+// }
+
 .create-close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+     position: absolute;
+    right: 5px;
+    top: 3px;
+    font-size: 20px;
+    transition: 0.3s;
     font-weight: bold;
 }
 
@@ -60,4 +76,6 @@
 
 .create-close-button:hover {
     cursor: pointer;
+    transition: 0.3s;
+    font-size: 24px;
 }

@@ -8,6 +8,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: fadeIn ease 0.3s;
     transition: visibility 0.2s, opacity 0.5s;
     z-index: 2;
 }
@@ -29,6 +30,14 @@
     position: absolute;
     right: 5px;
     top: 3px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.edit-deck-close:hover {
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 24px;
 }
 
 .edit-deck-container {
