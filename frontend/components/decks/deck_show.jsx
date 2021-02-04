@@ -98,7 +98,10 @@ class DeckShow extends React.Component {
         ) : null
         const edit = this.props.currentUser.id === this.props.deck.creator_id ? <EditDeckContainer close={this.editDeckModal} /> : null
         // onClick = { this.editDeckModal }
-
+        const noCards = this.props.currentUser.id === this.props.deck.creator_id && deck2Cards.length === 0 ? (
+            <div>There's no cards here!</div>
+        ) : null
+        // debugger;
         return (
             <div className="deck-show">
                 <div className="first-row">
@@ -121,6 +124,7 @@ class DeckShow extends React.Component {
                     </div>
                     <div className="deck-cards">
                         <ul className="deck-card-list">
+                            {noCards}
                             {deck2Cards}
                         </ul>
                     </div>

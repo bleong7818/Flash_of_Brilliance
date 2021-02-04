@@ -30,7 +30,6 @@ class Deckbox extends React.Component {
     }
 
     deleteRedirect() {
-        debugger;
         this.props.deleteDeck(this.props.deck.id);
         this.deleteDeckModal();
     }

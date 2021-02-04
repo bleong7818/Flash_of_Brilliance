@@ -21,8 +21,8 @@
     font-family: 'Open Sans', sans-serif;
     border-radius: 10px;
     background-color: white;
-    width: 35%;
-    height: 45%;
+    width: 25%;
+    height: 30%;
     transition: visibility 0s, opacity 0.5s;
     position: relative;
     display: flex;
@@ -33,10 +33,49 @@
 }
 
 .delete-deck-message {
+    width: 90%;
     display: flex;
+    padding-left: 5%;
+    align-items: center;
     justify-content: center;
+    text-align: center;
     // padding: 10px;
     font-size: 18px;
+}
+
+.delete-deck-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 60px;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.delete-deck-yes-button {
+    display: flex;
+    font-family: 'Open Sans', sans-serif;
+    background-color: lightgray;
+    justify-content: center;
+    border: none;
+    border-radius: 5px;
+}
+
+.delete-deck-yes-button:hover {
+    cursor: pointer;
+}
+
+.delete-deck-no-button {
+    display: flex;
+    font-family: 'Open Sans', sans-serif;
+    background-color: lightgray;
+    justify-content: center;
+    border: none;
+    border-radius: 5px;
+}
+
+.delete-deck-no-button:hover {
+    cursor: pointer;
 }
 
 .delete-deck-close {

@@ -26,8 +26,16 @@
 
 .create-card-close {
     position: absolute;
+    font-size: 20px;
+    transition: 0.3s;
     right: 5px;
     top: 3px;
+}
+
+.create-card-close:hover {
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 24px;
 }
 
 .card-creator {
@@ -46,7 +54,7 @@
 
 .create-card-form {
     width: 100%;
-    padding: 10px;
+    padding: 20px;
     font-family: 'Open Sans', sans-serif;
     display: flex;
     justify-content: center;

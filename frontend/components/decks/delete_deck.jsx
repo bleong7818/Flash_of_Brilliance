@@ -18,9 +18,11 @@ class DeleteDeck extends React.Component {
            <div className="delete-deck-modal-bg">
                 <div className="delete-deck-modal">
                     <h1 className="delete-deck-message">Are you sure you want to delete this deck?</h1>
-                    <button className="delete-deck-yes-button" onClick={this.deleteRedirect}
-                    >Yes, I want to delete it.</button>
-                    <button className="delete-deck-no-button" onClick={this.props.close}>No, I want to keep it.</button>
+                    <div className="delete-deck-button-container">
+                        <button className="delete-deck-yes-button" onClick={this.deleteRedirect}
+                        >Yes, I want to delete it.</button>
+                        <button className="delete-deck-no-button" onClick={this.props.close}>No, I want to keep it.</button>
+                    </div>
                     <div className="delete-deck-close" onClick={this.props.close}>×</div>
                 </div>
            </div>
