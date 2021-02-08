@@ -13,7 +13,6 @@ class DeleteDeck extends React.Component {
     }
 
     render() {
-        // debugger;
         return (
            <div className="delete-deck-modal-bg">
                 <div className="delete-deck-modal">

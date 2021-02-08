@@ -97,11 +97,9 @@ class DeckShow extends React.Component {
             <button className="edit-deck-modal-button" onClick={this.editDeckModal}>Edit Deck Title</button>
         ) : null
         const edit = this.props.currentUser.id === this.props.deck.creator_id ? <EditDeckContainer close={this.editDeckModal} /> : null
-        // onClick = { this.editDeckModal }
         const noCards = this.props.currentUser.id === this.props.deck.creator_id && deck2Cards.length === 0 ? (
             <div>There's no cards here!</div>
         ) : null
-        // debugger;
         return (
             <div className="deck-show">
                 <div className="first-row">

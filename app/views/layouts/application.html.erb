@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta property="og:title" content="Flash of Brilliance" />
+     <meta property='og:image' content="<%= image_url('HomePage.png') %>"/>
+     <meta property="og:description"
+       content="A fullstack Brainscape clone where users can write flashcards, 
+       create flashcard decks, read their own and other users’ flashcards, 
+       and delete their own flashcards."
+     />
+     <meta property="og:url"
+       content="https://flash-of-brilliance.herokuapp.com/#/"
+     />
     <title>FlashOfBrilliance</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -15,6 +25,7 @@
       window.github = "<%= image_url('github-square.svg') %>";
       window.linkedin = "<%= image_url('linkedin.svg') %>";
     </script>
+
   </head>
 
   <body>
