@@ -81,6 +81,7 @@ class NavBar extends React.Component {
     }
 
     render () {
+        debugger;
         const display = this.props.session_id ? (
         <div className="logged-in-nav">
             <div className="leftside-nav-bar">
@@ -107,15 +108,12 @@ class NavBar extends React.Component {
                     <div className="leftside-nav-bar">
                         <div className="main-page-link" onClick={this.mainPage}>Flash of Brilliance</div>
                         <a href="#" onclick='window.open("https://github.com/bleong7818");return false;'></a>
-                        {/* onclick="window.open ('http://www.foracure.org.au', ''); return false" href="javascript:void(0);" */}
-                        {/* <a onclick="window.open(this.href,'_blank');return false;" href="http://www.foracure.org.au">Some Other Site</a> */}
                         <a target="_blank"href="https://github.com/bleong7818">
                             <img className="github-logo" src={window.github} alt="" />
                         </a>
                         <a target="_blank"href="https://www.linkedin.com/in/brandon-leong-8bb965138/" target="_top">
                             <img className="linkedin-logo" src={window.linkedin} alt="" />
                         </a>
-                        {/* href="https://www.w3schools.com" target="_blank" */}
                     </div>
                 <div className="nav-bar-buttons">
                     <button className="demo-button" type="submit" onClick={this.demoSubmit}>Demo log in</button>
