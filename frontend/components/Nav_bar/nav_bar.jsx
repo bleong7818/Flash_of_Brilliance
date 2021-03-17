@@ -81,7 +81,7 @@ class NavBar extends React.Component {
     }
 
     render () {
-        debugger;
+
         const display = this.props.session_id ? (
         <div className="logged-in-nav">
             <div className="leftside-nav-bar">
