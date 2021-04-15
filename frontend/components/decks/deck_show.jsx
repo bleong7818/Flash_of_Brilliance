@@ -120,7 +120,7 @@ class DeckShow extends React.Component {
                     </div>
                     <div className="deck-options-container">
                         <div className="deck-options">
-                            {deckMastered}
+                            {/* {deckMastered} */}
                             {editButton}
                             {createButton}
                             {addDeckButton}
