@@ -86,10 +86,10 @@ class NavBar extends React.Component {
         <div className="logged-in-nav">
             <div className="leftside-nav-bar">
                 <div className="main-page-link" onClick={this.mainPage}>Flash of Brilliance</div>
-                <a target="_blank"href="https://github.com/bleong7818">
+                <a target="_blank" href="https://github.com/bleong7818">
                     <img className="github-logo" src={window.github} alt=""/>
                 </a>
-                <a target="_blank"href="https://www.linkedin.com/in/brandon-leong-8bb965138/">
+                <a target="_blank" href="https://www.linkedin.com/in/brandon-leong-8bb965138/">
                     <img className="linkedin-logo" src={window.linkedin} alt=""/>
                  </a>
             </div>
@@ -108,10 +108,10 @@ class NavBar extends React.Component {
                     <div className="leftside-nav-bar">
                         <div className="main-page-link" onClick={this.mainPage}>Flash of Brilliance</div>
                         <a href="#" onclick='window.open("https://github.com/bleong7818");return false;'></a>
-                        <a target="_blank"href="https://github.com/bleong7818">
+                        <a target="_blank" href="https://github.com/bleong7818">
                             <img className="github-logo" src={window.github} alt="" />
                         </a>
-                        <a target="_blank"href="https://www.linkedin.com/in/brandon-leong-8bb965138/" target="_top">
+                        <a target="_blank" href="https://www.linkedin.com/in/brandon-leong-8bb965138/">
                             <img className="linkedin-logo" src={window.linkedin} alt="" />
                         </a>
                     </div>
