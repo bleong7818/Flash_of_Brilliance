@@ -11,16 +11,18 @@ class DeckShow extends React.Component {
         this.state = {
             showEditDeck: false
         };
+        
         // this.filter = this.filter.bind(this);
         // this.props.deckId = this.props.deckId.bind(this);
         this.editDeckModal = this.editDeckModal.bind(this);
         this.studyRedirect = this.studyRedirect.bind(this);
         this.addUserDeck = this.addUserDeck.bind(this);
         this.deleteUserDeck = this.deleteUserDeck.bind(this);
+        this.setDecktoComplete = this.setDecktoComplete.bind(this);
+        this.needToStudyDeck = this.needToStudyDeck.bind(this);
     }
 
     componentDidMount() {
-        
         this.props.requestUsers();
         this.props.requestDeck(this.props.deckId);
         this.props.requestCards();
@@ -58,6 +60,14 @@ class DeckShow extends React.Component {
         modalBg.classList.add('bg-active');
     }
 
+    setDecktoComplete() {
+        localStorage.setItem('deckMastered?', true);
+    }
+
+    needToStudyDeck() {
+        localStorage.setItem('deckMastered?', false);
+    }
+
     render() {
         if (!this.props.deck) return null;
         if (this.props.deck.id !== parseInt(this.props.deckId, 10)) return null;
@@ -71,6 +81,7 @@ class DeckShow extends React.Component {
             }
         });
 
+        const deckMastered = <button className="score-button" onClick={}>Deck Score</button>
         // let studyCards = this.props.cards.filter(card => parseInt(card.deck_id, 10) === this.props.deck.id);
         const studyButton = this.props.deckCards.length !== 0 ? ( <button className="study-deck-button" onClick={this.studyRedirect} >Study This Deck</button>
         ) : null
@@ -98,7 +109,7 @@ class DeckShow extends React.Component {
         ) : null
         const edit = this.props.currentUser.id === this.props.deck.creator_id ? <EditDeckContainer close={this.editDeckModal} /> : null
         const noCards = this.props.currentUser.id === this.props.deck.creator_id && deck2Cards.length === 0 ? (
-            <div>There's no cards here!</div>
+            <div>There's no cards here! Create some cards to fill out this deck.</div>
         ) : null
         return (
             <div className="deck-show">
@@ -109,6 +120,7 @@ class DeckShow extends React.Component {
                     </div>
                     <div className="deck-options-container">
                         <div className="deck-options">
+                            {deckMastered}
                             {editButton}
                             {createButton}
                             {addDeckButton}
