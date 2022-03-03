@@ -81,7 +81,7 @@ class DeckShow extends React.Component {
             }
         });
 
-        const deckMastered = <button className="score-button" onClick={}>Deck Score</button>
+        // const deckMastered = <button className="score-button" onClick={}>Deck Score</button>
         // let studyCards = this.props.cards.filter(card => parseInt(card.deck_id, 10) === this.props.deck.id);
         const studyButton = this.props.deckCards.length !== 0 ? ( <button className="study-deck-button" onClick={this.studyRedirect} >Study This Deck</button>
         ) : null
