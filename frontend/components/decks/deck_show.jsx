@@ -66,7 +66,7 @@ class DeckShow extends React.Component {
 
     needToStudyDeck() {
         localStorage.setItem('deckMastered?', false);
-    }``
+    }
 
     render() {
         if (!this.props.deck) return null;
